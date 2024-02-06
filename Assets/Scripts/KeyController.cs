@@ -12,11 +12,13 @@ public class KeyController : MonoBehaviour
     public KeyCode associatedKey;
     private bool isActivated = false;
 
+    public GameObject[] connectedKeysObject;
+
     private Vector3 initialPosition;
     private Vector3 pressedPosition;
     private Rigidbody rb;
 
-    public KeyType keyType;  
+    public KeyType keyType;
 
     public float attractionRadius = 5f;
 
@@ -36,7 +38,7 @@ public class KeyController : MonoBehaviour
 
     public Material magnetMaterial;
     public Material inactiveMaterial;
-    
+
     public enum KeyType
     {
         Normal,
@@ -73,13 +75,23 @@ public class KeyController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
 
+
         if (keyText != null)
         {
             keyText.text = GetKeyStringWithoutAlpha(associatedKey);
         }
     }
 
-    void Update()
+    public void ProxyPress()
+    {
+        MoveKey(pressedPosition);
+        isActivated = true;
+        Debug.Log("Proxy Pressed" + this.gameObject.name);
+    }
+
+
+
+    void FixedUpdate()
     {
         if (keyType != KeyType.Inactive)
         {
@@ -87,12 +99,22 @@ public class KeyController : MonoBehaviour
             {
                 MoveKey(pressedPosition);
                 isActivated = true;
+
+
+                foreach(GameObject gameObject in connectedKeysObject)
+                {
+                    gameObject.GetComponent<KeyController>().ProxyPress();
+                    Debug.Log("Called");
+                }
             }
             else
             {
                 MoveKey(initialPosition);
                 isActivated = false;
             }
+
+
+
 
             switch (keyType)
             {
@@ -115,7 +137,8 @@ public class KeyController : MonoBehaviour
                 case KeyType.Fan:
                     if (isActivated)
                     {
-                        BlowObjects();                    }
+                        BlowObjects();
+                    }
                     break;
             }
         }
@@ -141,7 +164,7 @@ public class KeyController : MonoBehaviour
 
     private void AttractObjects()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, attractionRadius, layerMask:magneticLayer);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, attractionRadius, layerMask: magneticLayer);
 
         foreach (Collider collider in colliders)
         {
@@ -170,10 +193,9 @@ public class KeyController : MonoBehaviour
         Vector3 midpoint = (this.gameObject.transform.position + targetObject.transform.position) / 2f;
         rodInstance.transform.position = midpoint;
 
-        // Look at the target object
+
         rodInstance.transform.LookAt(targetObject.transform.position);
 
-        // Scale the rod to fit between keyObject and targetObject
         float distance = Vector3.Distance(this.gameObject.transform.position, targetObject.transform.position);
         rodInstance.transform.localScale = new Vector3(0.3f, 0.3f, distance - 1);
 
@@ -196,8 +218,6 @@ public class KeyController : MonoBehaviour
                 fanObject.transform.LookAt(rbBlow.gameObject.transform);
 
                 blades.transform.Rotate(0, 0, 1);
-                //  fanObject.transform.rotation.Set(0, 0, 2 * Time.deltaTime,0);
-                //fanObject.transform.localRotation.Set(0, 0, 1*Time.deltaTime,0);
             }
         }
     }

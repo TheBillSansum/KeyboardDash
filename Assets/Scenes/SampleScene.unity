@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4398954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 185909644}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &56137867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -282,6 +287,34 @@ PrefabInstance:
       propertyPath: associatedKey
       value: 51
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeys.Array.data[0]
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeys.Array.data[1]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 1837343894}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[1]
+      value: 
+      objectReference: {fileID: 2090198786}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
       value: Key3
@@ -351,6 +384,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 400200009}
     m_Modifications:
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: keyType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 110
@@ -606,6 +643,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 400200009}
     m_Modifications:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: keyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 122
       objectReference: {fileID: 0}
@@ -820,6 +861,10 @@ PrefabInstance:
       propertyPath: associatedKey
       value: 114
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeys.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
       value: Key14
@@ -989,6 +1034,22 @@ PrefabInstance:
       propertyPath: associatedKey
       value: 52
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 1837343894}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[1]
+      value: 
+      objectReference: {fileID: 2090198786}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[2]
+      value: 
+      objectReference: {fileID: 4398954}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
       value: Key4
@@ -1131,6 +1192,34 @@ PrefabInstance:
       propertyPath: associatedKey
       value: 49
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeys.Array.data[0]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeys.Array.data[1]
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 2090198786}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[1]
+      value: 
+      objectReference: {fileID: 4398954}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[2]
+      value: 
+      objectReference: {fileID: 1758368161}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
       value: Key1
@@ -1815,6 +1904,30 @@ PrefabInstance:
       propertyPath: associatedKey
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeys.Array.data[0]
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeys.Array.data[1]
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 4398954}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[1]
+      value: 
+      objectReference: {fileID: 1837343894}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
       value: Key2
@@ -2874,6 +2987,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 1724368821}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1758368161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 665007092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1837343894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 702036756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1860116844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3161,6 +3284,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 2068742394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2090198786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 1042000378}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2117089057
 GameObject:

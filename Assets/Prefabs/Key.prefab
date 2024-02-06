@@ -365,8 +365,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyPressDistance: 1
-  keyPressSpeed: 15
+  keyPressSpeed: 5
   associatedKey: 99
+  connectedKeysObject: []
   keyType: 0
   attractionRadius: 5
   normalMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
