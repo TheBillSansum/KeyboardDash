@@ -536,6 +536,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 988752543}
     m_Modifications:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: keyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 108
       objectReference: {fileID: 0}
@@ -1723,6 +1727,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 988752543}
     m_Modifications:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: keyType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 107
       objectReference: {fileID: 0}
@@ -2157,6 +2165,38 @@ PrefabInstance:
     - target: {fileID: 2725792089423717392, guid: 804cfa21bf9ce4a4ca6b8764747d890c, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3489097933546060940, guid: 804cfa21bf9ce4a4ca6b8764747d890c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238218617811718988, guid: 804cfa21bf9ce4a4ca6b8764747d890c, type: 3}
+      propertyPath: m_margin.x
+      value: 19.68164
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414365960750693087, guid: 804cfa21bf9ce4a4ca6b8764747d890c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414365960750693087, guid: 804cfa21bf9ce4a4ca6b8764747d890c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414365960750693087, guid: 804cfa21bf9ce4a4ca6b8764747d890c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6950084236367757707, guid: 804cfa21bf9ce4a4ca6b8764747d890c, type: 3}
+      propertyPath: m_margin.x
+      value: 41.612183
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883309530247056870, guid: 804cfa21bf9ce4a4ca6b8764747d890c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883309530247056870, guid: 804cfa21bf9ce4a4ca6b8764747d890c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
