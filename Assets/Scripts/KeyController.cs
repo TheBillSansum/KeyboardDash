@@ -13,6 +13,7 @@ public class KeyController : MonoBehaviour
     private bool isActivated = false;
 
     public GameObject[] connectedKeysObject;
+    public List<KeyController> connectedKeysCon = new List<KeyController>();
 
     private Vector3 initialPosition;
     private Vector3 pressedPosition;
@@ -51,6 +52,10 @@ public class KeyController : MonoBehaviour
 
     void Start()
     {
+        foreach (GameObject key in connectedKeysObject)
+        {
+            connectedKeysCon.Add(key.GetComponent<KeyController>());
+        }
         initialPosition = transform.position;
         pressedPosition = initialPosition + Vector3.up * keyPressDistance;
 
@@ -81,12 +86,13 @@ public class KeyController : MonoBehaviour
             keyText.text = GetKeyStringWithoutAlpha(associatedKey);
         }
     }
-
+    bool proxy;
     public void ProxyPress()
     {
         MoveKey(pressedPosition);
         isActivated = true;
         Debug.Log("Proxy Pressed" + this.gameObject.name);
+        proxy = true;
     }
 
 
@@ -100,18 +106,24 @@ public class KeyController : MonoBehaviour
                 MoveKey(pressedPosition);
                 isActivated = true;
 
-
-                foreach(GameObject gameObject in connectedKeysObject)
+                int i = 0;
+                foreach (KeyController key in connectedKeysCon)
                 {
-                    gameObject.GetComponent<KeyController>().ProxyPress();
+                    key.ProxyPress();
                     Debug.Log("Called");
                 }
             }
-            else
+            else if(!proxy)
             {
+                foreach(KeyController key in connectedKeysCon)
+                {
+                    key.proxy = false;
+                }
                 MoveKey(initialPosition);
                 isActivated = false;
             }
+
+
 
 
 
