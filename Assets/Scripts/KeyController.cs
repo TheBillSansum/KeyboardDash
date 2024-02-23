@@ -40,6 +40,10 @@ public class KeyController : MonoBehaviour
     public Material magnetMaterial;
     public Material inactiveMaterial;
 
+    public Mesh magnetMesh;
+    public Mesh fanMesh;
+    public Mesh inactiveMesh;
+
     public enum KeyType
     {
         Normal,
@@ -63,15 +67,18 @@ public class KeyController : MonoBehaviour
         {
             case KeyType.Magnet:
 
-                this.GetComponent<MeshRenderer>().material = magnetMaterial;
+                // this.GetComponent<MeshRenderer>().material = magnetMaterial;
+                this.GetComponent<MeshFilter>().mesh = magnetMesh;
                 break;
 
             case KeyType.Inactive:
-                this.GetComponent<MeshRenderer>().material = inactiveMaterial;
+                this.GetComponent<MeshFilter>().mesh = inactiveMesh;
                 break;
 
             case KeyType.Fan:
                 fanObject.SetActive(true);
+                this.GetComponent<MeshFilter>().mesh = fanMesh;
+                keyText.gameObject.SetActive(false);
                 break;
         }
 
