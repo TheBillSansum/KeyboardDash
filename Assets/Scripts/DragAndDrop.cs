@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public Vector3 startPosition;
+
+
     public enum KeyTypes
     {
         Normal,
@@ -14,11 +17,14 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
     }
 
     public string keyTypes;
+    public string description;
+    public TextMeshProUGUI descriptionArea;
 
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
     }
+
 
     public void Start()
     {
@@ -28,6 +34,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         transform.position = startPosition;
+        descriptionArea.text = description;
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;

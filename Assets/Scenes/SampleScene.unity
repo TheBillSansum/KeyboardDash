@@ -387,6 +387,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   keyTypes: Normal
+  description: A very basic key, pushes up on press!
+  descriptionArea: {fileID: 119010164}
 --- !u!1 &55645070 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -967,8 +969,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1003,7 +1005,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -1.7573242, y: -24.442963, z: -157.43604, w: -8.346382}
+  m_margin: {x: 7.809387, y: -21.696503, z: -157.43604, w: -8.346382}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2917,6 +2919,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   keyTypes: Magnet
+  description: Attracts metal objects towards itself, press to activate!
+  descriptionArea: {fileID: 119010164}
 --- !u!1 &568367736 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -3066,6 +3070,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   keyTypes: Fan
+  description: Blows light objects away from itself, will automatically aim at the
+    closest blowable object (kinky)
+  descriptionArea: {fileID: 119010164}
 --- !u!1001 &653129741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7409,6 +7416,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   keyTypes: 
+  description: 
+  descriptionArea: {fileID: 119010164}
 --- !u!1 &1633508789 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -7536,6 +7545,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   keyTypes: Conveyor
+  description: When activated, will push objects in the direction it is facing.
+  descriptionArea: {fileID: 119010164}
 --- !u!1001 &1663542444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14792,7 +14803,7 @@ GameObject:
   - component: {fileID: 1386427886807297885}
   - component: {fileID: 54841617}
   m_Layer: 4
-  m_Name: Slot1Image
+  m_Name: BasicDraggable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14811,7 +14822,7 @@ GameObject:
   - component: {fileID: 1386427886910542619}
   - component: {fileID: 563980889}
   m_Layer: 4
-  m_Name: Slot2Image
+  m_Name: MagnetDraggable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14849,7 +14860,7 @@ GameObject:
   - component: {fileID: 1386427887751882727}
   - component: {fileID: 628106696}
   m_Layer: 4
-  m_Name: Slot3Image
+  m_Name: FanDraggable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14868,7 +14879,7 @@ GameObject:
   - component: {fileID: 1386427885846927042}
   - component: {fileID: 1655280862}
   m_Layer: 4
-  m_Name: Slot4Image
+  m_Name: PushDraggable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
