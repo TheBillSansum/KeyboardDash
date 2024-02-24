@@ -40,16 +40,24 @@ public class KeyController : MonoBehaviour
     public Material magnetMaterial;
     public Material inactiveMaterial;
 
+    public Mesh normalMesh;
     public Mesh magnetMesh;
     public Mesh fanMesh;
     public Mesh inactiveMesh;
+    public Mesh conveyorMesh;
+
+    public Mesh[] conveyorAnimMesh = new Mesh[6];
+    public float animationInterval = 0.05f; // Time interval between mesh transitions
+    private int currentMeshIndex = 0;
+    private Coroutine conveyorAnimationCoroutine; // Coroutine reference
 
     public enum KeyType
     {
         Normal,
         Inactive,
         Magnet,
-        Fan
+        Fan,
+        Conveyor
     }
 
     public TextMeshPro keyText;
@@ -63,24 +71,7 @@ public class KeyController : MonoBehaviour
         initialPosition = transform.position;
         pressedPosition = initialPosition + Vector3.up * keyPressDistance;
 
-        switch (keyType)
-        {
-            case KeyType.Magnet:
-
-                // this.GetComponent<MeshRenderer>().material = magnetMaterial;
-                this.GetComponent<MeshFilter>().mesh = magnetMesh;
-                break;
-
-            case KeyType.Inactive:
-                this.GetComponent<MeshFilter>().mesh = inactiveMesh;
-                break;
-
-            case KeyType.Fan:
-                fanObject.SetActive(true);
-                this.GetComponent<MeshFilter>().mesh = fanMesh;
-                keyText.gameObject.SetActive(false);
-                break;
-        }
+        UpdateKeyType();
 
 
 
@@ -94,6 +85,41 @@ public class KeyController : MonoBehaviour
         }
     }
     bool proxy;
+
+    public void UpdateKeyType()
+    {
+        fanObject.SetActive(false);
+        keyText.gameObject.SetActive(true);
+        pressedPosition = initialPosition + Vector3.up * keyPressDistance;
+
+        switch (keyType)
+        {
+
+            case KeyType.Normal:
+                this.GetComponent<MeshFilter>().mesh = normalMesh;
+                break;
+
+            case KeyType.Magnet:
+                this.GetComponent<MeshFilter>().mesh = magnetMesh;
+                break;
+
+            case KeyType.Inactive:
+                this.GetComponent<MeshFilter>().mesh = inactiveMesh;
+                break;
+
+            case KeyType.Fan:
+                fanObject.SetActive(true);
+                this.GetComponent<MeshFilter>().mesh = fanMesh;
+                keyText.gameObject.SetActive(false);
+                pressedPosition = transform.position;
+                break;
+
+            case KeyType.Conveyor:
+                this.GetComponent<MeshFilter>().mesh = conveyorMesh;
+                pressedPosition = transform.position;
+                break;
+        }
+    }
     public void ProxyPress()
     {
         MoveKey(pressedPosition);
@@ -113,25 +139,21 @@ public class KeyController : MonoBehaviour
                 MoveKey(pressedPosition);
                 isActivated = true;
 
-                int i = 0;
                 foreach (KeyController key in connectedKeysCon)
                 {
                     key.ProxyPress();
                     Debug.Log("Called");
                 }
             }
-            else if(!proxy)
+            else if (!proxy)
             {
-                foreach(KeyController key in connectedKeysCon)
+                foreach (KeyController key in connectedKeysCon)
                 {
                     key.proxy = false;
                 }
                 MoveKey(initialPosition);
                 isActivated = false;
             }
-
-
-
 
 
 
@@ -149,6 +171,19 @@ public class KeyController : MonoBehaviour
                         {
                             rodInstance.SetActive(false);
                         }
+                    }
+                    break;
+
+                case KeyType.Conveyor:
+                    if (isActivated && conveyorAnimationCoroutine == null)
+                    {
+                        conveyorAnimationCoroutine = StartCoroutine(AnimateConveyor());
+                    }
+                    else if (!isActivated && conveyorAnimationCoroutine != null)
+                    {
+                        StopCoroutine(conveyorAnimationCoroutine);
+                        conveyorAnimationCoroutine = null;
+                        this.GetComponent<MeshFilter>().mesh = conveyorMesh;
                     }
                     break;
 
@@ -179,6 +214,26 @@ public class KeyController : MonoBehaviour
             return keyString.Substring("Alpha".Length);
         }
         return keyString;
+    }
+
+    private void ConveyObjects()
+    {
+
+    }
+
+    IEnumerator AnimateConveyor()
+    {
+        while (true)
+        {
+            // Cycle through the conveyor animation meshes
+            currentMeshIndex = (currentMeshIndex + 1) % conveyorAnimMesh.Length;
+
+            // Change the mesh of the conveyor
+            GetComponent<MeshFilter>().mesh = conveyorAnimMesh[currentMeshIndex];
+
+            // Wait for the specified interval before transitioning to the next mesh
+            yield return new WaitForSeconds(animationInterval);
+        }
     }
 
     private void AttractObjects()
@@ -236,8 +291,9 @@ public class KeyController : MonoBehaviour
                 rbBlow.AddForce(-direction * blowForce);
                 fanObject.transform.LookAt(rbBlow.gameObject.transform);
 
-                blades.transform.Rotate(0, 0, 1);
+                blades.transform.Rotate(0, 0, 10);
             }
         }
+        blades.transform.Rotate(0, 0, 5f);
     }
 }
