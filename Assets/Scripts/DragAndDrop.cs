@@ -81,5 +81,10 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         startPosition = transform.position;
     }
+
+    public void OnPointerEnter()
+    {
+        descriptionArea.text = description;
+    }
 }
 

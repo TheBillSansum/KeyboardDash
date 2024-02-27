@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.UIElements;
+using System.Runtime.CompilerServices;
 
 public class KeyController : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class KeyController : MonoBehaviour
     public float animationInterval = 0.05f; // Time interval between mesh transitions
     private int currentMeshIndex = 0;
     private Coroutine conveyorAnimationCoroutine; // Coroutine reference
+    public GameObject conveyorObject;
 
     public enum KeyType
     {
@@ -128,6 +130,18 @@ public class KeyController : MonoBehaviour
         proxy = true;
     }
 
+    public void Clicked()
+    {
+        switch (keyType)
+        {
+            case KeyType.Conveyor:
+                this.gameObject.transform.Rotate(0, -90, 0);
+                keyText.transform.Rotate(0, 0, 90);
+                Debug.Log("Span" + this.gameObject.name);
+                break;
+        }
+    }
+
 
 
     void FixedUpdate()
@@ -175,12 +189,16 @@ public class KeyController : MonoBehaviour
                     break;
 
                 case KeyType.Conveyor:
+
                     if (isActivated && conveyorAnimationCoroutine == null)
                     {
                         conveyorAnimationCoroutine = StartCoroutine(AnimateConveyor());
+                        conveyorObject.SetActive(true);
+                        Clicked();
                     }
                     else if (!isActivated && conveyorAnimationCoroutine != null)
                     {
+                        conveyorObject.SetActive(false);
                         StopCoroutine(conveyorAnimationCoroutine);
                         conveyorAnimationCoroutine = null;
                         this.GetComponent<MeshFilter>().mesh = conveyorMesh;
