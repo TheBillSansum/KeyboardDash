@@ -91,6 +91,8 @@ public class KeyController : MonoBehaviour
     public void UpdateKeyType()
     {
         fanObject.SetActive(false);
+        this.gameObject.transform.rotation = Quaternion.identity;
+        keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
         keyText.gameObject.SetActive(true);
         pressedPosition = initialPosition + Vector3.up * keyPressDistance;
 
@@ -134,9 +136,11 @@ public class KeyController : MonoBehaviour
     {
         switch (keyType)
         {
-            case KeyType.Conveyor:
-                this.gameObject.transform.Rotate(0, -90, 0);
-                keyText.transform.Rotate(0, 0, 90);
+            case KeyType.Conveyor:     
+                //keyText.transform.SetParent(null);
+                this.gameObject.transform.Rotate (0, -90, 0);//Rotate(0, -90, 0);
+                keyText.transform.rotation = Quaternion.Euler(90,180,-90);//Rotate(0, -90, 0)
+
                 Debug.Log("Span" + this.gameObject.name);
                 break;
         }
@@ -194,7 +198,8 @@ public class KeyController : MonoBehaviour
                     {
                         conveyorAnimationCoroutine = StartCoroutine(AnimateConveyor());
                         conveyorObject.SetActive(true);
-                        Clicked();
+                        ConveyObjects();
+
                     }
                     else if (!isActivated && conveyorAnimationCoroutine != null)
                     {

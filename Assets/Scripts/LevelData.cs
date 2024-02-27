@@ -9,6 +9,8 @@ public class LevelData : ScriptableObject
     public string levelName;
     public string levelDescription;
     public GameObject sceneObject;
+    public int basicInventory;  
     public int magnetsInventory;
     public int fansInventory;
+    public int conveyorsInventory;
 }

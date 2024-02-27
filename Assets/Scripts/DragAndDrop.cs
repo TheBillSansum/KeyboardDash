@@ -5,7 +5,12 @@ using TMPro;
 public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public Vector3 startPosition;
+    public ItemInventory stockHandler;
 
+    public ItemInventory magnetInv;
+    public ItemInventory normalInv;
+    public ItemInventory fanInv;
+    public ItemInventory pushInv;
 
     public enum KeyTypes
     {
@@ -39,39 +44,63 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.GetComponentInChildren<KeyController>())
-            {
+            KeyController keyController = hit.collider.GetComponentInChildren<KeyController>();
+            if (keyController != null)
+            {             
+                
+                switch (keyController.keyType)
+                {
+                    case KeyController.KeyType.Magnet:
+                        magnetInv.quantity +=1;
+                        Debug.Log("Magnet2");
+                        break;
+                    case KeyController.KeyType.Normal:
+                        normalInv.quantity +=1;
+                        break;
+                    case KeyController.KeyType.Fan:
+                        fanInv.quantity +=1;
+                        break;
+                    case KeyController.KeyType.Conveyor:
+                        pushInv.quantity +=1;
+                        break;
+                    default:
+                        Debug.Log("Invalid key type");
+                        break;
+                }    
                 switch (keyTypes)
                 {
                     case "Magnet":
-                        hit.collider.GetComponentInChildren<KeyController>().keyType = (KeyController.KeyType)KeyTypes.Magnet;
-
+                        stockHandler.quantity -= 1;
+                        keyController.keyType = KeyController.KeyType.Magnet;
                         break;
-
                     case "Normal":
-                        hit.collider.GetComponentInChildren<KeyController>().keyType = (KeyController.KeyType)KeyTypes.Normal;
+                        stockHandler.quantity -= 1;
+                        keyController.keyType = KeyController.KeyType.Normal;
                         break;
-
-                    //case KeyType.Inactive:
-                    //    break;
-
                     case "Fan":
-                        hit.collider.GetComponentInChildren<KeyController>().keyType = (KeyController.KeyType)KeyTypes.Fan;
+                        stockHandler.quantity -= 1;
+                        keyController.keyType = KeyController.KeyType.Fan;
                         break;
-
                     case "Conveyor":
-                        hit.collider.GetComponentInChildren<KeyController>().keyType = (KeyController.KeyType)KeyTypes.Conveyor;
+                        stockHandler.quantity -= 1;
+                        keyController.keyType = KeyController.KeyType.Conveyor;
                         break;
-                }   
+                    default:
+                        Debug.Log("Invalid key type");
+                        break;
+                }
 
-                hit.collider.GetComponentInChildren<KeyController>().UpdateKeyType();
+
+
+
+                
+                keyController.UpdateKeyType();
             }
             else
             {
-                Debug.Log("No collider detected.");
+                Debug.Log("No KeyController component found on collider.");
             }
         }
     }
@@ -79,7 +108,13 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        startPosition = transform.position;
+        Debug.Log("Test1");
+        if (stockHandler.inStock)
+        {
+            stockHandler.quantity -= 1;
+            Debug.Log(stockHandler.quantity);
+            startPosition = transform.position;
+        }
     }
 
     public void OnPointerEnter()
