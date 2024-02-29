@@ -16,6 +16,9 @@ MonoBehaviour:
   levelName: Introduction
   levelDescription: 
   sceneObject: {fileID: 384876553434278044, guid: c993e1503a3effa438348a06857fcdb5, type: 3}
+  keyboardEvents: {fileID: 0}
+  inventoryActive: 1
+  timeLimit: 15
   basicInventory: 99
   magnetsInventory: 10
   fansInventory: 10

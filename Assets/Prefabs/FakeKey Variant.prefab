@@ -8,6 +8,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_Size.x
+      value: 4.018818
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_Size.y
+      value: 4.055045
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_Size.z
+      value: 4.018818
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_Center.y
+      value: 2.0105329
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_Center.z
+      value: -0.024148941
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628790485321999039, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
       value: FakeKey Variant
