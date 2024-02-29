@@ -6,11 +6,16 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public Vector3 startPosition;
     public ItemInventory stockHandler;
+    public Texture2D cursorTextureNormal;
+    public Texture2D cursorTextureBlocked;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
 
     public ItemInventory magnetInv;
     public ItemInventory normalInv;
     public ItemInventory fanInv;
     public ItemInventory pushInv;
+    public ItemInventory powerInv;
 
     public enum KeyTypes
     {
@@ -18,7 +23,8 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
         Inactive,
         Magnet,
         Fan,
-        Conveyor
+        Conveyor,
+        Power
     }
 
     public string keyTypes;
@@ -28,6 +34,30 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            KeyController keyController = hit.collider.GetComponentInChildren<KeyController>();
+
+            if (keyController != null)
+            {
+                if (keyController.staticKey == true)
+                {
+                    Cursor.SetCursor(cursorTextureBlocked, hotSpot, cursorMode);
+                }
+                else
+                {
+                    Cursor.SetCursor(cursorTextureNormal, hotSpot, cursorMode);
+                }
+            }
+            else
+            {
+                Cursor.SetCursor(cursorTextureNormal, hotSpot, cursorMode);
+            }
+        }
     }
 
 
@@ -47,28 +77,30 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
         if (Physics.Raycast(ray, out hit))
         {
             KeyController keyController = hit.collider.GetComponentInChildren<KeyController>();
-            if (keyController != null)
-            {             
-                
+            if (keyController != null && keyController.staticKey == false)
+            {
                 switch (keyController.keyType)
                 {
                     case KeyController.KeyType.Magnet:
-                        magnetInv.quantity +=1;
+                        magnetInv.quantity += 1;
                         Debug.Log("Magnet2");
                         break;
                     case KeyController.KeyType.Normal:
-                        normalInv.quantity +=1;
+                        normalInv.quantity += 1;
                         break;
                     case KeyController.KeyType.Fan:
-                        fanInv.quantity +=1;
+                        fanInv.quantity += 1;
                         break;
                     case KeyController.KeyType.Conveyor:
-                        pushInv.quantity +=1;
+                        pushInv.quantity += 1;
+                        break;
+                    case KeyController.KeyType.Power:
+                        powerInv.quantity += 1;
                         break;
                     default:
                         Debug.Log("Invalid key type");
                         break;
-                }    
+                }
                 switch (keyTypes)
                 {
                     case "Magnet":
@@ -87,15 +119,15 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
                         stockHandler.quantity -= 1;
                         keyController.keyType = KeyController.KeyType.Conveyor;
                         break;
+                    case "Power":
+                        stockHandler.quantity -= 1;
+                        keyController.keyType = KeyController.KeyType.Power;
+                        break;
                     default:
                         Debug.Log("Invalid key type");
                         break;
                 }
 
-
-
-
-                
                 keyController.UpdateKeyType();
             }
             else
@@ -108,7 +140,6 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("Test1");
         if (stockHandler.inStock)
         {
             stockHandler.quantity -= 1;

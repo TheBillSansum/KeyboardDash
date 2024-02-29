@@ -13,8 +13,11 @@ public class KeyController : MonoBehaviour
     public KeyCode associatedKey;
     private bool isActivated = false;
 
+    public bool staticKey = false;
+
     public GameObject[] connectedKeysObject;
     public List<KeyController> connectedKeysCon = new List<KeyController>();
+    public List<KeyController> neighbourKeys;
 
     private Vector3 initialPosition;
     private Vector3 pressedPosition;
@@ -46,12 +49,15 @@ public class KeyController : MonoBehaviour
     public Mesh fanMesh;
     public Mesh inactiveMesh;
     public Mesh conveyorMesh;
+    public Mesh powerOffMesh;
+    public Mesh powerOnMesh;
 
     public Mesh[] conveyorAnimMesh = new Mesh[6];
     public float animationInterval = 0.05f; // Time interval between mesh transitions
     private int currentMeshIndex = 0;
     private Coroutine conveyorAnimationCoroutine; // Coroutine reference
     public GameObject conveyorObject;
+    public bool powerOn = false;
 
     public enum KeyType
     {
@@ -59,7 +65,8 @@ public class KeyController : MonoBehaviour
         Inactive,
         Magnet,
         Fan,
-        Conveyor
+        Conveyor,
+        Power
     }
 
     public TextMeshPro keyText;
@@ -90,6 +97,7 @@ public class KeyController : MonoBehaviour
 
     public void UpdateKeyType()
     {
+        powerOn = false;
         fanObject.SetActive(false);
         this.gameObject.transform.rotation = Quaternion.identity;
         keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
@@ -122,6 +130,11 @@ public class KeyController : MonoBehaviour
                 this.GetComponent<MeshFilter>().mesh = conveyorMesh;
                 pressedPosition = transform.position;
                 break;
+
+            case KeyType.Power:
+                this.GetComponent<MeshFilter>().mesh = powerOffMesh;
+                break;
+
         }
     }
     public void ProxyPress()
@@ -132,17 +145,80 @@ public class KeyController : MonoBehaviour
         proxy = true;
     }
 
+    public void ProxyPower()
+    {
+        isActivated = true;
+        
+
+        switch (keyType)
+        {
+
+            case KeyType.Magnet:
+
+                if (isActivated)
+                {
+                    AttractObjects();
+                }
+                else
+                {
+                    if (rodInstance != null)
+                    {
+                        rodInstance.SetActive(false);
+                    }
+                }
+                break;
+
+            case KeyType.Fan:
+                if (isActivated)
+                {
+                    BlowObjects();
+                }
+                break;
+
+            case KeyType.Conveyor:
+
+                if (isActivated && conveyorAnimationCoroutine == null)
+                {
+                    conveyorAnimationCoroutine = StartCoroutine(AnimateConveyor());
+                    conveyorObject.SetActive(true);
+                    ConveyObjects();
+
+                }
+                else if (!isActivated && conveyorAnimationCoroutine != null)
+                {
+                    conveyorObject.SetActive(false);
+                    StopCoroutine(conveyorAnimationCoroutine);
+                    conveyorAnimationCoroutine = null;
+                    this.GetComponent<MeshFilter>().mesh = conveyorMesh;
+                }
+                break;
+        }
+
+            
+    }
+
     public void Clicked()
     {
         switch (keyType)
         {
             case KeyType.Conveyor:     
-                //keyText.transform.SetParent(null);
                 this.gameObject.transform.Rotate (0, -90, 0);//Rotate(0, -90, 0);
                 keyText.transform.rotation = Quaternion.Euler(90,180,-90);//Rotate(0, -90, 0)
-
-                Debug.Log("Span" + this.gameObject.name);
                 break;
+
+            case KeyType.Power:
+                if (powerOn)
+                {
+                    powerOn = false;
+                    this.GetComponent<MeshFilter>().mesh = powerOffMesh;
+                }
+                else
+                {
+                    powerOn = true;
+                    this.GetComponent<MeshFilter>().mesh = powerOnMesh;
+                }
+                break;
+
         }
     }
 
@@ -217,6 +293,21 @@ public class KeyController : MonoBehaviour
                         BlowObjects();
                     }
                     break;
+
+                case KeyType.Power:
+
+                    if (powerOn)
+                    {
+                        foreach(KeyController keys in neighbourKeys)
+                        {
+                            if(keys.keyType == KeyType.Fan || keys.keyType == KeyType.Conveyor || keys.keyType == KeyType.Magnet)
+                            {
+                                keys.ProxyPower();
+                            }
+                        }
+                    }
+                    break;
+
             }
         }
     }

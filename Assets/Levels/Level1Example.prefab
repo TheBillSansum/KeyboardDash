@@ -469,6 +469,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -476,6 +484,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -485,9 +497,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 106
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 8011335588934530487}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 1110997589452555848}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 9100129215532947059}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 1913494588386706248}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 7423670117988699743}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 52223941377464106}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -527,6 +571,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -577,6 +637,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &940466719005776941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 112243838512310801}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6187052744405040162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6187052744405040162 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -682,6 +753,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -689,6 +768,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -698,9 +781,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 105
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 6333864248852457908}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 7467353423396928743}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 8011335588934530487}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 7597022006483603264}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 940466719005776941}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 1913494588386706248}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -740,6 +855,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -790,6 +921,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &1110997589452555848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 281754499457527924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9121783689603259454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -1146,6 +1288,14 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: blowForce
       value: 0.1
       objectReference: {fileID: 0}
@@ -1158,6 +1308,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: efd028c4bf91fe247bfa306487fdeed3, type: 3}
@@ -1166,9 +1320,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 109
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 940466719005776941}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 1913494588386706248}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 7423670117988699743}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -1208,6 +1382,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -1258,6 +1448,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &52223941377464106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 881149955530105110}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8162091396957769052 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -1276,6 +1477,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -1283,6 +1492,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -1292,12 +1505,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeys.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeys.Array.data[0]
@@ -1307,6 +1528,22 @@ PrefabInstance:
       propertyPath: connectedKeys.Array.data[1]
       value: 51
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 8950811563835695127}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 3624100799691461163}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 7814968419304055526}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 7148837283221240432}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
       value: 2
@@ -1427,6 +1664,22 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
       value: Key2
@@ -1480,6 +1733,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &70329321811318585 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 899079969193435397}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6352392051277903670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6352392051277903670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -1503,6 +1767,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -1510,6 +1782,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -1519,9 +1795,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 8735820857257876878}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 8584884644321748579}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 7821868587437791199}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 7350061160174778954}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 5903521990734222189}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 6195074186857439052}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -1561,6 +1869,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -1611,6 +1935,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &2069335757534652417 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 1167612882414198333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928669891020015630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4928669891020015630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -1638,6 +1973,14 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -1645,6 +1988,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -1654,9 +2001,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 107
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 1110997589452555848}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 7597022006483603264}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 940466719005776941}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 8112617760883979521}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 52223941377464106}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -1696,6 +2071,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -1746,6 +2137,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &1913494588386706248 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 1589182850845259124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4782822803962897223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4782822803962897223 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -1769,6 +2171,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -1776,6 +2186,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -1785,9 +2199,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 121
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 5156946825080408926}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 2306662556246001680}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 8777799645185706824}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 8011335588934530487}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 4881176014213809211}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 9100129215532947059}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -1830,7 +2276,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_text
-      value: 2
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -1881,6 +2339,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &1887819168827614535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 1635107769886348155}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7768421338037305137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -2391,6 +2860,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -2398,6 +2875,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -2407,9 +2888,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 52
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 3624100799691461163}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 4519237299232049474}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 8735820857257876878}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 8584884644321748579}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
       value: 0
@@ -2466,6 +2971,22 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
       value: Key4
@@ -2519,6 +3040,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &2719284850003404012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 2972137689532846800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9037934894037681379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6071077343360614042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -2546,6 +3078,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -2553,6 +3097,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -2562,9 +3110,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 122
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 4698656620415294448}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 7821868587437791199}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 5903521990734222189}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -2604,6 +3172,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -2654,6 +3238,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &2780346603396656460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 3032671681366842224}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6298808568984926010 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -2708,6 +3303,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: rodPrefab
       value: 
       objectReference: {fileID: 1300530704217833205}
@@ -2719,6 +3322,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: rodInstance
       value: 
@@ -2732,9 +3339,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 98
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 4881176014213809211}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 9100129215532947059}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 7282434130784909922}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 7423670117988699743}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -2774,6 +3405,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -2829,6 +3476,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4095552342047301080, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 3087845293205218093}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2763462762443166993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 3087845293205218093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6315684098691190631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -2929,6 +3587,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -2936,6 +3602,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -2945,9 +3615,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 5156946825080408926}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 6333864248852457908}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 1887819168827614535}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 8011335588934530487}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -2987,6 +3681,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -3041,6 +3751,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &2306662556246001680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 3206871953391943212}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706319619545655327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5908426786938507878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -3064,6 +3785,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -3071,6 +3800,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -3080,9 +3813,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 48
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 7467353423396928743}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 7597022006483603264}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 8697330749199770544}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
       value: 0
@@ -3203,6 +3956,22 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
       value: Key10
@@ -3256,6 +4025,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &2438741680580532529 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 3268442287819665165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8721713725486512446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5774807861260616519 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -3443,6 +4223,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -3450,6 +4238,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -3459,9 +4251,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 53
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 2719284850003404012}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 5156946825080408926}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 8584884644321748579}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 8777799645185706824}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
       value: 0
@@ -3513,6 +4329,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -3567,6 +4399,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &4519237299232049474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 3617655160807243646}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378700138138085709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5713825364456739636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -3672,6 +4515,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -3679,6 +4530,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -3688,12 +4543,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeys.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeys.Array.data[0]
@@ -3703,6 +4566,22 @@ PrefabInstance:
       propertyPath: connectedKeys.Array.data[1]
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 70329321811318585}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 2719284850003404012}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 7148837283221240432}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 8735820857257876878}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
       value: 0
@@ -3759,6 +4638,22 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
       value: Key3
@@ -3812,6 +4707,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+--- !u!114 &3624100799691461163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 4524028740052427799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681595835085566500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4879509449014904925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -4081,6 +4987,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -4088,6 +5002,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -4097,9 +5015,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 54
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 4519237299232049474}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 2306662556246001680}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 8777799645185706824}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 1887819168827614535}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
       value: 0
@@ -4151,6 +5093,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -4215,6 +5173,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 5409623056808492386}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5156946825080408926 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 5409623056808492386}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2252012156260952913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5599956891893378508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4228,6 +5197,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -4235,6 +5212,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -4244,9 +5225,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 97
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 7814968419304055526}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 7148837283221240432}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 7821868587437791199}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 2780346603396656460}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -4286,6 +5291,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -4346,6 +5367,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 5599956891893378508}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4698656620415294448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 5599956891893378508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865930066757729279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5710172813369094663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4359,6 +5391,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -4366,6 +5406,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -4375,9 +5419,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 103
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 8777799645185706824}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 1887819168827614535}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 7350061160174778954}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 9100129215532947059}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 7282434130784909922}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 2763462762443166993}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -4417,6 +5493,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -4477,6 +5569,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 5710172813369094663}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4881176014213809211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 5710172813369094663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976109876147627060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6447645538492770672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4490,6 +5593,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -4498,6 +5609,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: efd028c4bf91fe247bfa306487fdeed3, type: 3}
@@ -4505,6 +5620,30 @@ PrefabInstance:
       propertyPath: inactiveMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 2069335757534652417}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 7350061160174778954}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 5903521990734222189}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 7282434130784909922}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -4544,6 +5683,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -4599,6 +5754,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 6447645538492770672}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6195074186857439052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 6447645538492770672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6585836792133427080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4612,6 +5778,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -4619,6 +5793,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -4628,9 +5806,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 56
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 2306662556246001680}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 7467353423396928743}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 8011335588934530487}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 1110997589452555848}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -4670,6 +5872,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -4734,6 +5952,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 6585836792133427080}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6333864248852457908 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 6585836792133427080}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096487106065271227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6732447867090347345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4747,6 +5976,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -4754,6 +5991,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -4763,9 +6004,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 7821868587437791199}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 2069335757534652417}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 2780346603396656460}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 6195074186857439052}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -4805,6 +6070,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -4860,6 +6141,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 6732447867090347345}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5903521990734222189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 6732447867090347345}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6921799923351298531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4873,6 +6165,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -4880,6 +6180,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -4889,9 +6193,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 115
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 7148837283221240432}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 8735820857257876878}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 4698656620415294448}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 2069335757534652417}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 2780346603396656460}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 5903521990734222189}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -4931,6 +6267,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -4991,6 +6343,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 6921799923351298531}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7821868587437791199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 6921799923351298531}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773236687093675984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6987238123296625882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5004,6 +6367,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -5011,6 +6382,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -5020,9 +6395,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 113
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 8950811563835695127}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 70329321811318585}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 7148837283221240432}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 4698656620415294448}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -5062,6 +6461,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -5117,6 +6532,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 6987238123296625882}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7814968419304055526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 6987238123296625882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7182690649605997451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5130,6 +6556,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -5137,6 +6571,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -5146,9 +6584,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 117
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 2306662556246001680}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 6333864248852457908}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 1887819168827614535}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 1110997589452555848}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 9100129215532947059}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 940466719005776941}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -5188,6 +6658,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -5243,6 +6729,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 7182690649605997451}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8011335588934530487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 7182690649605997451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7344802618565065084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5256,6 +6753,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -5263,6 +6768,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -5272,9 +6781,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 111
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 7467353423396928743}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 2438741680580532529}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 1110997589452555848}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 8697330749199770544}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 1913494588386706248}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 8112617760883979521}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -5314,6 +6855,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -5369,6 +6926,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 7344802618565065084}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7597022006483603264 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 7344802618565065084}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7607590293322812510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5382,6 +6950,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -5389,6 +6965,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -5398,9 +6978,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 118
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 7350061160174778954}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 4881176014213809211}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 6195074186857439052}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 2763462762443166993}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -5440,6 +7044,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -5495,6 +7115,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 7607590293322812510}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7282434130784909922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 7607590293322812510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7675077130953608310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5508,6 +7139,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -5515,6 +7154,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -5524,9 +7167,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 102
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 8584884644321748579}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 8777799645185706824}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 2069335757534652417}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 4881176014213809211}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 6195074186857439052}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 7282434130784909922}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -5566,6 +7241,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -5626,6 +7317,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 7675077130953608310}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7350061160174778954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 7675077130953608310}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4526486381067262533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7694224761932637421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5721,6 +7423,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -5728,6 +7438,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -5737,9 +7451,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 57
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 6333864248852457908}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 2438741680580532529}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 1110997589452555848}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 7597022006483603264}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -5779,6 +7517,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -5843,6 +7597,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 7719924083641862875}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7467353423396928743 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 7719924083641862875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4571356553556942056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7747841663615907939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5860,6 +7625,14 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -5867,6 +7640,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -5876,9 +7653,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 110
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 9100129215532947059}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 940466719005776941}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 2763462762443166993}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 52223941377464106}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -5918,6 +7719,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -5973,6 +7790,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 7747841663615907939}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7423670117988699743 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 7747841663615907939}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8049680691712117836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5986,6 +7814,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -5993,6 +7829,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -6002,9 +7842,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 119
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 70329321811318585}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 3624100799691461163}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 7814968419304055526}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 8735820857257876878}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 4698656620415294448}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 4698656620415294448}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[6]
+      value: 
+      objectReference: {fileID: 7821868587437791199}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -6046,7 +7922,23 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -6103,6 +7995,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 8049680691712117836}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7148837283221240432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 8049680691712117836}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8121217058811188779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6116,6 +8019,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -6123,6 +8034,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -6132,11 +8047,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
@@ -6147,6 +8070,14 @@ PrefabInstance:
       propertyPath: connectedKeys.Array.data[1]
       value: 51
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 70329321811318585}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 7814968419304055526}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
       value: 0
@@ -6202,6 +8133,18 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -6266,6 +8209,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 8121217058811188779}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8950811563835695127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 8121217058811188779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2658897837468024856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8271378706880323663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6279,6 +8233,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -6286,6 +8248,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -6295,9 +8261,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 104
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 1887819168827614535}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 8011335588934530487}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 4881176014213809211}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 940466719005776941}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 2763462762443166993}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 7423670117988699743}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -6337,6 +8335,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -6397,6 +8411,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 8271378706880323663}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9100129215532947059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 8271378706880323663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2782029958322222716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8372420881494332812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6414,6 +8439,14 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -6421,6 +8454,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: rodInstance
       value: 
@@ -6434,9 +8471,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 2438741680580532529}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 7597022006483603264}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 8112617760883979521}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -6476,6 +8533,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -6536,6 +8609,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4095552342047301080, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 8372420881494332812}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8697330749199770544 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 8372420881494332812}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8454085635143253364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6549,6 +8633,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -6556,6 +8648,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -6565,9 +8661,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 4519237299232049474}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 5156946825080408926}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 8584884644321748579}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 1887819168827614535}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 7350061160174778954}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 4881176014213809211}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -6607,6 +8735,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -6662,6 +8806,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 8454085635143253364}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8777799645185706824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 8454085635143253364}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8482581144190577586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6675,6 +8830,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -6682,6 +8845,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -6691,9 +8858,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 101
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 3624100799691461163}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 2719284850003404012}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 7148837283221240432}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 8584884644321748579}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 7821868587437791199}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 2069335757534652417}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -6733,6 +8932,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -6788,6 +9003,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 8482581144190577586}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8735820857257876878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 8482581144190577586}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8908211647767302239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6801,6 +9027,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -6808,6 +9042,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -6817,6 +9055,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 114
       objectReference: {fileID: 0}
@@ -6824,6 +9066,34 @@ PrefabInstance:
       propertyPath: connectedKeys.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 2719284850003404012}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 4519237299232049474}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 8735820857257876878}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 8777799645185706824}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[4]
+      value: 
+      objectReference: {fileID: 2069335757534652417}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[5]
+      value: 
+      objectReference: {fileID: 7350061160174778954}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -6863,6 +9133,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -6918,6 +9204,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 8908211647767302239}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8584884644321748579 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 8908211647767302239}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8941402882610660157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6935,6 +9232,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOff
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -6942,6 +9251,10 @@ PrefabInstance:
       propertyPath: normalMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f10e078708357414eb97d6b70d5486b0, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOnMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 3d39d461df001ab46a81705a265e276a, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorMesh
       value: 
@@ -6951,9 +9264,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: f41badc92ad6bec4cb56a13c76ff1523, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: powerOffMesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 108
       objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 7597022006483603264}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 8697330749199770544}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: neighbourKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 1913494588386706248}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
       value: 
@@ -6993,6 +9326,22 @@ PrefabInstance:
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Center.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_text
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065822387964926049, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Name
@@ -7053,3 +9402,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 8941402882610660157}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8112617760883979521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 8941402882610660157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2901488116461671694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

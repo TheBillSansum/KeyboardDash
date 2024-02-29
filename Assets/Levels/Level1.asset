@@ -20,3 +20,4 @@ MonoBehaviour:
   magnetsInventory: 10
   fansInventory: 10
   conveyorsInventory: 3
+  powersInventory: 34

@@ -13,4 +13,5 @@ public class LevelData : ScriptableObject
     public int magnetsInventory;
     public int fansInventory;
     public int conveyorsInventory;
+    public int powersInventory;
 }

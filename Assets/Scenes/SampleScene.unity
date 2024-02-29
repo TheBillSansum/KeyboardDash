@@ -482,10 +482,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   stockHandler: {fileID: 5541978858707069950}
+  cursorTextureNormal: {fileID: 2800000, guid: 5f17e5ec36af27b41becc914517f4080, type: 3}
+  cursorTextureBlocked: {fileID: 2800000, guid: fc0b0fa72a35f7b4e846c361ff06e7ee, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   magnetInv: {fileID: 5541978858604074940}
   normalInv: {fileID: 5541978858707069950}
   fanInv: {fileID: 5541978859446526792}
   pushInv: {fileID: 5541978857478263397}
+  powerInv: {fileID: 5541978859588792456}
   keyTypes: Normal
   description: A very basic key, pushes up on press!
   descriptionArea: {fileID: 119010164}
@@ -571,7 +576,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 66043804}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 620739612}
+        m_TargetAssemblyTypeName: LevelSpawner, Assembly-CSharp
+        m_MethodName: ResetLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &66043804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1785,10 +1802,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   stockHandler: {fileID: 5541978858604074940}
+  cursorTextureNormal: {fileID: 2800000, guid: 5f17e5ec36af27b41becc914517f4080, type: 3}
+  cursorTextureBlocked: {fileID: 2800000, guid: fc0b0fa72a35f7b4e846c361ff06e7ee, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   magnetInv: {fileID: 5541978858604074940}
   normalInv: {fileID: 5541978858707069950}
   fanInv: {fileID: 5541978859446526792}
   pushInv: {fileID: 5541978857478263397}
+  powerInv: {fileID: 5541978859588792456}
   keyTypes: Magnet
   description: Attracts metal objects towards itself, press to activate!
   descriptionArea: {fileID: 119010164}
@@ -1934,8 +1956,11 @@ MonoBehaviour:
   fanInventory: {fileID: 5541978859446526792}
   magnetInventory: {fileID: 5541978858604074940}
   pushInventory: {fileID: 5541978857478263397}
+  powerInventory: {fileID: 5541978859588792456}
   levelData:
   - {fileID: 11400000, guid: b057a41545f757a4fa52245bb3ea9785, type: 2}
+  levelObject: {fileID: 0}
+  title: {fileID: 1773258114}
 --- !u!114 &628106696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1950,10 +1975,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   stockHandler: {fileID: 5541978859446526792}
+  cursorTextureNormal: {fileID: 2800000, guid: 5f17e5ec36af27b41becc914517f4080, type: 3}
+  cursorTextureBlocked: {fileID: 2800000, guid: fc0b0fa72a35f7b4e846c361ff06e7ee, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   magnetInv: {fileID: 5541978858604074940}
   normalInv: {fileID: 5541978858707069950}
   fanInv: {fileID: 5541978859446526792}
   pushInv: {fileID: 5541978857478263397}
+  powerInv: {fileID: 5541978859588792456}
   keyTypes: Fan
   description: Blows light objects away from itself, will automatically aim at the
     closest blowable object (kinky)
@@ -2064,7 +2094,7 @@ GameObject:
   - component: {fileID: 722830424}
   - component: {fileID: 722830423}
   m_Layer: 5
-  m_Name: -OutOfStock
+  m_Name: PowerOutOfStock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3859,12 +3889,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   stockHandler: {fileID: 5541978859588792456}
+  cursorTextureNormal: {fileID: 2800000, guid: 5f17e5ec36af27b41becc914517f4080, type: 3}
+  cursorTextureBlocked: {fileID: 2800000, guid: fc0b0fa72a35f7b4e846c361ff06e7ee, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   magnetInv: {fileID: 5541978858604074940}
   normalInv: {fileID: 5541978858707069950}
   fanInv: {fileID: 5541978859446526792}
   pushInv: {fileID: 5541978857478263397}
-  keyTypes: 
-  description: 
+  powerInv: {fileID: 5541978859588792456}
+  keyTypes: Power
+  description: Powers any keys that require power to function that are within touching
+    radius. Click on to toggle
   descriptionArea: {fileID: 119010164}
 --- !u!1 &1636949921
 GameObject:
@@ -3988,10 +4024,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   stockHandler: {fileID: 5541978857478263397}
+  cursorTextureNormal: {fileID: 2800000, guid: 5f17e5ec36af27b41becc914517f4080, type: 3}
+  cursorTextureBlocked: {fileID: 2800000, guid: fc0b0fa72a35f7b4e846c361ff06e7ee, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   magnetInv: {fileID: 5541978858604074940}
   normalInv: {fileID: 5541978858707069950}
   fanInv: {fileID: 5541978859446526792}
   pushInv: {fileID: 5541978857478263397}
+  powerInv: {fileID: 5541978859588792456}
   keyTypes: Conveyor
   description: When activated, will push objects in the direction it is facing. Click
     on key with mouse to pivot object
@@ -6638,7 +6679,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9317013d4eeeb3d41b7d28e0a85f233e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 18ab87d6938e45f4b8fba074ac5fa744, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8937,7 +8978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Slot 1
+  m_text: Power
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1db3901df9a1e834784c4c05f4ba4bee, type: 2}
   m_sharedMaterial: {fileID: -4406428672775297824, guid: 1db3901df9a1e834784c4c05f4ba4bee, type: 2}
@@ -9956,7 +9997,7 @@ GameObject:
   - component: {fileID: 3554774436795709202}
   - component: {fileID: 4518348217132188826}
   m_Layer: 5
-  m_Name: Slot1 (5)
+  m_Name: Power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10375,7 +10416,7 @@ GameObject:
   - component: {fileID: 5541978859588792455}
   - component: {fileID: 5541978859588792456}
   m_Layer: 4
-  m_Name: Slot5Image
+  m_Name: PowerDraggable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11112,7 +11153,7 @@ RectTransform:
   m_GameObject: {fileID: 5171326741225404770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 1}
+  m_LocalScale: {x: 0.39, y: 0.39, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1169621221942375968}
@@ -11163,7 +11204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286779219ce54ac4abf6831f12c82b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectTitle: '-'
+  objectTitle: 'Power '
   objectTitleText: {fileID: 3829481261125682297}
   quantity: 0
   quanitityText: {fileID: 5564032336029659091}
