@@ -14,6 +14,7 @@ public class LevelSpawner : MonoBehaviour
 
     public LevelData[] levelData;
     public GameObject levelObject;
+    public GameObject levelEventsObject;
 
     public bool gameStarted = false;
 
@@ -27,6 +28,8 @@ public class LevelSpawner : MonoBehaviour
 
     public int levelNumber;
 
+    public PopupMaker popupMaker;
+
 
     void Start()
     {
@@ -37,6 +40,7 @@ public class LevelSpawner : MonoBehaviour
     public void LoadLevel(int level)
     {
         gameStarted = false;
+
         levelObject = Instantiate(levelData[level].sceneObject);
         basicInventory.SetQuantity(levelData[level].basicInventory);
         fanInventory.SetQuantity(levelData[level].fansInventory);
@@ -46,6 +50,7 @@ public class LevelSpawner : MonoBehaviour
 
         title.text = "Level " + levelData[level].levelNumber.ToString() + " - " + levelData[level].levelName;
         levelNumber = levelData[level].levelNumber;
+
         if (levelData[level].timeLimit >= 0)
         {
             timerFloat = levelData[level].timeLimit;
@@ -61,8 +66,12 @@ public class LevelSpawner : MonoBehaviour
 
     public void StartPlay()
     {
-        //levelData[levelNumber].keyboardEvents.StartGame();
-        levelData[levelNumber].sceneObject.GetComponentInChildren<LevelEvents>().StartGame();
+        if (levelEventsObject != null)
+        {
+            Destroy(levelEventsObject);
+        }
+
+        levelEventsObject = Instantiate(levelData[levelNumber].keyboardEvents, levelObject.transform);
         gameStarted = true;
     }
 
@@ -72,22 +81,42 @@ public class LevelSpawner : MonoBehaviour
         LoadLevel(0);
     }
 
+    public void LevelFailed(int reason)
+    {
+        gameStarted = false;
+
+        if(reason == 0)
+        {
+                popupMaker.Generate("Error - Ran Out Of Time!", levelData[levelNumber].levelName + " Failed, Try Turning it Off and On Again?", "Error");
+        }
+    }
+
     public void Update()
     {
         if (timerOn && gameStarted)
         {
             timerFloat -= Time.deltaTime;
 
-            timerFill.fillAmount = timerFloat / levelData[levelNumber].timeLimit;
+            if(timerFloat <= 0)
+            {
+                LevelFailed(0);
+            }
 
-            int timeInSecondsInt = (int)timerFloat;
-            int minutes = timeInSecondsInt / 60;
-            int seconds = timeInSecondsInt - (minutes * 60);
-            timerTime.text = minutes.ToString("D2") + ":" + seconds.ToString("D2");
+            DisplayTime();
+        }
+        else if(gameStarted == false)
+        {
+            DisplayTime();
         }
     }
 
+    public void DisplayTime()
+    {
+        timerFill.fillAmount = timerFloat / levelData[levelNumber].timeLimit;
 
-
-
+        int timeInSecondsInt = (int)timerFloat;
+        int minutes = timeInSecondsInt / 60;
+        int seconds = timeInSecondsInt - (minutes * 60);
+        timerTime.text = minutes.ToString("D2") + ":" + seconds.ToString("D2");
+    }
 }

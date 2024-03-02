@@ -6,11 +6,14 @@ public class LevelEvents : MonoBehaviour
 {
     public GameObject objectToSpawn;
 
-    public void StartGame()
+    public void Start()
+    {
+        objectToSpawn = GameObject.FindGameObjectWithTag("Finish");
+    }
+
+    public void SpawnObject()
     {
         objectToSpawn.SetActive(true);
-        Debug.Log("Started" + this.gameObject.name);
-
     }
 
 }

@@ -2201,6 +2201,7 @@ MonoBehaviour:
   levelData:
   - {fileID: 11400000, guid: b057a41545f757a4fa52245bb3ea9785, type: 2}
   levelObject: {fileID: 0}
+  levelEventsObject: {fileID: 0}
   gameStarted: 0
   title: {fileID: 1773258114}
   timerBox: {fileID: 120119778}
@@ -2209,6 +2210,7 @@ MonoBehaviour:
   timerFloat: 0
   timerOn: 0
   levelNumber: 0
+  popupMaker: {fileID: 620739611}
 --- !u!114 &628106696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6274,7 +6276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48.2, y: 62.2}
+  m_AnchoredPosition: {x: -170.1, y: 62.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &474997270764527615
@@ -9772,9 +9774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Skill Issue Detected,
-
-    Please Try Again Later...'
+  m_text: Skill Issue Detected, Please Try Again Later...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a9fb72713462bd34a99acbf23a40dd74, type: 2}
   m_sharedMaterial: {fileID: -4406428672775297824, guid: a9fb72713462bd34a99acbf23a40dd74, type: 2}
@@ -9837,7 +9837,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 8.534576, z: -21.945923, w: 0}
+  m_margin: {x: 0, y: 8.534576, z: -254.93262, w: -16.85434}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10461,7 +10461,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 136.35852, y: 61.1}
+  m_AnchoredPosition: {x: 264.3, y: 61.1}
   m_SizeDelta: {x: 28.5317, y: 28.5317}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &4739953343248765581
@@ -10481,7 +10481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 54.30001, y: -63.97264}
+  m_AnchoredPosition: {x: 99.9, y: -63.97264}
   m_SizeDelta: {x: 102.6964, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4754204002688299329
@@ -10665,7 +10665,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 8.534576, z: 0, w: 0}
+  m_margin: {x: 0, y: 8.534576, z: -289.49847, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10764,8 +10764,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.689514, y: -101.74777}
-  m_SizeDelta: {x: 325.5416, y: 180.0181}
+  m_AnchoredPosition: {x: -97.8, y: -39.1}
+  m_SizeDelta: {x: 591.884, y: 180.0181}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4993178100108530080
 GameObject:
@@ -10838,7 +10838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122.5, y: -8.572647}
+  m_AnchoredPosition: {x: -241.4, y: -8.572647}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5074450766547791098
@@ -12758,7 +12758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.6, y: -0.4}
+  m_AnchoredPosition: {x: -92.4, y: -0.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &6414365959646802736
@@ -13350,7 +13350,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -68.9, y: -63.97264}
+  m_AnchoredPosition: {x: -91.7, y: -63.97264}
   m_SizeDelta: {x: 102.6964, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7202088384723057744

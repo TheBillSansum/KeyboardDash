@@ -16,7 +16,7 @@ MonoBehaviour:
   levelName: Introduction
   levelDescription: 
   sceneObject: {fileID: 384876553434278044, guid: c993e1503a3effa438348a06857fcdb5, type: 3}
-  keyboardEvents: {fileID: 0}
+  keyboardEvents: {fileID: 9105627481677262416, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
   inventoryActive: 1
   timeLimit: 15
   basicInventory: 99
