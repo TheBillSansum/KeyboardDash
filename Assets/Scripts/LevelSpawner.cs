@@ -51,7 +51,7 @@ public class LevelSpawner : MonoBehaviour
         title.text = "Level " + levelData[level].levelNumber.ToString() + " - " + levelData[level].levelName;
         levelNumber = levelData[level].levelNumber;
 
-        if (levelData[level].timeLimit >= 0)
+        if (levelData[level].timeLimit >= 1)
         {
             timerFloat = levelData[level].timeLimit;
             timerOn = true;
@@ -85,9 +85,9 @@ public class LevelSpawner : MonoBehaviour
     {
         gameStarted = false;
 
-        if(reason == 0)
+        if (reason == 0)
         {
-                popupMaker.Generate("Error - Ran Out Of Time!", levelData[levelNumber].levelName + " Failed, Try Turning it Off and On Again?", "Error");
+            popupMaker.Generate("Error - Ran Out Of Time!", levelData[levelNumber].levelName + " Failed, Try Turning it Off and On Again?", "Error");
         }
     }
 
@@ -102,23 +102,26 @@ public class LevelSpawner : MonoBehaviour
 
     public void Update()
     {
-        if (timerOn && gameStarted)
+        if (timerOn)
         {
-            timerFloat -= Time.deltaTime;
 
-            if(timerFloat <= 0)
+            if (gameStarted)
             {
-                LevelFailed(0);
-            }
+                timerFloat -= Time.deltaTime;
 
-            DisplayTime();
-        }
-        else if(gameStarted == false)
-        {
-            DisplayTime();
+                if (timerFloat <= 0)
+                {
+                    LevelFailed(0);
+                }
+
+                DisplayTime();
+            }
+            else if (gameStarted == false)
+            {
+                DisplayTime();
+            }
         }
     }
-
     public void DisplayTime()
     {
         timerFill.fillAmount = timerFloat / levelData[levelNumber].timeLimit;
