@@ -91,6 +91,15 @@ public class LevelSpawner : MonoBehaviour
         }
     }
 
+    public void LevelPassed()
+    {
+        Debug.Log("Level Passed");
+
+        gameStarted = false;
+
+        popupMaker.Generate("Victory - Level Passed", levelData[levelNumber].levelName + " Succsess", "Error");
+    }
+
     public void Update()
     {
         if (timerOn && gameStarted)

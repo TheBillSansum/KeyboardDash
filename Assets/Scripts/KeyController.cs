@@ -59,6 +59,8 @@ public class KeyController : MonoBehaviour
     public GameObject conveyorObject;
     public bool powerOn = false;
 
+    public bool proxyPowered = false;
+
     public enum KeyType
     {
         Normal,
@@ -148,7 +150,9 @@ public class KeyController : MonoBehaviour
     public void ProxyPower()
     {
         isActivated = true;
-        
+        proxyPowered = true;
+
+        Debug.Log("Proxy Powered" + this.gameObject.name);
 
         switch (keyType)
         {
@@ -197,6 +201,11 @@ public class KeyController : MonoBehaviour
             
     }
 
+    public void ProxyPowerOff()
+    {
+        proxyPowered = false;
+    }
+
     public void Clicked()
     {
         switch (keyType)
@@ -239,7 +248,7 @@ public class KeyController : MonoBehaviour
                     Debug.Log("Called");
                 }
             }
-            else if (!proxy)
+            else if (!proxy && !proxyPowered)
             {
                 foreach (KeyController key in connectedKeysCon)
                 {
@@ -303,6 +312,16 @@ public class KeyController : MonoBehaviour
                             if(keys.keyType == KeyType.Fan || keys.keyType == KeyType.Conveyor || keys.keyType == KeyType.Magnet)
                             {
                                 keys.ProxyPower();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (KeyController keys in neighbourKeys)
+                        {
+                            if (keys.keyType == KeyType.Fan || keys.keyType == KeyType.Conveyor || keys.keyType == KeyType.Magnet)
+                            {
+                                keys.ProxyPowerOff();
                             }
                         }
                     }

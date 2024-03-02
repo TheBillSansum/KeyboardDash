@@ -13,6 +13,7 @@ public class PopupMaker : MonoBehaviour
 
     public Sprite warningSprite;
     public Sprite errorSprite;
+    public Sprite victorySprite;
 
     public void Generate(string Title, string Body, string Image)
     {
@@ -28,6 +29,10 @@ public class PopupMaker : MonoBehaviour
         else if (Image == "Error")
         {
             popUpImage.sprite = errorSprite;
+        }
+        else if(Image == "Victory")
+        {
+            popUpImage.sprite = victorySprite;
         }
 
 
