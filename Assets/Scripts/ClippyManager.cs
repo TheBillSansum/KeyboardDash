@@ -25,6 +25,9 @@ public class ClippyManager : MonoBehaviour
         hints[1] = "Here is the play area! The goal is to get the object on the keyboard into the Goal, as shown by the gold!";
         hints[2] = "Use your keyboard to move the keys in the Game!";
         hints[3] = "When you are ready, press 'Play'!";
+        hints[4] = "Some levels have Time Limits! You must complete the goal before this time reaches 0 otherwise you will need to Try Again!";
+        hints[5] = "You unlocked the Inventory! Drag and Drop from the slots and place keys on the desired key!";
+
 
 
         PlayHint(0);
