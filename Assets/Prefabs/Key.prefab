@@ -374,10 +374,12 @@ MonoBehaviour:
   connectedKeysObject: []
   connectedKeysCon: []
   neighbourKeys: []
+  initialPosition: {x: 0, y: 0, z: 0}
+  pressedPosition: {x: 0, y: 0, z: 0}
   keyType: 0
   attractionRadius: 5
   normalMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  magneticForce: 0.1
+  magneticForce: 5
   magneticLayer:
     serializedVersion: 2
     m_Bits: 64

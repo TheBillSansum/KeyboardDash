@@ -15,10 +15,15 @@ public class LevelSpawner : MonoBehaviour
     public LevelData[] levelData;
     public GameObject levelObject;
     public GameObject levelEventsObject;
+    public GameObject inventoryObject;
 
     public bool gameStarted = false;
+    public bool levelPassed = false;
 
     public TextMeshProUGUI title;
+
+    public TextMeshProUGUI levelTitle;
+    public TextMeshProUGUI levelDescription;
 
     public GameObject timerBox;
     public TextMeshProUGUI timerTime;
@@ -29,6 +34,7 @@ public class LevelSpawner : MonoBehaviour
     public int levelNumber;
 
     public PopupMaker popupMaker;
+    public ClippyManager clippyManager;
 
 
     void Start()
@@ -40,6 +46,7 @@ public class LevelSpawner : MonoBehaviour
     public void LoadLevel(int level)
     {
         gameStarted = false;
+        levelPassed = false;
 
         levelObject = Instantiate(levelData[level].sceneObject);
         basicInventory.SetQuantity(levelData[level].basicInventory);
@@ -48,7 +55,9 @@ public class LevelSpawner : MonoBehaviour
         pushInventory.SetQuantity(levelData[level].conveyorsInventory);
         powerInventory.SetQuantity(levelData[level].powersInventory);
 
-        title.text = "Level " + levelData[level].levelNumber.ToString() + " - " + levelData[level].levelName;
+        title.text = " Inventory - Level " + levelData[level].levelNumber.ToString();
+        levelTitle.text = "Level " + levelData[level].levelNumber.ToString() + " - " + levelData[level].levelName;
+        levelDescription.text = levelData[level].levelDescription.ToString();
         levelNumber = levelData[level].levelNumber;
 
         if (levelData[level].timeLimit >= 1)
@@ -62,6 +71,31 @@ public class LevelSpawner : MonoBehaviour
             timerOn = false;
             timerBox.SetActive(false);
         }
+
+        if(levelData[level].inventoryActive == true)
+        {
+            inventoryObject.SetActive(true);
+
+        }
+        else
+        {
+            inventoryObject.SetActive(false);  
+            title.text = "";
+        }
+
+
+        switch (levelNumber)
+        {
+            case 1:
+                clippyManager.PlayHint(4);
+                break;
+
+            case 2:
+                clippyManager.PlayHint(5);
+                break;
+        }
+
+
     }
 
     public void StartPlay()
@@ -77,8 +111,13 @@ public class LevelSpawner : MonoBehaviour
 
     public void ResetLevel()
     {
-        levelObject.gameObject.SetActive(false);
-        LoadLevel(0);
+        ClearLevels();
+        LoadLevel(levelNumber);
+    }
+
+    public void ClearLevels()
+    {
+        Destroy(levelObject);
     }
 
     public void LevelFailed(int reason)
@@ -87,24 +126,26 @@ public class LevelSpawner : MonoBehaviour
 
         if (reason == 0)
         {
-            popupMaker.Generate("Error - Ran Out Of Time!", levelData[levelNumber].levelName + " Failed, Try Turning it Off and On Again?", "Error");
+            popupMaker.Generate("Error - Ran Out Of Time! - Level", levelData[levelNumber].levelNumber + " Failed, Try Turning it Off and On Again?", "Error");
+            ResetLevel();
         }
     }
 
     public void LevelPassed()
     {
         Debug.Log("Level Passed");
+        levelPassed = true;
 
         gameStarted = false;
 
-        popupMaker.Generate("Victory - Level Passed", levelData[levelNumber].levelName + " Succsess", "Victory");
+        popupMaker.Generate("Victory - Level Passed", levelData[levelNumber].levelNumber + " Succsess", "Victory");
+        
     }
 
     public void Update()
     {
         if (timerOn)
         {
-
             if (gameStarted)
             {
                 timerFloat -= Time.deltaTime;

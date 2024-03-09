@@ -27,6 +27,7 @@ public class ClippyManager : MonoBehaviour
         hints[3] = "When you are ready, press 'Play'!";
         hints[4] = "Some levels have Time Limits! You must complete the goal before this time reaches 0 otherwise you will need to Try Again!";
         hints[5] = "You unlocked the Inventory! Drag and Drop from the slots and place keys on the desired key!";
+        hints[6] = "The magnet key attracts any close metalic objects towards it, press the key assosiated with it to use it!";
 
 
 
@@ -37,11 +38,12 @@ public class ClippyManager : MonoBehaviour
     {
         currentHint = hint;
 
-        if (clippyHidden == false)
+        if (clippyHidden == false && hintHeard[hint]!= true)
         {
             clippyObject.SetActive(true);
             clippyObject.gameObject.transform.position = hintLocation[hint].position;
             clippyBody.text = hints[hint];
+            hintHeard[hint] = true;
         }
     }
 

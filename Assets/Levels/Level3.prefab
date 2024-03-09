@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 4069214094796575092}
   - component: {fileID: 1283025020885435539}
   m_Layer: 0
-  m_Name: Level1Example
+  m_Name: Level3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5399,7 +5399,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -5409,6 +5409,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -6387,7 +6391,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -6397,6 +6401,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -8515,7 +8523,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -8525,6 +8533,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -8552,6 +8564,10 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: lockedElevated
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a58a86e43dcf44e938368cfd1c3aff, type: 3}
+  m_Name: Level3
+  m_EditorClassIdentifier: 
+  levelNumber: 2
+  levelName: Magnets! How do they work?
+  levelDescription: If an object is metalic, using a Magnet will attract it towards
+    the key when activated, press the key to activate it!
+  sceneObject: {fileID: 384876553434278044, guid: ecc243a0c6b1c8547aa071bac341b629, type: 3}
+  keyboardEvents: {fileID: 9105627481677262416, guid: 3d727ffe775376449a76fefa1cec2d51, type: 3}
+  inventoryActive: 1
+  timeLimit: 15
+  basicInventory: 10
+  magnetsInventory: 10
+  fansInventory: 0
+  conveyorsInventory: 0
+  powersInventory: 0
