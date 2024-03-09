@@ -47,6 +47,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
                 if (keyController.staticKey == true)
                 {
                     Cursor.SetCursor(cursorTextureBlocked, hotSpot, cursorMode);
+                    Debug.Log("Static");
                 }
                 else
                 {
@@ -106,29 +107,33 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler
                     case "Magnet":
                         stockHandler.quantity -= 1;
                         keyController.keyType = KeyController.KeyType.Magnet;
+                        keyController.UpdateKeyType();
                         break;
                     case "Normal":
                         stockHandler.quantity -= 1;
                         keyController.keyType = KeyController.KeyType.Normal;
+                        keyController.UpdateKeyType();
                         break;
                     case "Fan":
                         stockHandler.quantity -= 1;
                         keyController.keyType = KeyController.KeyType.Fan;
+                        keyController.UpdateKeyType();
                         break;
                     case "Conveyor":
                         stockHandler.quantity -= 1;
                         keyController.keyType = KeyController.KeyType.Conveyor;
+                        keyController.UpdateKeyType();
                         break;
                     case "Power":
                         stockHandler.quantity -= 1;
                         keyController.keyType = KeyController.KeyType.Power;
+                        keyController.UpdateKeyType();
                         break;
                     default:
                         Debug.Log("Invalid key type");
                         break;
                 }
 
-                keyController.UpdateKeyType();
             }
             else
             {

@@ -97,7 +97,7 @@ public class LevelSpawner : MonoBehaviour
 
         gameStarted = false;
 
-        popupMaker.Generate("Victory - Level Passed", levelData[levelNumber].levelName + " Succsess", "Error");
+        popupMaker.Generate("Victory - Level Passed", levelData[levelNumber].levelName + " Succsess", "Victory");
     }
 
     public void Update()

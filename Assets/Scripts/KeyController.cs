@@ -12,6 +12,7 @@ public class KeyController : MonoBehaviour
     public float keyPressSpeed = 5f;
     public KeyCode associatedKey;
     private bool isActivated = false;
+    public bool lockedElevated = false;
 
     public bool staticKey = false;
 
@@ -19,8 +20,10 @@ public class KeyController : MonoBehaviour
     public List<KeyController> connectedKeysCon = new List<KeyController>();
     public List<KeyController> neighbourKeys;
 
-    private Vector3 initialPosition;
-    private Vector3 pressedPosition;
+    private Vector3 spawnPoint;
+
+    public Vector3 initialPosition;
+    public Vector3 pressedPosition;
     private Rigidbody rb;
 
     public KeyType keyType;
@@ -53,9 +56,9 @@ public class KeyController : MonoBehaviour
     public Mesh powerOnMesh;
 
     public Mesh[] conveyorAnimMesh = new Mesh[6];
-    public float animationInterval = 0.05f; // Time interval between mesh transitions
+    public float animationInterval = 0.05f; 
     private int currentMeshIndex = 0;
-    private Coroutine conveyorAnimationCoroutine; // Coroutine reference
+    private Coroutine conveyorAnimationCoroutine; 
     public GameObject conveyorObject;
     public bool powerOn = false;
 
@@ -75,6 +78,7 @@ public class KeyController : MonoBehaviour
 
     void Start()
     {
+        spawnPoint = transform.position;
         foreach (GameObject key in connectedKeysObject)
         {
             connectedKeysCon.Add(key.GetComponent<KeyController>());
@@ -99,12 +103,26 @@ public class KeyController : MonoBehaviour
 
     public void UpdateKeyType()
     {
+        this.transform.position = spawnPoint;
         powerOn = false;
         fanObject.SetActive(false);
         this.gameObject.transform.rotation = Quaternion.identity;
         keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
         keyText.gameObject.SetActive(true);
-        pressedPosition = initialPosition + Vector3.up * keyPressDistance;
+
+
+        if (lockedElevated)
+        {
+            transform.position = pressedPosition;
+                pressedPosition = initialPosition + Vector3.down * 0.03f * keyPressDistance;
+            initialPosition = transform.position;
+        }
+        else
+        {
+            pressedPosition = initialPosition + Vector3.up * keyPressDistance;
+        }
+
+
 
         switch (keyType)
         {
@@ -135,6 +153,7 @@ public class KeyController : MonoBehaviour
 
             case KeyType.Power:
                 this.GetComponent<MeshFilter>().mesh = powerOffMesh;
+                pressedPosition = transform.position;
                 break;
 
         }
@@ -198,7 +217,7 @@ public class KeyController : MonoBehaviour
                 break;
         }
 
-            
+
     }
 
     public void ProxyPowerOff()
@@ -210,9 +229,9 @@ public class KeyController : MonoBehaviour
     {
         switch (keyType)
         {
-            case KeyType.Conveyor:     
-                this.gameObject.transform.Rotate (0, -90, 0);//Rotate(0, -90, 0);
-                keyText.transform.rotation = Quaternion.Euler(90,180,-90);//Rotate(0, -90, 0)
+            case KeyType.Conveyor:
+                this.gameObject.transform.Rotate(0, -90, 0);//Rotate(0, -90, 0);
+                keyText.transform.rotation = Quaternion.Euler(90, 180, -90);//Rotate(0, -90, 0)
                 break;
 
             case KeyType.Power:
@@ -255,6 +274,7 @@ public class KeyController : MonoBehaviour
                     key.proxy = false;
                 }
                 MoveKey(initialPosition);
+
                 isActivated = false;
             }
 
@@ -304,12 +324,11 @@ public class KeyController : MonoBehaviour
                     break;
 
                 case KeyType.Power:
-
                     if (powerOn)
                     {
-                        foreach(KeyController keys in neighbourKeys)
+                        foreach (KeyController keys in neighbourKeys)
                         {
-                            if(keys.keyType == KeyType.Fan || keys.keyType == KeyType.Conveyor || keys.keyType == KeyType.Magnet)
+                            if (keys.keyType == KeyType.Fan || keys.keyType == KeyType.Conveyor || keys.keyType == KeyType.Magnet)
                             {
                                 keys.ProxyPower();
                             }
@@ -423,7 +442,6 @@ public class KeyController : MonoBehaviour
                 Vector3 direction = this.transform.position - collider.transform.position;
                 rbBlow.AddForce(-direction * blowForce);
                 fanObject.transform.LookAt(rbBlow.gameObject.transform);
-
                 blades.transform.Rotate(0, 0, 10);
             }
         }

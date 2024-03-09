@@ -2875,7 +2875,7 @@ MonoBehaviour:
   popUpImage: {fileID: 3338936614985054880}
   warningSprite: {fileID: 21300000, guid: be691460fb8cfb949ab938e44109dd6c, type: 3}
   errorSprite: {fileID: 21300000, guid: 490700cd9cfe0634eb46671da97c567c, type: 3}
-  victorySprite: {fileID: 0}
+  victorySprite: {fileID: 21300000, guid: 882ec51047a043144a71e93fe8e7877b, type: 3}
 --- !u!114 &620739612
 MonoBehaviour:
   m_ObjectHideFlags: 0
