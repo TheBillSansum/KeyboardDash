@@ -11,13 +11,10 @@ public class ConveyorPush : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         rb = other.GetComponent<Rigidbody>();
-
-
     }
 
     private void OnTriggerStay(Collider other)
     {
-        rb.AddRelativeForce(0,0, pushForce);
+        rb.AddRelativeForce(0, 0, pushForce);
     }
-
 }

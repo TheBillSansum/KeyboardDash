@@ -37,7 +37,7 @@ public class PopupMaker : MonoBehaviour
             popUpImage.sprite = errorSprite;
             lostButtons.SetActive(true);
         }
-        else if(Image == "Victory")
+        else if (Image == "Victory")
         {
             popUpImage.sprite = victorySprite;
             victoryButtons.SetActive(true);
@@ -46,7 +46,7 @@ public class PopupMaker : MonoBehaviour
 
     public void ButtonPressed()
     {
-        if(levelSpawner.levelPassed == true)
+        if (levelSpawner.levelPassed == true)
         {
             if (levelSpawner.levelData[levelSpawner.levelNumber + 1] != null)
             {
@@ -74,10 +74,5 @@ public class PopupMaker : MonoBehaviour
     public void ResetButton()
     {
         levelSpawner.ResetLevel();
-    }
-
-    internal void Generate(string v1, object p, string v2)
-    {
-        throw new NotImplementedException();
     }
 }

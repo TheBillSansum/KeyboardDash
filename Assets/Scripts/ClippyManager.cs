@@ -28,6 +28,7 @@ public class ClippyManager : MonoBehaviour
         hints[4] = "Some levels have Time Limits! You must complete the goal before this time reaches 0 otherwise you will need to Try Again!";
         hints[5] = "You unlocked the Inventory! Drag and Drop from the slots and place keys on the desired key!";
         hints[6] = "The magnet key attracts any close metalic objects towards it, press the key assosiated with it to use it!";
+        hints[7] = "Some levels limit how many presses you can use per attempt, once you hit the limit no further presses can be tracked, but play continues!";
 
 
 

@@ -46,7 +46,7 @@ public class LevelSpawner : MonoBehaviour
 
     void Start()
     {
-        LoadLevel(3);
+        LoadLevel(0);
     }
 
 
@@ -113,6 +113,10 @@ public class LevelSpawner : MonoBehaviour
             case 2:
                 clippyManager.PlayHint(5);
                 break;
+
+            case 3:
+                clippyManager.PlayHint(7);
+                break;
         }
 
 
@@ -146,7 +150,7 @@ public class LevelSpawner : MonoBehaviour
 
         if (reason == 0)
         {
-            popupMaker.Generate("Error - Ran Out Of Time! - Level", levelData[levelNumber].levelNumber + " Failed, Try Turning it Off and On Again?", "Error");
+            popupMaker.Generate("Error - Ran Out Of Time!", "Level " + levelData[levelNumber].levelNumber + " Failed, Try going a bit faster?", "Error");
             ResetLevel();
         }
     }

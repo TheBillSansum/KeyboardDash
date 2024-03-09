@@ -259,7 +259,7 @@ public class KeyController : MonoBehaviour
     {
         if (keyType != KeyType.Inactive)
         {
-            if (Input.GetKey(associatedKey) && levelSpawner.presses < levelSpawner.levelData[levelSpawner.levelNumber].pressLimits + 1)
+            if (Input.GetKey(associatedKey) && levelSpawner.presses < levelSpawner.levelData[levelSpawner.levelNumber].pressLimits + 1 || Input.GetKey(associatedKey) && levelSpawner.levelData[levelSpawner.levelNumber].pressLimits == 0)
             {
                 MoveKey(pressedPosition);
                 isActivated = true;
