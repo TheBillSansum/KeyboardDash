@@ -31,6 +31,13 @@ public class LevelSpawner : MonoBehaviour
     public float timerFloat;
     public bool timerOn;
 
+    public GameObject pressFatigueBox;
+    public TextMeshProUGUI pressesText;
+    public Image pressesFill;
+    public bool pressesTracked;
+    public float presses;
+    public bool pressFatigued = false;
+
     public int levelNumber;
 
     public PopupMaker popupMaker;
@@ -39,7 +46,7 @@ public class LevelSpawner : MonoBehaviour
 
     void Start()
     {
-        LoadLevel(0);
+        LoadLevel(3);
     }
 
 
@@ -59,6 +66,8 @@ public class LevelSpawner : MonoBehaviour
         levelTitle.text = "Level " + levelData[level].levelNumber.ToString() + " - " + levelData[level].levelName;
         levelDescription.text = levelData[level].levelDescription.ToString();
         levelNumber = levelData[level].levelNumber;
+        pressFatigued = false;
+        presses = 0;
 
         if (levelData[level].timeLimit >= 1)
         {
@@ -72,14 +81,25 @@ public class LevelSpawner : MonoBehaviour
             timerBox.SetActive(false);
         }
 
-        if(levelData[level].inventoryActive == true)
+        if (levelData[level].pressLimits >= 1)
+        {
+            pressFatigueBox.SetActive(true);
+            pressesTracked = true;
+        }
+        else
+        {
+            pressFatigueBox.SetActive(false);
+            pressesTracked = false;
+        }
+
+        if (levelData[level].inventoryActive == true)
         {
             inventoryObject.SetActive(true);
 
         }
         else
         {
-            inventoryObject.SetActive(false);  
+            inventoryObject.SetActive(false);
             title.text = "";
         }
 
@@ -138,8 +158,14 @@ public class LevelSpawner : MonoBehaviour
 
         gameStarted = false;
 
-        popupMaker.Generate("Victory - Level Passed", levelData[levelNumber].levelNumber + " Succsess", "Victory");
-        
+        if (levelData[levelNumber].timeLimit >= 1)
+        {
+            popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed in " + (levelData[levelNumber].timeLimit -= timerFloat).ToString("0.00") + " Seconds", "Victory");
+        }
+        else
+        {
+            popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed", "Victory");
+        }
     }
 
     public void Update()
@@ -162,6 +188,10 @@ public class LevelSpawner : MonoBehaviour
                 DisplayTime();
             }
         }
+        if (pressesTracked)
+        {
+            DisplayPresses();
+        }
     }
     public void DisplayTime()
     {
@@ -171,5 +201,23 @@ public class LevelSpawner : MonoBehaviour
         int minutes = timeInSecondsInt / 60;
         int seconds = timeInSecondsInt - (minutes * 60);
         timerTime.text = minutes.ToString("D2") + ":" + seconds.ToString("D2");
+    }
+
+    public void DisplayPresses()
+    {
+        pressesFill.fillAmount = presses / levelData[levelNumber].pressLimits;
+
+        if (presses > levelData[levelNumber].pressLimits)
+        {
+            pressesText.text = levelData[levelNumber].pressLimits + "/" + levelData[levelNumber].pressLimits;
+        }
+        else
+        {
+            pressesText.text = presses.ToString() + "/" + levelData[levelNumber].pressLimits;
+        }
+        if (presses >= levelData[levelNumber].pressLimits)
+        {
+            pressFatigued = true;
+        }
     }
 }

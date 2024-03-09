@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class PopupMaker : MonoBehaviour
 {
@@ -73,5 +74,10 @@ public class PopupMaker : MonoBehaviour
     public void ResetButton()
     {
         levelSpawner.ResetLevel();
+    }
+
+    internal void Generate(string v1, object p, string v2)
+    {
+        throw new NotImplementedException();
     }
 }

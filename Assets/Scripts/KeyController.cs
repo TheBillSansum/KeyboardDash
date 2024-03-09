@@ -8,6 +8,8 @@ using System.Runtime.CompilerServices;
 
 public class KeyController : MonoBehaviour
 {
+    public LevelSpawner levelSpawner;
+
     public float keyPressDistance = 0.1f;
     public float keyPressSpeed = 5f;
     public KeyCode associatedKey;
@@ -56,11 +58,12 @@ public class KeyController : MonoBehaviour
     public Mesh powerOnMesh;
 
     public Mesh[] conveyorAnimMesh = new Mesh[6];
-    public float animationInterval = 0.05f; 
+    public float animationInterval = 0.05f;
     private int currentMeshIndex = 0;
-    private Coroutine conveyorAnimationCoroutine; 
+    private Coroutine conveyorAnimationCoroutine;
     public GameObject conveyorObject;
     public bool powerOn = false;
+    public bool runOnce = false;
 
     public bool proxyPowered = false;
 
@@ -78,6 +81,7 @@ public class KeyController : MonoBehaviour
 
     void Start()
     {
+        levelSpawner = GameObject.FindAnyObjectByType<LevelSpawner>();
         spawnPoint = transform.position;
         foreach (GameObject key in connectedKeysObject)
         {
@@ -114,7 +118,7 @@ public class KeyController : MonoBehaviour
         if (lockedElevated)
         {
             transform.position = pressedPosition;
-                pressedPosition = initialPosition + Vector3.down * 0.03f * keyPressDistance;
+            pressedPosition = initialPosition + Vector3.down * 0.03f * keyPressDistance;
             initialPosition = transform.position;
         }
         else
@@ -246,7 +250,6 @@ public class KeyController : MonoBehaviour
                     this.GetComponent<MeshFilter>().mesh = powerOnMesh;
                 }
                 break;
-
         }
     }
 
@@ -256,10 +259,19 @@ public class KeyController : MonoBehaviour
     {
         if (keyType != KeyType.Inactive)
         {
-            if (Input.GetKey(associatedKey))
+            if (Input.GetKey(associatedKey) && levelSpawner.presses < levelSpawner.levelData[levelSpawner.levelNumber].pressLimits + 1)
             {
                 MoveKey(pressedPosition);
                 isActivated = true;
+
+                if (runOnce == false)
+                {
+                    runOnce = true;
+                    if (levelSpawner.gameStarted)
+                    {
+                        levelSpawner.presses += 1;
+                    }
+                }
 
                 foreach (KeyController key in connectedKeysCon)
                 {
@@ -274,7 +286,7 @@ public class KeyController : MonoBehaviour
                     key.proxy = false;
                 }
                 MoveKey(initialPosition);
-
+                runOnce = false;
                 isActivated = false;
             }
 

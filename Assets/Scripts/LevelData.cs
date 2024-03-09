@@ -12,6 +12,7 @@ public class LevelData : ScriptableObject
     public GameObject keyboardEvents;
     public bool inventoryActive = true;
     public float timeLimit;
+    public float pressLimits;
     public int basicInventory;  
     public int magnetsInventory;
     public int fansInventory;
