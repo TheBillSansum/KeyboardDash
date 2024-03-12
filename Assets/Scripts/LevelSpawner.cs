@@ -39,10 +39,12 @@ public class LevelSpawner : MonoBehaviour
     public bool pressFatigued = false;
 
     public int levelNumber;
+    public TransitionManager transitionManager;
 
     public PopupMaker popupMaker;
     public ClippyManager clippyManager;
 
+    public int levelToLoad;
 
     void Start()
     {
@@ -52,6 +54,14 @@ public class LevelSpawner : MonoBehaviour
 
     public void LoadLevel(int level)
     {
+        levelToLoad = level;
+        transitionManager.StartTransition();
+        Invoke("LoadingLevel", .9f);
+    }
+
+    public void LoadingLevel()
+    {
+        int level = levelToLoad;
         gameStarted = false;
         levelPassed = false;
 
