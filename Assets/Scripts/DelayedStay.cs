@@ -12,6 +12,14 @@ public class DelayedStay : MonoBehaviour
     public Material gradient;
     public Image fillImage;
     public TextMeshProUGUI fillPercentage;
+    public bool runOnce = false;
+
+    public FinishCriteria finishCriteria;
+
+    private void Start()
+    {
+        runOnce = false;
+    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -37,5 +45,10 @@ public class DelayedStay : MonoBehaviour
         color = Color.Lerp(color, new Color(0f, 1f, 0f, 0.5f), ratio); 
 
         gradient.color = color;
+
+        if(ratio >= 1)
+        {
+            finishCriteria.LevelPassed();
+        }
     }
 }

@@ -53,7 +53,7 @@ public class LevelSpawner : MonoBehaviour
         LoadLevel(4);
     }
 
-
+        
     public void LoadLevel(int level)
     {
         levelToLoad = level;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FinishCriteria : MonoBehaviour
 {
     public LevelSpawner levelSpawner;
-
+    public bool Triggers = true;
 
 
     public void Start()
@@ -15,9 +15,18 @@ public class FinishCriteria : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (Triggers)
         {
-            levelSpawner.LevelPassed();
+            if (other.gameObject.CompareTag("Player"))
+            {
+                LevelPassed();
+            }
         }
+    }
+
+
+    public void LevelPassed()
+    {
+        levelSpawner.LevelPassed();
     }
 }
