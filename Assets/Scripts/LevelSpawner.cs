@@ -15,10 +15,12 @@ public class LevelSpawner : MonoBehaviour
     public LevelData[] levelData;
     public GameObject levelObject;
     public GameObject levelEventsObject;
+    public GameObject startingPoint;
     public GameObject inventoryObject;
 
     public bool gameStarted = false;
     public bool levelPassed = false;
+    public bool firstPress = false;
 
     public TextMeshProUGUI title;
 
@@ -48,7 +50,7 @@ public class LevelSpawner : MonoBehaviour
 
     void Start()
     {
-        LoadLevel(0);
+        LoadLevel(4);
     }
 
 
@@ -56,7 +58,7 @@ public class LevelSpawner : MonoBehaviour
     {
         levelToLoad = level;
         transitionManager.StartTransition();
-        Invoke("LoadingLevel", .9f);
+        Invoke("LoadingLevel", 0.5f);
     }
 
     public void LoadingLevel()
@@ -64,8 +66,13 @@ public class LevelSpawner : MonoBehaviour
         int level = levelToLoad;
         gameStarted = false;
         levelPassed = false;
+        firstPress = false;
+
 
         levelObject = Instantiate(levelData[level].sceneObject);
+
+        startingPoint = Instantiate(levelData[level].transparentStartPoint, levelObject.transform);
+
         basicInventory.SetQuantity(levelData[level].basicInventory);
         fanInventory.SetQuantity(levelData[level].fansInventory);
         magnetInventory.SetQuantity(levelData[level].magnetsInventory);
@@ -78,6 +85,8 @@ public class LevelSpawner : MonoBehaviour
         levelNumber = levelData[level].levelNumber;
         pressFatigued = false;
         presses = 0;
+
+
 
         if (levelData[level].timeLimit >= 1)
         {
@@ -138,6 +147,7 @@ public class LevelSpawner : MonoBehaviour
         {
             Destroy(levelEventsObject);
         }
+        Destroy(startingPoint);
 
         levelEventsObject = Instantiate(levelData[levelNumber].keyboardEvents, levelObject.transform);
         gameStarted = true;
@@ -186,7 +196,7 @@ public class LevelSpawner : MonoBehaviour
     {
         if (timerOn)
         {
-            if (gameStarted)
+            if (gameStarted && firstPress)
             {
                 timerFloat -= Time.deltaTime;
 

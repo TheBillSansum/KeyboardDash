@@ -10,7 +10,7 @@ public class TransitionManager : MonoBehaviour
     public bool runTransition;
     public bool goingUp = false;
     public float maxScale = 500;
-    public float speed = 50;
+    public float speed = 100;
     public float scale = 1f;
     private bool hasCompletedCycle = false;
 

@@ -10,6 +10,7 @@ public class LevelData : ScriptableObject
     public string levelDescription;
     public GameObject sceneObject;
     public GameObject keyboardEvents;
+    public GameObject transparentStartPoint;
     public bool inventoryActive = true;
     public float timeLimit;
     public float pressLimits;

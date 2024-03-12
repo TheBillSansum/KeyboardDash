@@ -60,6 +60,7 @@ public class KeyController : MonoBehaviour
     public Mesh[] conveyorAnimMesh = new Mesh[6];
     public float animationInterval = 0.05f;
     private int currentMeshIndex = 0;
+    public Direction conveyorDirection = Direction.Right;
     private Coroutine conveyorAnimationCoroutine;
     public GameObject conveyorObject;
     public bool powerOn = false;
@@ -75,6 +76,14 @@ public class KeyController : MonoBehaviour
         Fan,
         Conveyor,
         Power
+    }
+
+    public enum Direction
+    {
+        Left,
+        Right,
+        Up,
+        Down
     }
 
     public TextMeshPro keyText;
@@ -153,11 +162,47 @@ public class KeyController : MonoBehaviour
             case KeyType.Conveyor:
                 this.GetComponent<MeshFilter>().mesh = conveyorMesh;
                 pressedPosition = transform.position;
+
+                switch (conveyorDirection)
+                {
+                    case Direction.Down:
+                        this.gameObject.transform.Rotate(0, 0, 0);
+                        keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
+                        break;
+
+                    case Direction.Right:
+                        this.gameObject.transform.Rotate(0, -90, 0);
+                        keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
+                        break;
+
+                    case Direction.Up:
+                        this.gameObject.transform.Rotate(0, -180, 0);
+                        keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
+                        break;
+
+                    case Direction.Left:
+                        this.gameObject.transform.Rotate(0, -270, 0);
+                        keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
+                        break;
+
+
+
+                }
                 break;
 
             case KeyType.Power:
                 this.GetComponent<MeshFilter>().mesh = powerOffMesh;
                 pressedPosition = transform.position;
+                if (powerOn)
+                {
+                    powerOn = false;
+                    this.GetComponent<MeshFilter>().mesh = powerOffMesh;
+                }
+                else
+                {
+                    powerOn = true;
+                    this.GetComponent<MeshFilter>().mesh = powerOnMesh;
+                }
                 break;
 
         }
@@ -263,6 +308,10 @@ public class KeyController : MonoBehaviour
             {
                 MoveKey(pressedPosition);
                 isActivated = true;
+                if(levelSpawner.firstPress != true)
+                {
+                    levelSpawner.firstPress = true;
+                }
 
                 if (runOnce == false)
                 {
@@ -389,13 +438,10 @@ public class KeyController : MonoBehaviour
     {
         while (true)
         {
-            // Cycle through the conveyor animation meshes
             currentMeshIndex = (currentMeshIndex + 1) % conveyorAnimMesh.Length;
 
-            // Change the mesh of the conveyor
             GetComponent<MeshFilter>().mesh = conveyorAnimMesh[currentMeshIndex];
 
-            // Wait for the specified interval before transitioning to the next mesh
             yield return new WaitForSeconds(animationInterval);
         }
     }

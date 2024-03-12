@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 9105627481677262416, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+  objectToDespawn: {fileID: 0}
 --- !u!1 &1881645820734558351
 GameObject:
   m_ObjectHideFlags: 0

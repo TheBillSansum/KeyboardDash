@@ -17,8 +17,10 @@ MonoBehaviour:
   levelDescription: Speed is Key! Kachow!
   sceneObject: {fileID: 384876553434278044, guid: f0eca7c41cd87fd44a85af217e1a6c12, type: 3}
   keyboardEvents: {fileID: 9105627481677262416, guid: 742a13e5e9b5f614e8cdf22ec01a1f31, type: 3}
+  transparentStartPoint: {fileID: 336407094407682380, guid: cd3237fd9aa02c949947bb5a65c1c8d9, type: 3}
   inventoryActive: 0
-  timeLimit: 5
+  timeLimit: 3.8311923
+  pressLimits: 0
   basicInventory: 0
   magnetsInventory: 0
   fansInventory: 0
