@@ -19,7 +19,7 @@ MonoBehaviour:
   keyboardEvents: {fileID: 9105627481677262416, guid: 742a13e5e9b5f614e8cdf22ec01a1f31, type: 3}
   transparentStartPoint: {fileID: 336407094407682380, guid: cd3237fd9aa02c949947bb5a65c1c8d9, type: 3}
   inventoryActive: 0
-  timeLimit: 3.8311923
+  timeLimit: 3.5
   pressLimits: 0
   basicInventory: 0
   magnetsInventory: 0

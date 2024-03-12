@@ -50,7 +50,7 @@ public class LevelSpawner : MonoBehaviour
 
     void Start()
     {
-        LoadLevel(4);
+        LoadLevel(0);
     }
 
         
