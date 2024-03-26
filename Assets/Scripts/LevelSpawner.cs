@@ -64,6 +64,7 @@ public class LevelSpawner : MonoBehaviour
     public void LoadingLevel()
     {
         int level = levelToLoad;
+        ClearLevels();
         gameStarted = false;
         levelPassed = false;
         firstPress = false;

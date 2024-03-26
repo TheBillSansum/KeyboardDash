@@ -19,4 +19,12 @@ public class LevelData : ScriptableObject
     public int fansInventory;
     public int conveyorsInventory;
     public int powersInventory;
+    public difficultyLevel difficulty;
+    public float personalRecord;
+    public enum difficultyLevel 
+    {
+        easy,
+        medium, 
+        hard
+    }
 }
