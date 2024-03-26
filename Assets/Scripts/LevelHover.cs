@@ -12,39 +12,45 @@ public class LevelHover : MonoBehaviour
     public TextMeshProUGUI personalRecord;
     public TextMeshProUGUI timeLimit;
     public LevelData levelData;
-    public Sprite[] levelImages = new Sprite[10];
+    public GameObject[] levelImages;
+    public GameObject layoutSketch;
     public Image levelKeyboardImage;
+    public Transform spawnLocation;
 
 
     public void DisplayInformation(int levelInt)
     {
-        levelData = GameObject.Find("GameManager").GetComponent<LevelSpawner>().levelData[levelInt];
-        levelKeyboardImage.sprite = levelImages[levelInt];
+        if (levelInt < 0 || levelInt >= levelImages.Length)
+        {
+            Debug.LogError("Invalid level index: " + levelInt);
+            return;
+        }
 
-        levelDescription.text = levelData.levelDescription;
-        if(levelData.pressLimits >= 1)
+        levelData = GameObject.Find("GameManager").GetComponent<LevelSpawner>().levelData[levelInt];
+
+        if (layoutSketch != null)
         {
-            pressFatigueText.text = levelData.pressLimits.ToString() + " Presses";
+            Destroy(layoutSketch);
+        }
+
+        GameObject prefabToInstantiate = levelImages[levelInt];
+        if (prefabToInstantiate == null)
+        {
+            Debug.LogError("Prefab is null at index: " + levelInt);
+            return;
+        }
+
+        layoutSketch = Instantiate(prefabToInstantiate, spawnLocation.position, spawnLocation.rotation, spawnLocation);
+
+        if (levelData != null)
+        {
+            pressFatigueText.text = levelData.pressLimits >= 1 ? levelData.pressLimits.ToString() + " Presses" : "No Limit";
+            personalRecord.text = levelData.personalRecord >= 1 ? levelData.personalRecord.ToString("0.0") + " Seconds" : "No Time Submitted";
+            timeLimit.text = levelData.timeLimit >= 1 ? levelData.timeLimit.ToString() + " Seconds" : "No Limit";
         }
         else
         {
-            pressFatigueText.text = "No Limit";
-        }
-        if(levelData.personalRecord >= 1)
-        {
-            personalRecord.text = levelData.personalRecord.ToString() + " Seconds";
-        }
-        else
-        {
-            personalRecord.text = "N/A";
-        }
-        if (levelData.timeLimit >= 1)
-        {
-            timeLimit.text = levelData.timeLimit.ToString() + " Seconds";
-        }
-        else
-        {
-            timeLimit.text = "No Limit";
+            Debug.LogError("Level data is null for index: " + levelInt);
         }
     }
 

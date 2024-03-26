@@ -32,6 +32,7 @@ public class LevelSpawner : MonoBehaviour
     public Image timerFill;
     public float timerFloat;
     public bool timerOn;
+    private float startTime;
 
     public GameObject pressFatigueBox;
     public TextMeshProUGUI pressesText;
@@ -138,8 +139,6 @@ public class LevelSpawner : MonoBehaviour
                 clippyManager.PlayHint(7);
                 break;
         }
-
-
     }
 
     public void StartPlay()
@@ -149,7 +148,7 @@ public class LevelSpawner : MonoBehaviour
             Destroy(levelEventsObject);
         }
         Destroy(startingPoint);
-
+        startTime = Time.time; 
         levelEventsObject = Instantiate(levelData[levelNumber].keyboardEvents, levelObject.transform);
         gameStarted = true;
     }
@@ -180,8 +179,13 @@ public class LevelSpawner : MonoBehaviour
     {
         Debug.Log("Level Passed");
         levelPassed = true;
-
         gameStarted = false;
+
+        float completionTime = Time.time - startTime; // Calculate the completion time
+        if (levelData[levelNumber].personalRecord == 0 || completionTime < levelData[levelNumber].personalRecord)
+        {
+            levelData[levelNumber].personalRecord = completionTime; // Update personalRecord if it's a new record
+        }
 
         if (levelData[levelNumber].timeLimit >= 1)
         {
