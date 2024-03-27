@@ -181,10 +181,10 @@ public class LevelSpawner : MonoBehaviour
         levelPassed = true;
         gameStarted = false;
 
-        float completionTime = Time.time - startTime; // Calculate the completion time
+        float completionTime = Time.time - startTime;
         if (levelData[levelNumber].personalRecord == 0 || completionTime < levelData[levelNumber].personalRecord)
         {
-            levelData[levelNumber].personalRecord = completionTime; // Update personalRecord if it's a new record
+            levelData[levelNumber].personalRecord = completionTime;
         }
 
         if (levelData[levelNumber].timeLimit >= 1)
