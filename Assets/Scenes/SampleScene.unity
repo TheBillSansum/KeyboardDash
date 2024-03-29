@@ -1507,18 +1507,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 4
   levelSpawner: {fileID: 620739612}
-  leveldata: {fileID: 0}
+  levelData: {fileID: 0}
   levelText: {fileID: 1454760368}
   basic: {fileID: 1640107744}
   magnet: {fileID: 894819632}
   convey: {fileID: 1127374629}
   fan: {fileID: 1729764165}
   power: {fileID: 1945433836}
+  timeLimit: {fileID: 0}
+  pressFatigue: {fileID: 0}
   basicText: {fileID: 0}
   magnetText: {fileID: 0}
   conveyText: {fileID: 0}
   fanText: {fileID: 0}
   powerText: {fileID: 0}
+  fatigueText: {fileID: 0}
+  timeText: {fileID: 0}
 --- !u!114 &120543021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2005,18 +2009,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 2
   levelSpawner: {fileID: 620739612}
-  leveldata: {fileID: 0}
+  levelData: {fileID: 0}
   levelText: {fileID: 1037066603}
   basic: {fileID: 1521804859}
   magnet: {fileID: 1436935431}
   convey: {fileID: 800262941}
   fan: {fileID: 968607515}
   power: {fileID: 484605839}
+  timeLimit: {fileID: 0}
+  pressFatigue: {fileID: 0}
   basicText: {fileID: 0}
   magnetText: {fileID: 0}
   conveyText: {fileID: 0}
   fanText: {fileID: 0}
   powerText: {fileID: 0}
+  fatigueText: {fileID: 0}
+  timeText: {fileID: 0}
 --- !u!114 &168586800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2730,18 +2738,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 4
   levelSpawner: {fileID: 620739612}
-  leveldata: {fileID: 0}
+  levelData: {fileID: 0}
   levelText: {fileID: 430807255}
   basic: {fileID: 1560893090}
   magnet: {fileID: 1106911719}
   convey: {fileID: 923243790}
   fan: {fileID: 420195683}
   power: {fileID: 2121023594}
+  timeLimit: {fileID: 0}
+  pressFatigue: {fileID: 0}
   basicText: {fileID: 0}
   magnetText: {fileID: 0}
   conveyText: {fileID: 0}
   fanText: {fileID: 0}
   powerText: {fileID: 0}
+  fatigueText: {fileID: 0}
+  timeText: {fileID: 0}
 --- !u!114 &302633230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4462,7 +4474,8 @@ Transform:
   m_LocalPosition: {x: 77, y: -278, z: -14.64871}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8588006106941349642}
   m_Father: {fileID: 550161276}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &507535096
@@ -5895,6 +5908,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0764c5f571a7d4746b4f3f88aec54212, type: 2}
   - {fileID: 11400000, guid: 607050ad3caa7e641b42efe812240e4d, type: 2}
   - {fileID: 11400000, guid: 4da8e8b903afc8143a3cb22a9f1286ef, type: 2}
+  - {fileID: 11400000, guid: f4bbd443d6cb9e34badf7c5d8a18f394, type: 2}
   levelObject: {fileID: 0}
   levelEventsObject: {fileID: 0}
   startingPoint: {fileID: 0}
@@ -8547,18 +8561,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 4
   levelSpawner: {fileID: 620739612}
-  leveldata: {fileID: 0}
+  levelData: {fileID: 0}
   levelText: {fileID: 1512223728}
   basic: {fileID: 1989099834}
   magnet: {fileID: 805305404}
   convey: {fileID: 2055359719}
   fan: {fileID: 2037038456}
   power: {fileID: 1873199608}
+  timeLimit: {fileID: 0}
+  pressFatigue: {fileID: 0}
   basicText: {fileID: 0}
   magnetText: {fileID: 0}
   conveyText: {fileID: 0}
   fanText: {fileID: 0}
   powerText: {fileID: 0}
+  fatigueText: {fileID: 0}
+  timeText: {fileID: 0}
 --- !u!114 &850340156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10445,18 +10463,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 3
   levelSpawner: {fileID: 620739612}
-  leveldata: {fileID: 0}
+  levelData: {fileID: 0}
   levelText: {fileID: 1026913638}
   basic: {fileID: 813875151}
   magnet: {fileID: 1776728567}
   convey: {fileID: 336411227}
   fan: {fileID: 1833705165}
   power: {fileID: 470333090}
+  timeLimit: {fileID: 0}
+  pressFatigue: {fileID: 0}
   basicText: {fileID: 0}
   magnetText: {fileID: 0}
   conveyText: {fileID: 0}
   fanText: {fileID: 0}
   powerText: {fileID: 0}
+  fatigueText: {fileID: 0}
+  timeText: {fileID: 0}
 --- !u!114 &1075269502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14619,18 +14641,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 4
   levelSpawner: {fileID: 620739612}
-  leveldata: {fileID: 0}
+  levelData: {fileID: 0}
   levelText: {fileID: 910015898}
   basic: {fileID: 30707191}
   magnet: {fileID: 1781810864}
   convey: {fileID: 563692891}
   fan: {fileID: 1852520123}
   power: {fileID: 1658924364}
+  timeLimit: {fileID: 0}
+  pressFatigue: {fileID: 0}
   basicText: {fileID: 0}
   magnetText: {fileID: 0}
   conveyText: {fileID: 0}
   fanText: {fileID: 0}
   powerText: {fileID: 0}
+  fatigueText: {fileID: 0}
+  timeText: {fileID: 0}
 --- !u!114 &1566938524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15129,7 +15155,7 @@ MonoBehaviour:
   - {fileID: 3692244538435403601, guid: 6e3f2b93eae256e46ba1429cadb14e35, type: 3}
   - {fileID: 1345330326096366292, guid: 71ca78091b36f9a478780df4cb0e55ce, type: 3}
   - {fileID: 4229546184447232030, guid: 4c57c061120189a4cab502ac1d4ec4bf, type: 3}
-  - {fileID: 0}
+  - {fileID: 1800770699949694831, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -15787,18 +15813,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   levelSpawner: {fileID: 620739612}
-  leveldata: {fileID: 0}
+  levelData: {fileID: 0}
   levelText: {fileID: 1654269139}
   basic: {fileID: 1935476348}
   magnet: {fileID: 1525810203}
   convey: {fileID: 870742348}
   fan: {fileID: 226728636}
   power: {fileID: 1887125430}
+  timeLimit: {fileID: 0}
+  pressFatigue: {fileID: 0}
   basicText: {fileID: 0}
   magnetText: {fileID: 0}
   conveyText: {fileID: 0}
   fanText: {fileID: 0}
   powerText: {fileID: 0}
+  fatigueText: {fileID: 0}
+  timeText: {fileID: 0}
 --- !u!114 &1656098266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16057,18 +16087,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 4
   levelSpawner: {fileID: 620739612}
-  leveldata: {fileID: 0}
+  levelData: {fileID: 0}
   levelText: {fileID: 1269604807}
   basic: {fileID: 1829847606}
   magnet: {fileID: 444655220}
   convey: {fileID: 1807253447}
   fan: {fileID: 817022260}
   power: {fileID: 363612483}
+  timeLimit: {fileID: 0}
+  pressFatigue: {fileID: 0}
   basicText: {fileID: 0}
   magnetText: {fileID: 0}
   conveyText: {fileID: 0}
   fanText: {fileID: 0}
   powerText: {fileID: 0}
+  fatigueText: {fileID: 0}
+  timeText: {fileID: 0}
 --- !u!114 &1665317171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16505,12 +16539,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 219140133792933175, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
       propertyPath: m_Name
-      value: Level0 (5)
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 509927399728591311, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1590955721}
+    - target: {fileID: 509927399728591311, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4549673264726481433, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -16593,7 +16631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7806832668732315832, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
       propertyPath: level
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7806832668732315832, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
       propertyPath: levelSpawner
@@ -19288,18 +19326,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 4
   levelSpawner: {fileID: 620739612}
-  leveldata: {fileID: 0}
+  levelData: {fileID: 0}
   levelText: {fileID: 847654313}
   basic: {fileID: 339755855}
   magnet: {fileID: 701931313}
   convey: {fileID: 1239492197}
   fan: {fileID: 964951164}
   power: {fileID: 1329480374}
+  timeLimit: {fileID: 0}
+  pressFatigue: {fileID: 0}
   basicText: {fileID: 0}
   magnetText: {fileID: 0}
   conveyText: {fileID: 0}
   fanText: {fileID: 0}
   powerText: {fileID: 0}
+  fatigueText: {fileID: 0}
+  timeText: {fileID: 0}
 --- !u!114 &1913976735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28959,6 +29001,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &8039350532792457885
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 506050022}
+    m_Modifications:
+    - target: {fileID: 1800770699949694831, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_Name
+      value: Level5Layout
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800770699949694831, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 67.23999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -234.64465
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.64871
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
 --- !u!114 &8066494168572196610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29454,6 +29557,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830642185853025140}
   m_CullTransparentMesh: 1
+--- !u!4 &8588006106941349642 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5154762779478964977, guid: 0d2aafd87691c114eadd15c4b11096f2, type: 3}
+  m_PrefabInstance: {fileID: 8039350532792457885}
+  m_PrefabAsset: {fileID: 0}
 --- !u!222 &8601041053718375393
 CanvasRenderer:
   m_ObjectHideFlags: 0

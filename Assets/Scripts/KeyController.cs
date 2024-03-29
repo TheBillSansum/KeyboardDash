@@ -429,11 +429,6 @@ public class KeyController : MonoBehaviour
         return keyString;
     }
 
-    private void ConveyObjects()
-    {
-
-    }
-
     IEnumerator AnimateConveyor()
     {
         while (true)

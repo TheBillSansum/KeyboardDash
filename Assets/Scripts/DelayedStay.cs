@@ -13,6 +13,9 @@ public class DelayedStay : MonoBehaviour
     public Image fillImage;
     public TextMeshProUGUI fillPercentage;
     public bool runOnce = false;
+    public bool inTrigger = false;
+    public bool onlyGoal = true;
+    public bool complete = false;
 
     public FinishCriteria finishCriteria;
 
@@ -26,6 +29,14 @@ public class DelayedStay : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             currentTime += Time.deltaTime;
+            inTrigger = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inTrigger = false;
         }
     }
 
@@ -33,6 +44,11 @@ public class DelayedStay : MonoBehaviour
     public void Update()
     {
         UpdateGradient();
+
+        if(inTrigger == false && currentTime > 0)
+        {
+            currentTime -= (Time.deltaTime * 0.5f);
+        }
     }
 
     private void UpdateGradient()
@@ -48,7 +64,15 @@ public class DelayedStay : MonoBehaviour
 
         if(ratio >= 1)
         {
-            finishCriteria.LevelPassed();
+            if (onlyGoal)
+            {
+                finishCriteria.LevelPassed();
+            }
+            complete = true;
+        }
+        else
+        {
+            complete = false;
         }
     }
 }
