@@ -14,6 +14,7 @@ public class PopupMaker : MonoBehaviour
     public Image popUpImage;
     public GameObject victoryButtons;
     public GameObject lostButtons;
+    public PopupInstance instance;
 
     public Sprite warningSprite;
     public Sprite errorSprite;
@@ -21,6 +22,7 @@ public class PopupMaker : MonoBehaviour
 
     public void Generate(string Title, string Body, string Image)
     {
+        
         lostButtons.SetActive(false);
         victoryButtons.SetActive(false);
         popUpObjectBlank.SetActive(true);

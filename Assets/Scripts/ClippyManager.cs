@@ -14,6 +14,11 @@ public class ClippyManager : MonoBehaviour
     public Transform[] hintLocation = new Transform[10];
     public Sprite[] clippySprite = new Sprite[10];
 
+    public GameObject enableClippyButton;
+    public GameObject cullClippyButton;
+    public GameObject clippyMenu;
+    public bool clippyMenuActive = false;
+
     public Image clippyImage;
 
     public TextMeshProUGUI clippyBody;
@@ -30,9 +35,24 @@ public class ClippyManager : MonoBehaviour
         hints[6] = "The magnet key attracts any close metalic objects towards it, press the key assosiated with it to use it!";
         hints[7] = "Some levels limit how many presses you can use per attempt, once you hit the limit no further presses can be tracked, but play continues!";
 
-
+        clippyMenu.SetActive(false);
+        clippyMenuActive = false;
 
         PlayHint(0);
+    }
+
+    public void Update()
+    {
+        if (clippyHidden == true)
+        {
+            enableClippyButton.SetActive(true);
+            cullClippyButton.SetActive(false);
+        }
+        if (clippyHidden == false)
+        {      
+            enableClippyButton.SetActive(false);
+            cullClippyButton.SetActive(true);
+        }
     }
 
     public void PlayHint(int hint)
@@ -63,12 +83,30 @@ public class ClippyManager : MonoBehaviour
         clippyHidden = true;
         clippyObject.SetActive(false);
     }
+    
+    public void EnableClippy()
+    {
+        clippyHidden = false;
+        clippyObject.SetActive(true);
+    }
+
+    public void ToggleMenu()
+    {
+        if (clippyMenuActive)
+        {
+            clippyMenuActive = false;
+            clippyMenu.SetActive(false);
+        }
+        else
+        {
+            clippyMenuActive = true;
+            clippyMenu.SetActive(true);
+        }
+    }
 
 
     public void DisplayFace(string emotion)
     {
-
-
         switch(emotion)
         {
             case "Normal":
@@ -93,4 +131,12 @@ public class ClippyManager : MonoBehaviour
         }
     }
 
+    public void FactoryReset()
+    {
+        for (int i = 0; i < hintHeard.Length; i++)
+        {
+            hintHeard[i] = false;
+        }
+        PlayHint(0);
+    }
 }

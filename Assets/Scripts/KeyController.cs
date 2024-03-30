@@ -60,9 +60,11 @@ public class KeyController : MonoBehaviour
     public Mesh[] conveyorAnimMesh = new Mesh[6];
     public float animationInterval = 0.05f;
     private int currentMeshIndex = 0;
-    public Direction conveyorDirection = Direction.Right;
+    public Direction conveyorDirection;
+
     private Coroutine conveyorAnimationCoroutine;
     public GameObject conveyorObject;
+    public ConveyorPush conveyorPush;
     public bool powerOn = false;
     public bool runOnce = false;
 
@@ -167,26 +169,27 @@ public class KeyController : MonoBehaviour
                 {
                     case Direction.Down:
                         this.gameObject.transform.Rotate(0, 0, 0);
+                        conveyorPush.conveyorDirection_ = ConveyorPush.Direction.Down;
                         keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
                         break;
 
                     case Direction.Right:
                         this.gameObject.transform.Rotate(0, -90, 0);
+                        conveyorPush.conveyorDirection_ = ConveyorPush.Direction.Right;
                         keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
                         break;
 
                     case Direction.Up:
                         this.gameObject.transform.Rotate(0, -180, 0);
+                        conveyorPush.conveyorDirection_ = ConveyorPush.Direction.Up;
                         keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
                         break;
 
                     case Direction.Left:
                         this.gameObject.transform.Rotate(0, -270, 0);
+                        conveyorPush.conveyorDirection_ = ConveyorPush.Direction.Left;
                         keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
                         break;
-
-
-
                 }
                 break;
 
@@ -253,7 +256,7 @@ public class KeyController : MonoBehaviour
                 {
                     conveyorAnimationCoroutine = StartCoroutine(AnimateConveyor());
                     conveyorObject.SetActive(true);
-                    ConveyObjects();
+                    
 
                 }
                 else if (!isActivated && conveyorAnimationCoroutine != null)
@@ -364,7 +367,7 @@ public class KeyController : MonoBehaviour
                     {
                         conveyorAnimationCoroutine = StartCoroutine(AnimateConveyor());
                         conveyorObject.SetActive(true);
-                        ConveyObjects();
+                        
 
                     }
                     else if (!isActivated && conveyorAnimationCoroutine != null)
@@ -406,7 +409,6 @@ public class KeyController : MonoBehaviour
                         }
                     }
                     break;
-
             }
         }
     }

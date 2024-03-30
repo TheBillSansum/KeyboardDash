@@ -59,7 +59,7 @@ public class LevelLoaderInstance : MonoBehaviour
 
     private void UpdateInventoryUI(GameObject inventoryObject, TextMeshProUGUI inventoryText, float inventoryCount, string differenceText = "")
     {
-        if (inventoryCount > 1)
+        if (inventoryCount > 0)
         {
             inventoryObject.SetActive(true);
             inventoryText.text = $"-{differenceText}{inventoryCount.ToString("0")}-";

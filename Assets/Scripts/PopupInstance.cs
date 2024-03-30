@@ -6,6 +6,9 @@ public class PopupInstance : MonoBehaviour
 {
     public void ClosePopup()
     {
-        this.gameObject.SetActive(false);
+        if (this != null)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }

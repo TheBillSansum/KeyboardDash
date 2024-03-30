@@ -45,6 +45,7 @@ public class LevelSpawner : MonoBehaviour
     public TransitionManager transitionManager;
 
     public PopupMaker popupMaker;
+    public PopupInstance popupInstance;
     public ClippyManager clippyManager;
 
     public int levelToLoad;
@@ -54,12 +55,22 @@ public class LevelSpawner : MonoBehaviour
         LoadLevel(0);
     }
 
-        
+
     public void LoadLevel(int level)
     {
         levelToLoad = level;
         transitionManager.StartTransition();
-        Invoke("LoadingLevel", 0.5f);
+
+        StartCoroutine(LoadLevelCoroutine());
+    }
+
+    private IEnumerator LoadLevelCoroutine()
+    {
+        float transitionDuration = 1f;
+        float halfDuration = transitionDuration * 0.5f;
+        yield return new WaitForSeconds(halfDuration);
+
+        LoadingLevel();
     }
 
     public void LoadingLevel()
@@ -69,6 +80,9 @@ public class LevelSpawner : MonoBehaviour
         gameStarted = false;
         levelPassed = false;
         firstPress = false;
+
+
+        popupInstance.ClosePopup();
 
 
         levelObject = Instantiate(levelData[level].sceneObject);
@@ -148,14 +162,13 @@ public class LevelSpawner : MonoBehaviour
             Destroy(levelEventsObject);
         }
         Destroy(startingPoint);
-        startTime = Time.time; 
+        startTime = Time.time;
         levelEventsObject = Instantiate(levelData[levelNumber].keyboardEvents, levelObject.transform);
         gameStarted = true;
     }
 
     public void ResetLevel()
     {
-        ClearLevels();
         LoadLevel(levelNumber);
     }
 
@@ -171,7 +184,7 @@ public class LevelSpawner : MonoBehaviour
         if (reason == 0)
         {
             popupMaker.Generate("Error - Ran Out Of Time!", "Level " + levelData[levelNumber].levelNumber + " Failed, Try going a bit faster?", "Error");
-            ResetLevel();
+          //  ResetLevel();
         }
     }
 
@@ -224,7 +237,8 @@ public class LevelSpawner : MonoBehaviour
     }
     public void DisplayTime()
     {
-        timerFill.fillAmount = timerFloat / levelData[levelNumber].timeLimit;
+        float timelimit = levelData[levelNumber].timeLimit;
+        timerFill.fillAmount = timerFloat / timelimit;
 
         int timeInSecondsInt = (int)timerFloat;
         int minutes = timeInSecondsInt / 60;

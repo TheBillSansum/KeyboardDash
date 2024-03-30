@@ -53,6 +53,5 @@ public class TransitionManager : MonoBehaviour
         runTransition = true;
         starShape.gameObject.SetActive(true);
         hasCompletedCycle = false;
-        
     }
 }

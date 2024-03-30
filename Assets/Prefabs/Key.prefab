@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelSpawner: {fileID: 0}
   keyPressDistance: 1
   keyPressSpeed: 5
   associatedKey: 99
@@ -407,8 +408,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   animationInterval: 0.05
+  conveyorDirection: 0
   conveyorObject: {fileID: 8490109464222056029}
+  conveyorPush: {fileID: 7866197856975028685}
   powerOn: 0
+  runOnce: 0
   proxyPowered: 0
   keyText: {fileID: 2065822387964926049}
 --- !u!54 &-6033544843484648760
