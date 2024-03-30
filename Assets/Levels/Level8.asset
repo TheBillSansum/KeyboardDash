@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01a58a86e43dcf44e938368cfd1c3aff, type: 3}
-  m_Name: Level7
+  m_Name: Level8
   m_EditorClassIdentifier: 
-  levelNumber: 6
-  levelName: Walls
-  levelDescription: Too many walls! Try to navigate throughout them to the finish
-  sceneObject: {fileID: 384876553434278044, guid: 12a6816c875b9b848b454f25c9ba5cdf, type: 3}
-  keyboardEvents: {fileID: 7700257554455438464, guid: 20966f2d644ce5949ae9ff9981a24a75, type: 3}
-  transparentStartPoint: {fileID: 5743216045290696378, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
+  levelNumber: 7
+  levelName: '#1 Biggest Fan!'
+  levelDescription: Can you indirectly get this key to the finish?
+  sceneObject: {fileID: 384876553434278044, guid: 46fca6208be546e49b1f1fc727fffc5c, type: 3}
+  keyboardEvents: {fileID: 9105627481677262416, guid: 0b2eaa1e6140210448ce0e71b138c311, type: 3}
+  transparentStartPoint: {fileID: 6316105186098464377, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
   inventoryActive: 1
   timeLimit: 0
   pressLimits: 0
-  basicInventory: 1
+  basicInventory: 10
   magnetsInventory: 0
-  fansInventory: 0
-  conveyorsInventory: 1
+  fansInventory: 10
+  conveyorsInventory: 0
   powersInventory: 0
   difficulty: 1
   personalRecord: 6.4243107

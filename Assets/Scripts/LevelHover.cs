@@ -11,6 +11,7 @@ public class LevelHover : MonoBehaviour
     public TextMeshProUGUI pressFatigueText;
     public TextMeshProUGUI personalRecord;
     public TextMeshProUGUI timeLimit;
+    public TextMeshProUGUI title;
     public LevelData levelData;
     public GameObject[] levelImages;
     public GameObject layoutSketch;
@@ -44,7 +45,8 @@ public class LevelHover : MonoBehaviour
 
         if (levelData != null)
         {
-            pressFatigueText.text = levelData.pressLimits >= 1 ? levelData.pressLimits.ToString() + " Presses" : "No Limit";
+            title.text = "Level " + levelData.levelNumber + " Layout - Windows Paint";
+            pressFatigueText.text = levelData.pressLimits == 0 ? "No Limit" : levelData.pressLimits == 1 ? levelData.pressLimits.ToString() + " Press" : levelData.pressLimits.ToString() + " Presses";
             personalRecord.text = levelData.personalRecord >= 1 ? levelData.personalRecord.ToString("0.0") + " Seconds" : "No Time Submitted";
             timeLimit.text = levelData.timeLimit >= 1 ? levelData.timeLimit.ToString() + " Seconds" : "No Limit";
         }

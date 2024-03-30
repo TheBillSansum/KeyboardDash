@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class LevelLoaderInstance : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class LevelLoaderInstance : MonoBehaviour
     public GameObject power;
     public GameObject timeLimit;
     public GameObject pressFatigue;
+    public GameObject difficulty;
 
     public TextMeshProUGUI basicText;
     public TextMeshProUGUI magnetText;
@@ -24,6 +26,8 @@ public class LevelLoaderInstance : MonoBehaviour
     public TextMeshProUGUI powerText;
     public TextMeshProUGUI fatigueText;
     public TextMeshProUGUI timeText;
+    public Image difficultyColour;
+    public TextMeshProUGUI difficultyText;
 
     private Dictionary<GameObject, TextMeshProUGUI> inventoryTextMap;
 
@@ -55,6 +59,22 @@ public class LevelLoaderInstance : MonoBehaviour
             { pressFatigue, fatigueText },
             { timeLimit, timeText }
         };
+
+        if(levelData.difficulty == LevelData.difficultyLevel.easy)
+        {
+            difficultyColour.color = Color.green;
+            difficultyText.text = "-Easy-";
+        }
+        else if(levelData.difficulty == LevelData.difficultyLevel.medium)
+        {
+            difficultyColour.color = Color.yellow;
+            difficultyText.text = "-Medium-";
+        }
+        else if(levelData.difficulty == LevelData.difficultyLevel.hard)
+        {
+            difficultyColour.color = Color.red;
+            difficultyText.text = "-Hard-";
+        }
     }
 
     private void UpdateInventoryUI(GameObject inventoryObject, TextMeshProUGUI inventoryText, float inventoryCount, string differenceText = "")
