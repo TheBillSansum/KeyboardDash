@@ -28,6 +28,7 @@ public class LevelLoaderInstance : MonoBehaviour
     public TextMeshProUGUI timeText;
     public Image difficultyColour;
     public TextMeshProUGUI difficultyText;
+    public TextMeshProUGUI descriptionText;
 
     private Dictionary<GameObject, TextMeshProUGUI> inventoryTextMap;
 
@@ -75,6 +76,8 @@ public class LevelLoaderInstance : MonoBehaviour
             difficultyColour.color = Color.red;
             difficultyText.text = "-Hard-";
         }
+
+        descriptionText.text = levelData.levelDescription.ToString();
     }
 
     private void UpdateInventoryUI(GameObject inventoryObject, TextMeshProUGUI inventoryText, float inventoryCount, string differenceText = "")

@@ -40,7 +40,7 @@ public class FinishCriteria : MonoBehaviour
     {
         if (Triggers)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("Player") && levelSpawner.gameStarted == true)
             {
                 LevelPassed();
             }

@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.UIElements;
-using System.Runtime.CompilerServices;
 
 public class KeyController : MonoBehaviour
 {

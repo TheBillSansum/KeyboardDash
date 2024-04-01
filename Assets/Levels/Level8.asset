@@ -21,7 +21,7 @@ MonoBehaviour:
   inventoryActive: 1
   timeLimit: 0
   pressLimits: 0
-  basicInventory: 10
+  basicInventory: 0
   magnetsInventory: 0
   fansInventory: 10
   conveyorsInventory: 0

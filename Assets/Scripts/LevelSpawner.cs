@@ -184,6 +184,7 @@ public class LevelSpawner : MonoBehaviour
         if (reason == 0)
         {
             popupMaker.Generate("Error - Ran Out Of Time!", "Level " + levelData[levelNumber].levelNumber + " Failed, Try going a bit faster?", "Error");
+            gameStarted = false;
         }
     }
 

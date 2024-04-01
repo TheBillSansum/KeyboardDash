@@ -41,6 +41,11 @@ public class BottomBarUI : MonoBehaviour
         }
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void ToggleStart()
     {
         if (enlargeStart == false)

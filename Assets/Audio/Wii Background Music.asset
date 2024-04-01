@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b6a9f74a6f3d44a9fcc2b9acf50a21, type: 3}
+  m_Name: Wii Background Music
+  m_EditorClassIdentifier: 
+  title: Wii Background Music
+  artist: Kazumi Totaka
+  albumCover: {fileID: 21300000, guid: 2e7d0acd2cf5bb441bb5f778db8d9dd6, type: 3}
+  audioClip: {fileID: 8300000, guid: e7111553cb3fedc4ca56d5428ffb0742, type: 3}
