@@ -38,6 +38,8 @@ public class KeyController : MonoBehaviour
     public GameObject rodPrefab;
     public Rigidbody rbMagnet;
 
+    public GameObject stickySkin;
+
     public Rigidbody rbBlow;
     public float blowForce = 0.1f;
     public GameObject fanObject;
@@ -94,6 +96,12 @@ public class KeyController : MonoBehaviour
         foreach (GameObject key in connectedKeysObject)
         {
             connectedKeysCon.Add(key.GetComponent<KeyController>());
+            key.GetComponent<KeyController>().stickySkin.SetActive(true);
+            key.GetComponent<KeyController>().connectedKeysObject = connectedKeysObject;
+        }
+        if(connectedKeysObject.Length >= 1)
+        {
+            stickySkin.SetActive(true);
         }
         initialPosition = transform.position;
         pressedPosition = initialPosition + Vector3.up * keyPressDistance;
@@ -208,11 +216,12 @@ public class KeyController : MonoBehaviour
         }
     }
     public void ProxyPress()
-    {
-        MoveKey(pressedPosition);
-        isActivated = true;
-        Debug.Log("Proxy Pressed" + this.gameObject.name);
+    {     
+        isActivated = true;    
         proxy = true;
+        MoveKey(pressedPosition);
+        Debug.Log("Proxy Pressed" + this.gameObject.name);
+
     }
 
     public void ProxyPower()
@@ -308,7 +317,7 @@ public class KeyController : MonoBehaviour
             {
                 MoveKey(pressedPosition);
                 isActivated = true;
-                if(levelSpawner.firstPress != true)
+                if (levelSpawner.firstPress != true)
                 {
                     levelSpawner.firstPress = true;
                 }
@@ -334,6 +343,8 @@ public class KeyController : MonoBehaviour
                 {
                     key.proxy = false;
                 }
+
+
                 MoveKey(initialPosition);
                 runOnce = false;
                 isActivated = false;
@@ -364,7 +375,7 @@ public class KeyController : MonoBehaviour
                     {
                         conveyorAnimationCoroutine = StartCoroutine(AnimateConveyor());
                         conveyorObject.SetActive(true);
-                        
+
 
                     }
                     else if (!isActivated && conveyorAnimationCoroutine != null)
@@ -409,7 +420,6 @@ public class KeyController : MonoBehaviour
             }
         }
     }
-
 
     void MoveKey(Vector3 targetPosition)
     {

@@ -1708,7 +1708,7 @@ PrefabInstance:
       objectReference: {fileID: 7148837283221240432}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
@@ -1737,11 +1737,11 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[0]
       value: 
-      objectReference: {fileID: 2658897837468024856}
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[1]
       value: 
-      objectReference: {fileID: 7681595835085566500}
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[2]
       value: 

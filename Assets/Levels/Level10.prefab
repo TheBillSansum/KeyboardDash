@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 4069214094796575092}
   - component: {fileID: 1283025020885435539}
   m_Layer: 0
-  m_Name: Level7
+  m_Name: Level10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,8 +77,8 @@ Transform:
   - {fileID: 8404853645660929344}
   - {fileID: 427325568016774302}
   - {fileID: 1362754789729316829}
-  - {fileID: 9008343382208523902}
-  - {fileID: 1604667023885147151}
+  - {fileID: 8173529569338844767}
+  - {fileID: 4785552298724479398}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1283025020885435539
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8f4bdd167ead14cb0e2df478ccf918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 6394882193900855240}
+  objectToSpawn: {fileID: 9105627481677262416, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
 --- !u!1 &1881645820734558351
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 7075183762978250034}
   serializedVersion: 2
   m_LocalRotation: {x: -0.29222584, y: 0.29222584, z: 0.6438976, w: 0.6438976}
-  m_LocalPosition: {x: 2.716, y: -0.178, z: 5.349}
+  m_LocalPosition: {x: 1.666, y: -0.178, z: 9.42}
   m_LocalScale: {x: 1, y: 0.42736483, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -627,10 +627,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -657,10 +653,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 106
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -1644,7 +1636,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -1654,10 +1646,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -1685,10 +1673,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeys.Array.size
@@ -1724,7 +1708,7 @@ PrefabInstance:
       objectReference: {fileID: 7148837283221240432}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
@@ -1753,11 +1737,11 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2658897837468024856}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6352392051277903670}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[2]
       value: 
@@ -1765,11 +1749,11 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[3]
       value: 
-      objectReference: {fileID: 9037934894037681379}
+      objectReference: {fileID: 3793647788864504553}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[4]
       value: 
-      objectReference: {fileID: 7378700138138085709}
+      objectReference: {fileID: 2252012156260952913}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[5]
       value: 
@@ -1946,7 +1930,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -1956,10 +1940,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -1987,10 +1967,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -2172,7 +2148,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -2182,10 +2158,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -2213,10 +2185,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 107
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -3079,7 +3047,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -3089,10 +3057,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -3120,10 +3084,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 52
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -3818,7 +3778,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -3828,10 +3788,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -3859,10 +3815,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -4028,7 +3980,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -4038,10 +3990,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -4069,10 +4017,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 48
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -4478,7 +4422,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -4488,10 +4432,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -4519,10 +4459,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 53
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -4686,103 +4622,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 3617655160807243646}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3630992066730523464
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4069214094796575092}
-    m_Modifications:
-    - target: {fileID: 5721806387508172086, guid: 20966f2d644ce5949ae9ff9981a24a75, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721806387508172086, guid: 20966f2d644ce5949ae9ff9981a24a75, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721806387508172086, guid: 20966f2d644ce5949ae9ff9981a24a75, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7700257554455438464, guid: 20966f2d644ce5949ae9ff9981a24a75, type: 3}
-      propertyPath: m_Name
-      value: Level7Starting
-      objectReference: {fileID: 0}
-    - target: {fileID: 7700257554455438464, guid: 20966f2d644ce5949ae9ff9981a24a75, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 20966f2d644ce5949ae9ff9981a24a75, type: 3}
---- !u!1 &6394882193900855240 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7700257554455438464, guid: 20966f2d644ce5949ae9ff9981a24a75, type: 3}
-  m_PrefabInstance: {fileID: 3630992066730523464}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &9008343382208523902 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5721806387508172086, guid: 20966f2d644ce5949ae9ff9981a24a75, type: 3}
-  m_PrefabInstance: {fileID: 3630992066730523464}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4237232506098352765
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4069214094796575092}
-    m_Modifications:
-    - target: {fileID: 3209167315644849778, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3209167315644849778, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3209167315644849778, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3209167315644849778, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3209167315644849778, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3209167315644849778, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3209167315644849778, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5743216045290696378, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
-      propertyPath: m_Name
-      value: Level7Spawn
-      objectReference: {fileID: 0}
-    - target: {fileID: 5743216045290696378, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
---- !u!4 &1604667023885147151 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3209167315644849778, guid: 306827d53ed0f6e4592c3b88ab26451f, type: 3}
-  m_PrefabInstance: {fileID: 4237232506098352765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4398013358698853308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4879,7 +4718,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -4889,10 +4728,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -4920,10 +4755,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 51
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeys.Array.size
@@ -4959,7 +4790,7 @@ PrefabInstance:
       objectReference: {fileID: 8735820857257876878}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
@@ -4996,7 +4827,11 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7681595835085566500}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[3]
+      value: 
+      objectReference: {fileID: 3793647788864504553}
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Size.x
       value: 4
@@ -5363,7 +5198,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -5373,10 +5208,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -5404,10 +5235,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 54
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -5585,7 +5412,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -5595,10 +5422,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -5626,10 +5449,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 97
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -5791,7 +5610,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -5801,10 +5620,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -5832,10 +5647,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 103
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -6194,7 +6005,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -6204,10 +6015,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -6235,10 +6042,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 56
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -6597,7 +6400,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -6607,10 +6410,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -6638,10 +6437,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 115
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -6983,12 +6778,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9043205884608097354, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 6987238123296625882}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3793647788864504553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6075943714702661171, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+  m_PrefabInstance: {fileID: 6987238123296625882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7814968419304055526 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
   m_PrefabInstance: {fileID: 6987238123296625882}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3793647788864504553}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
@@ -7404,6 +7204,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &7367192593837833096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4069214094796575092}
+    m_Modifications:
+    - target: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.8100002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316105186098464377, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_Name
+      value: Level1StartingPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316105186098464377, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+--- !u!4 &4785552298724479398 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
+  m_PrefabInstance: {fileID: 7367192593837833096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7607590293322812510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7611,7 +7477,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -7621,10 +7487,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -7652,10 +7514,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 102
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -7907,7 +7765,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -7917,10 +7775,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -7948,10 +7802,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 57
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -8531,7 +8381,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -8541,10 +8391,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -8574,10 +8420,6 @@ PrefabInstance:
       value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeys.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -8594,6 +8436,10 @@ PrefabInstance:
       value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysCon.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.data[0]
       value: 
       objectReference: {fileID: 70329321811318585}
@@ -8602,8 +8448,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7814968419304055526}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysCon.Array.data[0]
+      value: 
+      objectReference: {fileID: 8950811563835695127}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysCon.Array.data[1]
+      value: 
+      objectReference: {fileID: 70329321811318585}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysCon.Array.data[2]
+      value: 
+      objectReference: {fileID: 3624100799691461163}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysCon.Array.data[3]
+      value: 
+      objectReference: {fileID: 7814968419304055526}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
@@ -8632,15 +8494,19 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[0]
       value: 
-      objectReference: {fileID: 6352392051277903670}
+      objectReference: {fileID: 2658897837468024856}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[1]
       value: 
-      objectReference: {fileID: 7681595835085566500}
+      objectReference: {fileID: 6352392051277903670}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.data[2]
       value: 
-      objectReference: {fileID: 9037934894037681379}
+      objectReference: {fileID: 7681595835085566500}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: connectedKeysObject.Array.data[3]
+      value: 
+      objectReference: {fileID: 3793647788864504553}
     - target: {fileID: 1482367057170138071, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: m_Size.x
       value: 4
@@ -8757,7 +8623,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -8767,10 +8633,6 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: staticKey
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -8798,10 +8660,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 104
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -9792,7 +9650,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: a31f6ac8d19328f49bda5a3aaa2322b4, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: keyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: powerOn
@@ -9833,10 +9691,6 @@ PrefabInstance:
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: associatedKey
       value: 108
-      objectReference: {fileID: 0}
-    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
-      propertyPath: lockedElevated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -9980,3 +9834,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &8989464966591947864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4069214094796575092}
+    m_Modifications:
+    - target: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.8100002
+      objectReference: {fileID: 0}
+    - target: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034317765373756323, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105627481677262416, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_Name
+      value: Level1SpawnObjects
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105627481677262416, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+--- !u!4 &8173529569338844767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 985948658608357895, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+  m_PrefabInstance: {fileID: 8989464966591947864}
+  m_PrefabAsset: {fileID: 0}

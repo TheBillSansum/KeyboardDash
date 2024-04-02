@@ -41,6 +41,11 @@ public class BottomBarUI : MonoBehaviour
         }
     }
 
+    public void OpenFeedback()
+    {
+        Application.OpenURL("https://forms.gle/R8za8bGTmkRmVC5t9");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

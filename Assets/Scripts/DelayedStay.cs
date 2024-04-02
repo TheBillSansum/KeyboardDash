@@ -19,6 +19,9 @@ public class DelayedStay : MonoBehaviour
 
     public FinishCriteria finishCriteria;
 
+    public delegate void ResetGoalDelegate();
+    public static event ResetGoalDelegate OnResetGoal;
+
     private void Start()
     {
         runOnce = false;
@@ -40,12 +43,20 @@ public class DelayedStay : MonoBehaviour
         }
     }
 
+    public void ResetGoal()
+    {
+        runOnce = false;
+        inTrigger = false;
+        complete = false;
+        currentTime = 0;
+        Debug.Log("Reset");
+    }
 
     public void Update()
     {
         UpdateGradient();
 
-        if(inTrigger == false && currentTime > 0)
+        if (inTrigger == false && currentTime > 0)
         {
             currentTime -= (Time.deltaTime * 0.5f);
         }
@@ -57,12 +68,12 @@ public class DelayedStay : MonoBehaviour
         fillImage.fillAmount = Mathf.Clamp01(currentTime / requiredTime);
         fillPercentage.text = (ratio * 100).ToString("0") + "%";
 
-        Color color = new Color(1f, 0f, 0f, 1f); 
-        color = Color.Lerp(color, new Color(0f, 1f, 0f, 0.5f), ratio); 
+        Color color = new Color(1f, 0f, 0f, 1f);
+        color = Color.Lerp(color, new Color(0f, 1f, 0f, 0.5f), ratio);
 
         gradient.color = color;
 
-        if(ratio >= 1)
+        if (ratio >= 1)
         {
             if (onlyGoal)
             {

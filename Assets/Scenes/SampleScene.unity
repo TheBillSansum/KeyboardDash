@@ -3133,8 +3133,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1214895341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.49528554}
-  m_AnchorMax: {x: 1, y: 0.99999964}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 43.5087}
   m_SizeDelta: {x: 20, y: -69.1776}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5262,7 +5262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &550161273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6529,6 +6529,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 529d46c19724f68429ff3d349874bc36, type: 2}
   - {fileID: 11400000, guid: e66392af66a030447a1a772c8c123b43, type: 2}
   - {fileID: 11400000, guid: b6e99a8475095604e89c3687ded7665a, type: 2}
+  - {fileID: 11400000, guid: d958cb1ad1d38cc478742349b10e52b5, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   levelObject: {fileID: 0}
   levelEventsObject: {fileID: 0}
   startingPoint: {fileID: 0}
@@ -11136,7 +11142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7806832668732315832, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
       propertyPath: level
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7806832668732315832, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
       propertyPath: levelSpawner
@@ -11599,6 +11605,7 @@ MonoBehaviour:
   nextButton: {fileID: 1194823439}
   prevButton: {fileID: 334104491}
   songs:
+  - {fileID: 11400000, guid: b92044c2602c1d44391176a6edea7dfb, type: 2}
   - {fileID: 11400000, guid: 33eab388aca84954a8ac2d1d48fc6b01, type: 2}
   - {fileID: 11400000, guid: 1cfdc09403a1bc4498e6153472bdd33c, type: 2}
   - {fileID: 11400000, guid: c1e0c0b6c6e7dda40bb9fb130e8116d5, type: 2}
@@ -13686,7 +13693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -14125,7 +14132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Steve
+  m_text: Artist Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1db3901df9a1e834784c4c05f4ba4bee, type: 2}
   m_sharedMaterial: {fileID: -4406428672775297824, guid: 1db3901df9a1e834784c4c05f4ba4bee, type: 2}
@@ -15515,7 +15522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -16560,7 +16567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f0b78fafbaa0c4f438c38ec704932259, type: 3}
+  m_Sprite: {fileID: 2784325872354485142, guid: 91f80eda6c1bff4459362daeed08155a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17305,7 +17312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: song title innit
+  m_text: Song Title
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1db3901df9a1e834784c4c05f4ba4bee, type: 2}
   m_sharedMaterial: {fileID: -4406428672775297824, guid: 1db3901df9a1e834784c4c05f4ba4bee, type: 2}
@@ -21872,6 +21879,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7806832668732315832, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
+      propertyPath: level
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806832668732315832, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
       propertyPath: levelSpawner
       value: 
       objectReference: {fileID: 620739612}
@@ -21937,7 +21948,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 69:69
+  m_text: 00:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a9fb72713462bd34a99acbf23a40dd74, type: 2}
   m_sharedMaterial: {fileID: -4406428672775297824, guid: a9fb72713462bd34a99acbf23a40dd74, type: 2}
@@ -24964,7 +24975,7 @@ GameObject:
   - component: {fileID: 3120760092662619001}
   - component: {fileID: 3497328381947677092}
   m_Layer: 5
-  m_Name: Shutdown (2)
+  m_Name: Feedback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27414,7 +27425,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0, g: 0.28873968, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_SelectedColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -27760,7 +27771,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0, g: 0.28873968, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_SelectedColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -27779,7 +27790,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3120760092662619001}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5247629321370252851}
+        m_TargetAssemblyTypeName: BottomBarUI, Assembly-CSharp
+        m_MethodName: OpenFeedback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3551472699715210722
 GameObject:
   m_ObjectHideFlags: 0
@@ -29125,7 +29148,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0, g: 0.28873968, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_SelectedColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -29571,7 +29594,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0, g: 0.28873968, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_SelectedColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -31440,8 +31463,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8354565686016422746}
   - {fileID: 4687580271294898100}
+  - {fileID: 8354565686016422746}
   - {fileID: 8771892445324670799}
   - {fileID: 8809164764102648767}
   - {fileID: 2461780471660384479}
@@ -31980,7 +32003,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0, g: 0.28873968, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_SelectedColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -33110,7 +33133,7 @@ GameObject:
   - component: {fileID: 8797050811299271326}
   - component: {fileID: 6765299001036165197}
   m_Layer: 5
-  m_Name: Shutdown (3)
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

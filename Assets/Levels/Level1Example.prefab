@@ -94,7 +94,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 9105627481677262416, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
-  objectToDespawn: {fileID: 8364558537837297133}
 --- !u!1 &1881645820734558351
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +343,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSpawner: {fileID: 0}
+  Triggers: 1
+  multipleStays: 0
+  delayedStay:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7173597301970487770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,7 +1708,7 @@ PrefabInstance:
       objectReference: {fileID: 7148837283221240432}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
@@ -7252,11 +7259,6 @@ PrefabInstance:
 --- !u!4 &4785552298724479398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2617775370561219118, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
-  m_PrefabInstance: {fileID: 7367192593837833096}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8364558537837297133 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1308690475302454885, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
   m_PrefabInstance: {fileID: 7367192593837833096}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7607590293322812510

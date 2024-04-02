@@ -26,6 +26,7 @@ public class MusicPlayer : MonoBehaviour
 
     private void Start()
     {
+        ShuffleSongs(songs);
         Play();
 
         playButton.onClick.AddListener(Play);
@@ -36,6 +37,21 @@ public class MusicPlayer : MonoBehaviour
 
         UpdateVolume(1);
         UpdateUI();
+    }
+
+    public static void ShuffleSongs(SongData[] songs)
+    {
+        System.Random rng = new System.Random();
+
+        int n = songs.Length;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            SongData value = songs[k];
+            songs[k] = songs[n];
+            songs[n] = value;
+        }
     }
 
     private void UpdateUI()

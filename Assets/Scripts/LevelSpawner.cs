@@ -170,10 +170,20 @@ public class LevelSpawner : MonoBehaviour
         {
             Destroy(levelEventsObject);
         }
+        gameStarted = false;
+        levelPassed = false;
+        firstPress = false;
+        pressFatigued = false;
+        presses = 0;
         Destroy(startingPoint);
         startTime = Time.time;
         levelEventsObject = Instantiate(levelData[levelNumber].keyboardEvents, levelObject.transform);
         gameStarted = true;
+
+        foreach (DelayedStay delayedStay in FindObjectsOfType<DelayedStay>())
+        {
+            delayedStay.SendMessage("ResetGoal", SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     public void ResetLevel()
