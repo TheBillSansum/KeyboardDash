@@ -34,6 +34,7 @@ public class MusicPlayer : MonoBehaviour
         nextButton.onClick.AddListener(NextSong);
         prevButton.onClick.AddListener(PreviousSong);
 
+        UpdateVolume(1);
         UpdateUI();
     }
 

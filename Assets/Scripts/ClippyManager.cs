@@ -8,11 +8,11 @@ public class ClippyManager : MonoBehaviour
 {
     public bool clippyHidden = false;
     public int currentHint;
-    public string[] hints = new string[10];
-    public bool[] hintHeard = new bool[10];
-    public bool[] hintReady = new bool[10];
-    public Transform[] hintLocation = new Transform[10];
-    public Sprite[] clippySprite = new Sprite[10];
+    public string[] hints = new string[20];
+    public bool[] hintHeard = new bool[20];
+    public bool[] hintReady = new bool[20];
+    public Transform[] hintLocation = new Transform[20];
+    public Sprite[] clippySprite = new Sprite[20];
 
     public GameObject enableClippyButton;
     public GameObject cullClippyButton;
@@ -34,6 +34,12 @@ public class ClippyManager : MonoBehaviour
         hints[5] = "You unlocked the Inventory! Drag and Drop from the slots and place keys on the desired key!";
         hints[6] = "The magnet key attracts any close metalic objects towards it, press the key assosiated with it to use it!";
         hints[7] = "Some levels limit how many presses you can use per attempt, once you hit the limit no further presses can be tracked, but play continues!";
+        hints[8] = "Goals that have a % require you to hold the key in the goal, make sure to keep it contained as if it leaves progress is lost!";
+        hints[9] = "Just like last level, some levels contain multiple keys, which must all be complete at the same time to pass";
+        hints[10] = "You have 2 'Power' blocks this level and only one press, you will have to get creative in placements. Powering on the blocks don't count as a press ;)";
+        hints[11] = "You unlocked a conveyer belt to place, you only have one though, be cautious of where you place it!";
+        hints[12] = "New Item! Place the fans on the keyboard and then press that button during play to blow the closest key object away";
+        hints[13] = "Oh! The first 'Hard' level! Good Luck, make sure to get a speedy start";
 
         clippyMenu.SetActive(false);
         clippyMenuActive = false;
@@ -57,6 +63,7 @@ public class ClippyManager : MonoBehaviour
 
     public void PlayHint(int hint)
     {
+        Debug.Log("Instruction to play hint" + hint);
         currentHint = hint;
 
         if (clippyHidden == false && hintHeard[hint]!= true)

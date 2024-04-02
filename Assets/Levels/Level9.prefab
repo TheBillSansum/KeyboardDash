@@ -77,8 +77,8 @@ Transform:
   - {fileID: 8404853645660929344}
   - {fileID: 427325568016774302}
   - {fileID: 1362754789729316829}
-  - {fileID: 6010560673166448395}
-  - {fileID: 9173763897654942031}
+  - {fileID: 4506129056714813767}
+  - {fileID: 5840453070308598389}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1283025020885435539
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8f4bdd167ead14cb0e2df478ccf918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 7444333145123965644, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
+  objectToSpawn: {fileID: 143581957557774847, guid: 148556631c7b57b4595c8c519f342be3, type: 3}
 --- !u!1 &1881645820734558351
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +915,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -1455,7 +1459,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: blowForce
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
@@ -2369,6 +2373,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -2959,6 +2967,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7290435791249556170, guid: 104c6cef98c94874786d2100af817f4d, type: 3}
   m_PrefabInstance: {fileID: 2469346071399517593}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2522027884512552925
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4069214094796575092}
+    m_Modifications:
+    - target: {fileID: 143581957557774847, guid: 148556631c7b57b4595c8c519f342be3, type: 3}
+      propertyPath: m_Name
+      value: Level9SpawnObjects
+      objectReference: {fileID: 0}
+    - target: {fileID: 143581957557774847, guid: 148556631c7b57b4595c8c519f342be3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117970288605069428, guid: 148556631c7b57b4595c8c519f342be3, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218365496095229352, guid: 148556631c7b57b4595c8c519f342be3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -14.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218365496095229352, guid: 148556631c7b57b4595c8c519f342be3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.604
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218365496095229352, guid: 148556631c7b57b4595c8c519f342be3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.325
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 148556631c7b57b4595c8c519f342be3, type: 3}
+--- !u!4 &5840453070308598389 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8218365496095229352, guid: 148556631c7b57b4595c8c519f342be3, type: 3}
+  m_PrefabInstance: {fileID: 2522027884512552925}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2903919699880155211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3040,6 +3090,44 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7290435791249556170, guid: 104c6cef98c94874786d2100af817f4d, type: 3}
   m_PrefabInstance: {fileID: 2903919699880155211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2925157907415142782
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4069214094796575092}
+    m_Modifications:
+    - target: {fileID: 1589985206220808249, guid: 75f2142cfb6e28c468cf25b12f1b5fcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -14.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589985206220808249, guid: 75f2142cfb6e28c468cf25b12f1b5fcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.604
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589985206220808249, guid: 75f2142cfb6e28c468cf25b12f1b5fcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.325
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341896506835553390, guid: 75f2142cfb6e28c468cf25b12f1b5fcc, type: 3}
+      propertyPath: m_Name
+      value: Level9SpawnLocation
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341896506835553390, guid: 75f2142cfb6e28c468cf25b12f1b5fcc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 75f2142cfb6e28c468cf25b12f1b5fcc, type: 3}
+--- !u!4 &4506129056714813767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1589985206220808249, guid: 75f2142cfb6e28c468cf25b12f1b5fcc, type: 3}
+  m_PrefabInstance: {fileID: 2925157907415142782}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2972137689532846800
 PrefabInstance:
@@ -3284,6 +3372,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: staticKey
       value: 0
       objectReference: {fileID: 0}
@@ -3508,6 +3600,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: rodPrefab
       value: 
@@ -5106,72 +5202,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7290435791249556170, guid: 104c6cef98c94874786d2100af817f4d, type: 3}
   m_PrefabInstance: {fileID: 4945240973758721499}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &5176109850621686160
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4069214094796575092}
-    m_Modifications:
-    - target: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.6606313
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.17531049
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.6276863
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9919958
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.1255393
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.0135330055
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.001054692
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -14.421
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 1.604
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.325
-      objectReference: {fileID: 0}
-    - target: {fileID: 7444333145123965644, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_Name
-      value: Level9SpawnObjects
-      objectReference: {fileID: 0}
-    - target: {fileID: 7444333145123965644, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
---- !u!4 &6010560673166448395 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1494334615655048859, guid: 438a66c931e5ef347ad03352e2ae539a, type: 3}
-  m_PrefabInstance: {fileID: 5176109850621686160}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5264445864091663377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5897,6 +5927,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -6287,6 +6321,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -6687,6 +6725,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -6883,6 +6925,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -7089,6 +7135,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -7293,6 +7343,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -7985,6 +8039,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: staticKey
       value: 0
       objectReference: {fileID: 0}
@@ -8185,6 +8243,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -8831,6 +8893,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -9008,72 +9074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715091d0af94f6648a02a6d9882253f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &8419026227908586184
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4069214094796575092}
-    m_Modifications:
-    - target: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.6606313
-      objectReference: {fileID: 0}
-    - target: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.17531049
-      objectReference: {fileID: 0}
-    - target: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.6276863
-      objectReference: {fileID: 0}
-    - target: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9919958
-      objectReference: {fileID: 0}
-    - target: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.1255393
-      objectReference: {fileID: 0}
-    - target: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.0135330055
-      objectReference: {fileID: 0}
-    - target: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.001054692
-      objectReference: {fileID: 0}
-    - target: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -14.421
-      objectReference: {fileID: 0}
-    - target: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 1.604
-      objectReference: {fileID: 0}
-    - target: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.325
-      objectReference: {fileID: 0}
-    - target: {fileID: 8676966371365560272, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_Name
-      value: Level9SpawnTransparent
-      objectReference: {fileID: 0}
-    - target: {fileID: 8676966371365560272, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
---- !u!4 &9173763897654942031 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 835877423646421895, guid: 8833ef1aab35ad64bb18f0745d6337b2, type: 3}
-  m_PrefabInstance: {fileID: 8419026227908586184}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8454085635143253364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9098,6 +9098,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -9304,6 +9308,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -9508,6 +9516,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: blowForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 

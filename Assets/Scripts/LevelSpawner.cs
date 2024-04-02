@@ -144,14 +144,23 @@ public class LevelSpawner : MonoBehaviour
             case 1:
                 clippyManager.PlayHint(4);
                 break;
-
             case 2:
                 clippyManager.PlayHint(5);
                 break;
-
             case 3:
                 clippyManager.PlayHint(7);
                 break;
+            case 4:
+                clippyManager.PlayHint(8);
+                break;
+            case 5:
+                clippyManager.PlayHint(10);
+                break;
+            case 6:
+                clippyManager.PlayHint(11);
+                break;
+
+
         }
     }
 
