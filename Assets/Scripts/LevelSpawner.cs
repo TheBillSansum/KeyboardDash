@@ -203,7 +203,14 @@ public class LevelSpawner : MonoBehaviour
         if (reason == 0)
         {
             popupMaker.Generate("Error - Ran Out Of Time!", "Level " + levelData[levelNumber].levelNumber + " Failed, Try going a bit faster?", "Error");
-            gameStarted = false;
+        }
+        else if(reason == 1)
+        {
+            popupMaker.Generate("Error - Key fell off map", "Level " + levelData[levelNumber].levelNumber + " Failed, Try keep it all on board next time...", "Error");
+        }
+        else if(reason == 2)
+        {
+            popupMaker.Generate("Error - Hit by a Laser", "Level " + levelData[levelNumber].levelNumber + " Failed, Try avoid those pesky lasers next time?", "Error");
         }
     }
 

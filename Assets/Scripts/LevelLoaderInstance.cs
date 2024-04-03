@@ -20,7 +20,10 @@ public class LevelLoaderInstance : MonoBehaviour
     public GameObject difficulty;
     public GameObject externalThreat;
 
+    public Sprite laserThreat;
+    public Sprite lasersThreat;
     public Sprite cannonThreat;
+
 
     public TextMeshProUGUI basicText;
     public TextMeshProUGUI magnetText;
@@ -87,6 +90,18 @@ public class LevelLoaderInstance : MonoBehaviour
             externalThreat.SetActive(true);
             externalThreat.GetComponent<Image>().sprite = cannonThreat;
             cannonText.text = "-Cannon-";
+        }
+        else if(levelData.externalThreat == "Laser")
+        {
+            externalThreat.SetActive(true);
+            externalThreat.GetComponent<Image>().sprite = laserThreat;
+            cannonText.text = "-Laser-";
+        }
+        else if(levelData.externalThreat == "Lasers")
+        {
+            externalThreat.SetActive(true);
+            externalThreat.GetComponent<Image>().sprite = lasersThreat;
+            cannonText.text = "-Lasers-";
         }
         else
         {
