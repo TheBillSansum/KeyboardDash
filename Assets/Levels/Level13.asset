@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a58a86e43dcf44e938368cfd1c3aff, type: 3}
   m_Name: Level13
   m_EditorClassIdentifier: 
-  levelNumber: 11
+  levelNumber: 12
   levelName: 'Laser 2: Electric Boogaloo'
-  levelDescription: Avoid those lasers!
+  levelDescription: Keep high, you must keep above these lasers to pass this level
   sceneObject: {fileID: 384876553434278044, guid: c4bda2bb8e8714245a03fc67c6bd8777, type: 3}
   keyboardEvents: {fileID: 9105627481677262416, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
   transparentStartPoint: {fileID: 6316105186098464377, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
