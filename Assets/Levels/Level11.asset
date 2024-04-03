@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01a58a86e43dcf44e938368cfd1c3aff, type: 3}
-  m_Name: Level10
+  m_Name: Level11
   m_EditorClassIdentifier: 
-  levelNumber: 9
-  levelName: Sticky Keys
-  levelDescription: Sticky Keys, they really stick!
-  sceneObject: {fileID: 384876553434278044, guid: a96766e2c1409a448a92850984559ef0, type: 3}
-  keyboardEvents: {fileID: 571817369907953601, guid: 6c3ff206659ff5643817927606f8e75b, type: 3}
-  transparentStartPoint: {fileID: 8303775118478279515, guid: cd8f6e4e8db4eb74394a45a5ad27d0f6, type: 3}
+  levelNumber: 10
+  levelName: The Protector
+  levelDescription: Make sure the key gets to the goal without getting attacked!
+  sceneObject: {fileID: 384876553434278044, guid: cfcb628546f1b054fb30c09107524647, type: 3}
+  keyboardEvents: {fileID: 9105627481677262416, guid: ab4b14439e572824394a162ab84ea9ea, type: 3}
+  transparentStartPoint: {fileID: 6316105186098464377, guid: 47863d2ca388d544690060f312faa5ce, type: 3}
   inventoryActive: 0
   timeLimit: 0
-  pressLimits: 0
+  pressLimits: 10
   basicInventory: 0
   magnetsInventory: 0
   fansInventory: 0
@@ -28,3 +28,4 @@ MonoBehaviour:
   powersInventory: 0
   difficulty: 1
   personalRecord: 3.1452074
+  externalThreat: Cannon

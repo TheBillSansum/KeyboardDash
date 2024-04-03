@@ -12,6 +12,7 @@ public class KeyController : MonoBehaviour
     public KeyCode associatedKey;
     private bool isActivated = false;
     public bool lockedElevated = false;
+    public bool permPowerOn = false;
 
     public bool staticKey = false;
 
@@ -215,14 +216,14 @@ public class KeyController : MonoBehaviour
 
         }
     }
-    public void ProxyPress()
-    {     
-        isActivated = true;    
-        proxy = true;
-        MoveKey(pressedPosition);
-        Debug.Log("Proxy Pressed" + this.gameObject.name);
+    //public void ProxyPress()
+    //{     
+    //    isActivated = true;    
+    //    proxy = true;
+    //    MoveKey(pressedPosition);
+    //    Debug.Log("Proxy Pressed" + this.gameObject.name);
 
-    }
+    //}
 
     public void ProxyPower()
     {
@@ -288,8 +289,11 @@ public class KeyController : MonoBehaviour
         switch (keyType)
         {
             case KeyType.Conveyor:
-                this.gameObject.transform.Rotate(0, -90, 0);//Rotate(0, -90, 0);
-                keyText.transform.rotation = Quaternion.Euler(90, 180, -90);//Rotate(0, -90, 0)
+                if (staticKey != true)
+                {
+                    this.gameObject.transform.Rotate(0, -90, 0);//Rotate(0, -90, 0);
+                    keyText.transform.rotation = Quaternion.Euler(90, 180, -90);//Rotate(0, -90, 0)
+                }
                 break;
 
             case KeyType.Power:
@@ -333,8 +337,7 @@ public class KeyController : MonoBehaviour
 
                 foreach (KeyController key in connectedKeysCon)
                 {
-                    key.ProxyPress();
-                    Debug.Log("Called");
+                   key.ProxyPress();
                 }
             }
             else if (!proxy && !proxyPowered)
@@ -344,8 +347,10 @@ public class KeyController : MonoBehaviour
                     key.proxy = false;
                 }
 
-
-                MoveKey(initialPosition);
+                if (isActivated == false)
+                {
+                    MoveKey(initialPosition);
+                }
                 runOnce = false;
                 isActivated = false;
             }
@@ -419,6 +424,29 @@ public class KeyController : MonoBehaviour
                     break;
             }
         }
+        if (permPowerOn)
+        {
+            ProxyPower();
+        }
+    }
+
+    public void ProxyPress()
+    {
+        if (!isActivated)
+        {
+            isActivated = true;
+            SynchronizeKeys();
+            Debug.Log("Proxy Pressed" + this.gameObject.name);
+        }
+    }
+
+    void SynchronizeKeys()
+    {
+        foreach (KeyController key in connectedKeysCon)
+        {
+            key.MoveKey(key.pressedPosition);
+            Debug.Log("Run");
+        }
     }
 
     void MoveKey(Vector3 targetPosition)
@@ -426,6 +454,23 @@ public class KeyController : MonoBehaviour
         Vector3 currentPosition = rb.position;
         Vector3 newPosition = Vector3.Lerp(currentPosition, targetPosition, keyPressSpeed * Time.deltaTime);
         rb.MovePosition(newPosition);
+
+        // Check if all connected keys have reached the target position
+        //bool allKeysReachedTarget = true;
+        //foreach (KeyController key in connectedKeysCon)
+        //{
+        //    if (Vector3.Distance(key.transform.position, targetPosition) > 0.001f)
+        //    {
+        //        allKeysReachedTarget = false;
+        //        break;
+        //    }
+        //}
+
+        //// If all connected keys have reached the target, reset isActivated flag
+        //if (allKeysReachedTarget)
+        //{
+        //    isActivated = false;
+        //}
     }
 
     string GetKeyStringWithoutAlpha(KeyCode key)

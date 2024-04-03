@@ -7,6 +7,7 @@ public class ConveyorPush : MonoBehaviour
     public float pushForce = 10;
     public Direction conveyorDirection_;
     public Rigidbody rb;
+    public GameObject parent;
     public enum Direction
     {
         Left,
@@ -22,23 +23,6 @@ public class ConveyorPush : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Vector3 forceDirection = Vector3.zero;
-        switch (conveyorDirection_)
-        {
-            case Direction.Left:
-                forceDirection = transform.right;
-                break;
-            case Direction.Right:
-                forceDirection = -transform.right;
-                break;
-            case Direction.Up:
-                forceDirection = -transform.up;
-                break;
-            case Direction.Down:
-                forceDirection = transform.up;
-                break;
-        }
-
-        rb.AddForce(pushForce * forceDirection, ForceMode.Force);
+        rb.AddForce(pushForce * parent.transform.right, ForceMode.Force);
     }
 }

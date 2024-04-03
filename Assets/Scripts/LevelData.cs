@@ -21,6 +21,7 @@ public class LevelData : ScriptableObject
     public int powersInventory;
     public difficultyLevel difficulty;
     public float personalRecord;
+    public string externalThreat;
     public enum difficultyLevel 
     {
         easy,

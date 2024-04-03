@@ -7,6 +7,8 @@ public class FinishCriteria : MonoBehaviour
     public LevelSpawner levelSpawner;
     public bool Triggers = true;
     public bool multipleStays = false;
+    public bool clearCannonBalls = false;
+    public Cannon cannon;
     public DelayedStay[] delayedStay = new DelayedStay[5];
 
 
@@ -50,6 +52,10 @@ public class FinishCriteria : MonoBehaviour
 
     public void LevelPassed()
     {
+        if (clearCannonBalls)
+        {
+            cannon.DisposeAllCannonballs();
+        }
         levelSpawner.LevelPassed();
     }
 }

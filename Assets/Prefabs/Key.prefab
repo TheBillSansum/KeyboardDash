@@ -802,6 +802,7 @@ MonoBehaviour:
   pushForce: 10
   conveyorDirection_: 0
   rb: {fileID: 0}
+  parent: {fileID: 6075943714702661171}
 --- !u!1001 &3244811537407725942
 PrefabInstance:
   m_ObjectHideFlags: 0

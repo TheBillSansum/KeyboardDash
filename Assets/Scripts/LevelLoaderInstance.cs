@@ -18,6 +18,9 @@ public class LevelLoaderInstance : MonoBehaviour
     public GameObject timeLimit;
     public GameObject pressFatigue;
     public GameObject difficulty;
+    public GameObject externalThreat;
+
+    public Sprite cannonThreat;
 
     public TextMeshProUGUI basicText;
     public TextMeshProUGUI magnetText;
@@ -29,6 +32,7 @@ public class LevelLoaderInstance : MonoBehaviour
     public Image difficultyColour;
     public TextMeshProUGUI difficultyText;
     public TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI cannonText;
 
     private Dictionary<GameObject, TextMeshProUGUI> inventoryTextMap;
 
@@ -78,6 +82,16 @@ public class LevelLoaderInstance : MonoBehaviour
         }
 
         descriptionText.text = levelData.levelDescription.ToString();
+        if(levelData.externalThreat == "Cannon")
+        {
+            externalThreat.SetActive(true);
+            externalThreat.GetComponent<Image>().sprite = cannonThreat;
+            cannonText.text = "-Cannon-";
+        }
+        else
+        {
+            externalThreat.SetActive(false);
+        }
     }
 
     private void UpdateInventoryUI(GameObject inventoryObject, TextMeshProUGUI inventoryText, float inventoryCount, string differenceText = "")
