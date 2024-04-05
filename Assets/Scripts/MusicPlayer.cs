@@ -9,7 +9,7 @@ public class MusicPlayer : MonoBehaviour
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI songTitleText;
     public TextMeshProUGUI artistText;
-    public Image albumCoverImage; // Add this field in the Inspector and assign the Image component
+    public Image albumCoverImage;
 
     public Button playButton;
     public Button stopButton;
@@ -26,6 +26,11 @@ public class MusicPlayer : MonoBehaviour
 
     private void Start()
     {
+        if (PlayerPrefs.GetInt("MusicOff") == 1)
+        {
+            this.gameObject.SetActive(false);
+        }
+
         ShuffleSongs(songs);
         Play();
 
@@ -115,7 +120,7 @@ public class MusicPlayer : MonoBehaviour
 
     public void UpdateVolume(float vol)
     {
-        volume = vol / 3 ;
+        volume = vol / 3;
     }
 
     private void Update()

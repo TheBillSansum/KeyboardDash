@@ -5,11 +5,19 @@ using UnityEngine;
 public class PlayerFallDetect : MonoBehaviour
 {
     public LevelSpawner levelSpawner;
+    public string location;
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player") && levelSpawner.gameStarted == true)
         {
-            levelSpawner.LevelFailed(1);
+            if (location == "Bottom")
+            {
+                levelSpawner.LevelFailed(1);
+            }
+            else if( location == "Top")
+            {
+                levelSpawner.LevelFailed(3);
+            }
         }
     }
 }

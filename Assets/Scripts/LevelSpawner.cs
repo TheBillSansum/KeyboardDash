@@ -23,6 +23,7 @@ public class LevelSpawner : MonoBehaviour
     public bool firstPress = false;
 
     public TextMeshProUGUI title;
+    public GameObject timeScaledDownText;
 
     public TextMeshProUGUI levelTitle;
     public TextMeshProUGUI levelDescription;
@@ -159,8 +160,24 @@ public class LevelSpawner : MonoBehaviour
             case 6:
                 clippyManager.PlayHint(11);
                 break;
-
-
+            case 7:
+                clippyManager.PlayHint(12);
+                break;
+            case 8:
+                clippyManager.PlayHint(13);
+                break;
+            case 9:
+                clippyManager.PlayHint(14);
+                break;
+            case 10:
+                clippyManager.PlayHint(15);
+                break;
+            case 11:
+                clippyManager.PlayHint(16);
+                break;
+            case 12:
+                clippyManager.PlayHint(17);
+                break;
         }
     }
 
@@ -212,6 +229,10 @@ public class LevelSpawner : MonoBehaviour
         {
             popupMaker.Generate("Error - Hit by a Laser", "Level " + levelData[levelNumber].levelNumber + " Failed, Try avoid those pesky lasers next time?", "Error");
         }
+        else if(reason == 3)
+        {
+            popupMaker.Generate("Error - Key flew away", "Level " + levelData[levelNumber].levelNumber + " Failed, We don't have an infinite supply! Keep them on the board...", "Error");
+        }
     }
 
     public void LevelPassed()
@@ -228,7 +249,7 @@ public class LevelSpawner : MonoBehaviour
 
         if (levelData[levelNumber].timeLimit >= 1)
         {
-            popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed in " + (levelData[levelNumber].timeLimit -= timerFloat).ToString("0.00") + " Seconds", "Victory");
+            popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed with " + (timerFloat).ToString("0.00") + " Seconds Left", "Victory");
         }
         else
         {
@@ -260,6 +281,21 @@ public class LevelSpawner : MonoBehaviour
         {
             DisplayPresses();
         }
+
+        if(PlayerPrefs.GetInt("SlowMode") == 1)
+        {
+            Time.timeScale = 0.75f;
+            timeScaledDownText.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            timeScaledDownText.SetActive(false);
+        }
+
+
+
+
     }
     public void DisplayTime()
     {

@@ -19,7 +19,7 @@ MonoBehaviour:
   keyboardEvents: {fileID: 9105627481677262416, guid: 742a13e5e9b5f614e8cdf22ec01a1f31, type: 3}
   transparentStartPoint: {fileID: 336407094407682380, guid: cd3237fd9aa02c949947bb5a65c1c8d9, type: 3}
   inventoryActive: 0
-  timeLimit: 4.0382257
+  timeLimit: 6
   pressLimits: 0
   basicInventory: 0
   magnetsInventory: 0
@@ -27,5 +27,5 @@ MonoBehaviour:
   conveyorsInventory: 0
   powersInventory: 0
   difficulty: 0
-  personalRecord: 4.4370174
+  personalRecord: 2.8552914
   externalThreat: 

@@ -23,6 +23,7 @@ public class LevelLoaderInstance : MonoBehaviour
     public Sprite laserThreat;
     public Sprite lasersThreat;
     public Sprite cannonThreat;
+    public Sprite zeroGravity;
 
 
     public TextMeshProUGUI basicText;
@@ -102,6 +103,12 @@ public class LevelLoaderInstance : MonoBehaviour
             externalThreat.SetActive(true);
             externalThreat.GetComponent<Image>().sprite = lasersThreat;
             cannonText.text = "-Lasers-";
+        }
+        else if(levelData.externalThreat == "ZeroGravity")
+        {
+            externalThreat.SetActive(true);
+            externalThreat.GetComponent<Image>().sprite = zeroGravity;
+            cannonText.text = "-Zero Gravity-";
         }
         else
         {

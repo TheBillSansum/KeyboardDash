@@ -40,6 +40,10 @@ public class ClippyManager : MonoBehaviour
         hints[11] = "You unlocked a conveyer belt to place, you only have one though, be cautious of where you place it!";
         hints[12] = "New Item! Place the fans on the keyboard and then press that button during play to blow the closest key object away";
         hints[13] = "Oh! The first 'Hard' level! Good Luck, make sure to get a speedy start";
+        hints[14] = "Tut Tut Tut... Sticky Keys! The groups of green keys all act as a group, keep that in mind!";
+        hints[15] = "EXTERNAL DANGERS! Cannon balls will knock your key off axis, make a wall from the bottom row to protect its journey.";
+        hints[16] = "EXTERNAL DANGER! That laser will end your turn straight away, don't get caught! Atleast there is only one...";
+        hints[17] = "Ah... thats more than one, Okay make sure to stay high to avoid those, one touch and its over...";
 
         clippyMenu.SetActive(false);
         clippyMenuActive = false;

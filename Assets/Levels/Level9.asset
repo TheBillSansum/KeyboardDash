@@ -16,8 +16,8 @@ MonoBehaviour:
   levelName: Hoppin' Holes
   levelDescription: Don't get trapped now!
   sceneObject: {fileID: 384876553434278044, guid: 59c587bfdcb19a8439022fac9e7125f9, type: 3}
-  keyboardEvents: {fileID: 143581957557774847, guid: 148556631c7b57b4595c8c519f342be3, type: 3}
-  transparentStartPoint: {fileID: 7341896506835553390, guid: 75f2142cfb6e28c468cf25b12f1b5fcc, type: 3}
+  keyboardEvents: {fileID: 1196157037706374425, guid: a07fbcb299c8a914b8f0b7fa7bf9ad5f, type: 3}
+  transparentStartPoint: {fileID: 7923478928619666533, guid: 1889f125e1370f148bfdc4435e2e5187, type: 3}
   inventoryActive: 1
   timeLimit: 0
   pressLimits: 0
@@ -28,3 +28,4 @@ MonoBehaviour:
   powersInventory: 1
   difficulty: 2
   personalRecord: 4.631706
+  externalThreat: 
