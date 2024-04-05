@@ -54,6 +54,7 @@ public class LevelSpawner : MonoBehaviour
     void Start()
     {
         LoadLevel(0);
+        
     }
 
 
@@ -81,6 +82,12 @@ public class LevelSpawner : MonoBehaviour
         gameStarted = false;
         levelPassed = false;
         firstPress = false;
+        levelData[level].attempts++;
+        if(levelData[level].attempts > 5)
+        {
+            clippyManager.PlayHint(19);
+        }
+
 
 
         popupInstance.ClosePopup();
@@ -237,7 +244,7 @@ public class LevelSpawner : MonoBehaviour
 
     public void LevelPassed()
     {
-        Debug.Log("Level Passed");
+        levelData[levelNumber].attempts = 0;
         levelPassed = true;
         gameStarted = false;
 

@@ -18,6 +18,7 @@ public class ClippyManager : MonoBehaviour
     public GameObject cullClippyButton;
     public GameObject clippyMenu;
     public bool clippyMenuActive = false;
+    public GameObject turnOnSlowMode;
 
     public Image clippyImage;
 
@@ -44,6 +45,8 @@ public class ClippyManager : MonoBehaviour
         hints[15] = "EXTERNAL DANGERS! Cannon balls will knock your key off axis, make a wall from the bottom row to protect its journey.";
         hints[16] = "EXTERNAL DANGER! That laser will end your turn straight away, don't get caught! Atleast there is only one...";
         hints[17] = "Ah... thats more than one, Okay make sure to stay high to avoid those, one touch and its over...";
+
+        hints[19] = "Having Issues? I can see you've failed this level a few times now... Did you know you can slow down time to allow more time for reaction speed?, head over to settings!";
 
         clippyMenu.SetActive(false);
         clippyMenuActive = false;
@@ -76,6 +79,14 @@ public class ClippyManager : MonoBehaviour
             clippyObject.gameObject.transform.position = hintLocation[hint].position;
             clippyBody.text = hints[hint];
             hintHeard[hint] = true;
+            if (hint == 19)
+            {
+                turnOnSlowMode.SetActive(true);
+            }
+            else
+            {
+                turnOnSlowMode.SetActive(false);
+            }
         }
     }
 

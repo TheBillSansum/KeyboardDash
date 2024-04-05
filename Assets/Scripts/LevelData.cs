@@ -22,6 +22,7 @@ public class LevelData : ScriptableObject
     public difficultyLevel difficulty;
     public float personalRecord;
     public string externalThreat;
+    public int attempts;
     public enum difficultyLevel 
     {
         easy,
