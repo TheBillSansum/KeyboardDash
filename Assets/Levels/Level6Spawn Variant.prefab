@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 268922941275724252, guid: 416e47be72c8ead419f98775954111c3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+      objectReference: {fileID: 2100000, guid: 68618c88c16bee34aa6de77786a87646, type: 2}
     - target: {fileID: 542621810981454301, guid: 416e47be72c8ead419f98775954111c3, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 1885605579020627241, guid: 416e47be72c8ead419f98775954111c3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+      objectReference: {fileID: 2100000, guid: 68618c88c16bee34aa6de77786a87646, type: 2}
     - target: {fileID: 2539967825575555095, guid: 416e47be72c8ead419f98775954111c3, type: 3}
       propertyPath: m_Name
       value: Level6Spawn Variant
@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 3455224832425524891, guid: 416e47be72c8ead419f98775954111c3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+      objectReference: {fileID: 2100000, guid: 68618c88c16bee34aa6de77786a87646, type: 2}
     - target: {fileID: 4442373294522315856, guid: 416e47be72c8ead419f98775954111c3, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: 6167914896488813350, guid: 416e47be72c8ead419f98775954111c3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+      objectReference: {fileID: 2100000, guid: 68618c88c16bee34aa6de77786a87646, type: 2}
     - target: {fileID: 9073766916005784672, guid: 416e47be72c8ead419f98775954111c3, type: 3}
       propertyPath: m_TagString
       value: Untagged

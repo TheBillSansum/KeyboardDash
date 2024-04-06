@@ -345,6 +345,8 @@ MonoBehaviour:
   levelSpawner: {fileID: 0}
   Triggers: 1
   multipleStays: 0
+  clearCannonBalls: 0
+  cannon: {fileID: 0}
   delayedStay:
   - {fileID: 0}
   - {fileID: 0}
@@ -626,6 +628,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -1941,6 +1947,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -2158,6 +2168,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -5551,6 +5565,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -5748,6 +5766,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -6538,6 +6560,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -7544,6 +7570,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
@@ -8666,6 +8696,10 @@ PrefabInstance:
       propertyPath: powerOff
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 

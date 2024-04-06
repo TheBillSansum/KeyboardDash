@@ -530,7 +530,7 @@ public class KeyController : MonoBehaviour
         rodInstance.transform.LookAt(targetObject.transform.position);
 
         float distance = Vector3.Distance(this.gameObject.transform.position, targetObject.transform.position);
-        rodInstance.transform.localScale = new Vector3(0.3f, 0.3f, distance - 1);
+        rodInstance.transform.localScale = new Vector3(0.3f, 0.3f, distance);
 
     }
 

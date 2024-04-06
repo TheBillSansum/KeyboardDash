@@ -972,6 +972,8 @@ MonoBehaviour:
   levelSpawner: {fileID: 0}
   Triggers: 0
   multipleStays: 1
+  clearCannonBalls: 0
+  cannon: {fileID: 0}
   delayedStay:
   - {fileID: 2731284018516249151}
   - {fileID: 2380819733181528336}
@@ -5144,7 +5146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -7303,7 +7305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -8517,7 +8519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: neighbourKeys.Array.size
@@ -10237,7 +10239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeys.Array.size

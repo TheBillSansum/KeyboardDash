@@ -8,6 +8,7 @@ public class CameraSwitcher : MonoBehaviour
     public CinemachineVirtualCameraBase camera1;
     public CinemachineVirtualCameraBase camera2;
     public float transitionDuration = 1.0f; // Adjust the smoothness of the transition
+    public GameObject userInterface;
 
     private bool transitionInProgress = false;
 
@@ -20,9 +21,14 @@ public class CameraSwitcher : MonoBehaviour
             StartCoroutine(SwitchCamera());
         }
     }
+    public void Start()
+    {
+        userInterface.SetActive(false);
+    }
 
     IEnumerator SwitchCamera()
     {
+
         // Set transition in progress
         transitionInProgress = true;
 
@@ -44,5 +50,6 @@ public class CameraSwitcher : MonoBehaviour
 
         // Reset transition status
         transitionInProgress = false;
+        userInterface.SetActive(true);
     }
 }
