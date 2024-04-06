@@ -8,6 +8,8 @@ public class FinishCriteria : MonoBehaviour
     public bool Triggers = true;
     public bool multipleStays = false;
     public bool clearCannonBalls = false;
+    public bool clearKeyboardChecker = false;
+    public int objectsInTrigger = 1;
     public Cannon cannon;
     public DelayedStay[] delayedStay = new DelayedStay[5];
 
@@ -15,13 +17,24 @@ public class FinishCriteria : MonoBehaviour
     public void Start()
     {
         levelSpawner = GameObject.Find("GameManager").GetComponent<LevelSpawner>();
+        if (clearKeyboardChecker)
+        {
+            Invoke("SetUpObjects", 1);
+        }
+
     }
+
+    
 
     public void Update()
     {
         if (multipleStays)
         {
             AllDelayedStaysComplete();
+        }
+        if (clearKeyboardChecker && objectsInTrigger == 0 && levelSpawner.gameStarted == true)
+        {
+            LevelPassed();
         }
     }
 
@@ -35,11 +48,16 @@ public class FinishCriteria : MonoBehaviour
             }
         }
         LevelPassed();
-        return true; 
+        return true;
     }
 
     private void OnTriggerEnter(Collider other)
-    {
+    {        
+        if (clearKeyboardChecker && other.CompareTag("Respawn") && levelSpawner.gameStarted == true)
+        {
+            objectsInTrigger++;
+        }
+
         if (Triggers)
         {
             if (other.gameObject.CompareTag("Player") && levelSpawner.gameStarted == true)
@@ -47,6 +65,19 @@ public class FinishCriteria : MonoBehaviour
                 LevelPassed();
             }
         }
+
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Respawn") && levelSpawner.gameStarted == true)
+        {
+            objectsInTrigger--;
+        }
+    }
+    public void SetUpObjects()
+    {
+        objectsInTrigger--;
     }
 
 
