@@ -11,32 +11,50 @@ public class FinishCriteria : MonoBehaviour
     public bool clearKeyboardChecker = false;
     public int objectsInTrigger = 1;
     public Cannon cannon;
+    public bool firstPress = true;
     public DelayedStay[] delayedStay = new DelayedStay[5];
 
 
     public void Start()
     {
         levelSpawner = GameObject.Find("GameManager").GetComponent<LevelSpawner>();
-        if (clearKeyboardChecker)
-        {
-            Invoke("SetUpObjects", 1);
-        }
-
+        Restart();
     }
 
-    
+    public void Restart()
+    {
+        if (clearKeyboardChecker)
+        {
+            objectsInTrigger = 1;
+
+            firstPress = true;
+        }
+    }
+
+
 
     public void Update()
     {
         if (multipleStays)
         {
             AllDelayedStaysComplete();
+        }       
+
+        if (Input.anyKeyDown && firstPress && clearKeyboardChecker)
+        {
+            objectsInTrigger--;
+            firstPress = false;
         }
-        if (clearKeyboardChecker && objectsInTrigger == 0 && levelSpawner.gameStarted == true)
+
+        if (clearKeyboardChecker && objectsInTrigger == 0 && levelSpawner.gameStarted == true && firstPress == false)
         {
             LevelPassed();
         }
+
+
+
     }
+
 
     private bool AllDelayedStaysComplete()
     {
@@ -47,12 +65,14 @@ public class FinishCriteria : MonoBehaviour
                 return false;
             }
         }
+
         LevelPassed();
+
         return true;
     }
 
     private void OnTriggerEnter(Collider other)
-    {        
+    {
         if (clearKeyboardChecker && other.CompareTag("Respawn") && levelSpawner.gameStarted == true)
         {
             objectsInTrigger++;

@@ -2579,7 +2579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7806832668732315832, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
       propertyPath: level
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7806832668732315832, guid: 70438be13d67bc24cb6fd171c383e9e6, type: 3}
       propertyPath: levelSpawner
@@ -3906,8 +3906,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1214895341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.49528554}
+  m_AnchorMax: {x: 1, y: 0.99999964}
   m_AnchoredPosition: {x: 0, y: 43.5087}
   m_SizeDelta: {x: 20, y: -69.1776}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6645,7 +6645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &550161273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8191,6 +8191,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d9e07f6c38e38d459d2795aa2378323, type: 2}
   - {fileID: 11400000, guid: 08f9c136198a4a6418337aec978561f3, type: 2}
   - {fileID: 11400000, guid: 8903e8b60e565014dbe2d51de625a9ad, type: 2}
+  - {fileID: 11400000, guid: 86a8dd8ff02a6a04f802ba820d03b619, type: 2}
   levelObject: {fileID: 0}
   levelEventsObject: {fileID: 0}
   startingPoint: {fileID: 0}

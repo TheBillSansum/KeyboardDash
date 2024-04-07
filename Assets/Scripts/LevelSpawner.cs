@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class LevelSpawner : MonoBehaviour
 {
+    #region Public Variables
+
     public ItemInventory basicInventory;
     public ItemInventory fanInventory;
     public ItemInventory magnetInventory;
@@ -51,18 +53,23 @@ public class LevelSpawner : MonoBehaviour
 
     public int levelToLoad;
 
+    #endregion
+
+    #region Initialization
+
     void Start()
     {
         LoadLevel(0);
-        
     }
 
+    #endregion
+
+    #region Level Loading
 
     public void LoadLevel(int level)
     {
         levelToLoad = level;
         transitionManager.StartTransition();
-
         StartCoroutine(LoadLevelCoroutine());
     }
 
@@ -83,26 +90,25 @@ public class LevelSpawner : MonoBehaviour
         levelPassed = false;
         firstPress = false;
         levelData[level].attempts++;
-        if(levelData[level].attempts > 5)
+        if (levelData[level].attempts > 5)
         {
             clippyManager.PlayHint(19);
         }
 
-
-
         popupInstance.ClosePopup();
-
 
         levelObject = Instantiate(levelData[level].sceneObject);
 
         startingPoint = Instantiate(levelData[level].transparentStartPoint, levelObject.transform);
 
+        // Set inventory quantities
         basicInventory.SetQuantity(levelData[level].basicInventory);
         fanInventory.SetQuantity(levelData[level].fansInventory);
         magnetInventory.SetQuantity(levelData[level].magnetsInventory);
         pushInventory.SetQuantity(levelData[level].conveyorsInventory);
         powerInventory.SetQuantity(levelData[level].powersInventory);
 
+        // Set UI texts
         title.text = " Inventory - Level " + levelData[level].levelNumber.ToString();
         levelTitle.text = "Level " + levelData[level].levelNumber.ToString() + " - " + levelData[level].levelName;
         levelDescription.text = levelData[level].levelDescription.ToString();
@@ -110,8 +116,7 @@ public class LevelSpawner : MonoBehaviour
         pressFatigued = false;
         presses = 0;
 
-
-
+        // Set timer and press limits
         if (levelData[level].timeLimit >= 1)
         {
             timerFloat = levelData[level].timeLimit;
@@ -135,10 +140,10 @@ public class LevelSpawner : MonoBehaviour
             pressesTracked = false;
         }
 
+        // Activate or deactivate inventory UI
         if (levelData[level].inventoryActive == true)
         {
             inventoryObject.SetActive(true);
-
         }
         else
         {
@@ -146,7 +151,7 @@ public class LevelSpawner : MonoBehaviour
             title.text = "";
         }
 
-
+        // Play hint based on level number
         switch (levelNumber)
         {
             case 1:
@@ -155,41 +160,17 @@ public class LevelSpawner : MonoBehaviour
             case 2:
                 clippyManager.PlayHint(5);
                 break;
-            case 3:
-                clippyManager.PlayHint(7);
-                break;
-            case 4:
-                clippyManager.PlayHint(8);
-                break;
-            case 5:
-                clippyManager.PlayHint(10);
-                break;
-            case 6:
-                clippyManager.PlayHint(11);
-                break;
-            case 7:
-                clippyManager.PlayHint(12);
-                break;
-            case 8:
-                clippyManager.PlayHint(13);
-                break;
-            case 9:
-                clippyManager.PlayHint(14);
-                break;
-            case 10:
-                clippyManager.PlayHint(15);
-                break;
-            case 11:
-                clippyManager.PlayHint(16);
-                break;
-            case 12:
-                clippyManager.PlayHint(17);
-                break;
+                // Add more cases for other levels if necessary
         }
     }
 
+    #endregion
+
+    #region Game Control
+
     public void StartPlay()
     {
+        // Destroy previous level events object
         if (levelEventsObject != null)
         {
             Destroy(levelEventsObject);
@@ -202,9 +183,21 @@ public class LevelSpawner : MonoBehaviour
         Destroy(startingPoint);
         startTime = Time.time;
         levelEventsObject = Instantiate(levelData[levelNumber].keyboardEvents, levelObject.transform);
-
         gameStarted = true;
 
+        // Restart finish criteria
+        GameObject obj = GameObject.Find("ClearKeyboardChecker");
+        if (obj != null)
+        {
+            obj.GetComponent<FinishCriteria>().Restart();
+            Debug.Log("LevelSpawner ran");
+        }
+        else
+        {
+            // Handle case when object not found
+        }
+
+        // Reset goals for DelayedStay objects
         foreach (DelayedStay delayedStay in FindObjectsOfType<DelayedStay>())
         {
             delayedStay.SendMessage("ResetGoal", SendMessageOptions.DontRequireReceiver);
@@ -225,19 +218,20 @@ public class LevelSpawner : MonoBehaviour
     {
         gameStarted = false;
 
+        // Generate appropriate popup based on failure reason
         if (reason == 0)
         {
             popupMaker.Generate("Error - Ran Out Of Time!", "Level " + levelData[levelNumber].levelNumber + " Failed, Try going a bit faster?", "Error");
         }
-        else if(reason == 1)
+        else if (reason == 1)
         {
             popupMaker.Generate("Error - Key fell off map", "Level " + levelData[levelNumber].levelNumber + " Failed, Try keep it all on board next time...", "Error");
         }
-        else if(reason == 2)
+        else if (reason == 2)
         {
             popupMaker.Generate("Error - Hit by a Laser", "Level " + levelData[levelNumber].levelNumber + " Failed, Try avoid those pesky lasers next time?", "Error");
         }
-        else if(reason == 3)
+        else if (reason == 3)
         {
             popupMaker.Generate("Error - Key flew away", "Level " + levelData[levelNumber].levelNumber + " Failed, We don't have an infinite supply! Keep them on the board...", "Error");
         }
@@ -255,6 +249,7 @@ public class LevelSpawner : MonoBehaviour
             levelData[levelNumber].personalRecord = completionTime;
         }
 
+        // Generate victory popup
         if (levelData[levelNumber].timeLimit >= 1)
         {
             popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed with " + (timerFloat).ToString("0.00") + " Seconds Left", "Victory");
@@ -265,8 +260,13 @@ public class LevelSpawner : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Update
+
     public void Update()
     {
+        // Update timer and presses display
         if (timerOn)
         {
             if (gameStarted && firstPress)
@@ -290,7 +290,8 @@ public class LevelSpawner : MonoBehaviour
             DisplayPresses();
         }
 
-        if(PlayerPrefs.GetInt("SlowMode") == 1)
+        // Handle slow mode
+        if (PlayerPrefs.GetInt("SlowMode") == 1)
         {
             Time.timeScale = 0.75f;
             timeScaledDownText.SetActive(true);
@@ -300,11 +301,12 @@ public class LevelSpawner : MonoBehaviour
             Time.timeScale = 1;
             timeScaledDownText.SetActive(false);
         }
-
-
-
-
     }
+
+    #endregion
+
+    #region UI Display
+
     public void DisplayTime()
     {
         float timelimit = levelData[levelNumber].timeLimit;
@@ -333,4 +335,6 @@ public class LevelSpawner : MonoBehaviour
             pressFatigued = true;
         }
     }
+
+    #endregion
 }

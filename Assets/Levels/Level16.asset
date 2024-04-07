@@ -10,23 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01a58a86e43dcf44e938368cfd1c3aff, type: 3}
-  m_Name: Level15
+  m_Name: Level16
   m_EditorClassIdentifier: 
-  levelNumber: 14
-  levelName: Office Clear Out!
-  levelDescription: Clean up your dirty work space! get rid of all these items on
-    your keyboard to pass
-  sceneObject: {fileID: 384876553434278044, guid: cdbfdc6b8167d9d4f828261979a34e87, type: 3}
-  keyboardEvents: {fileID: 5540953537679865180, guid: 852b589d27639314aabb7b08a7f206c9, type: 3}
+  levelNumber: 15
+  levelName: USB Placement
+  levelDescription: Wrong Way. Spin. Wrong Way. Spin. Right Way
+  sceneObject: {fileID: 384876553434278044, guid: a1e36633bd4933342941a95e3100fce0, type: 3}
+  keyboardEvents: {fileID: 4703304004853824956, guid: c5aad943d6f25704e8d6f26dc438bc29, type: 3}
   transparentStartPoint: {fileID: 132901185817840023, guid: f71a2eab4bae7f340a69ae39f16c466a, type: 3}
-  inventoryActive: 0
+  inventoryActive: 1
   timeLimit: 0
-  pressLimits: 25
+  pressLimits: 0
   basicInventory: 0
   magnetsInventory: 0
   fansInventory: 0
-  conveyorsInventory: 0
-  powersInventory: 0
+  conveyorsInventory: 25
+  powersInventory: 5
   difficulty: 1
   personalRecord: 7.4974213
   externalThreat: 
