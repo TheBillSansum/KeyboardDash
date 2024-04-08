@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNumber: 3
   levelName: Press Limits!
-  levelDescription: Cant be having too many presses now can we
+  levelDescription: Cant be having too many presses now can we...
   sceneObject: {fileID: 384876553434278044, guid: df396bdd2eab4ae4eb88dca8c861e072, type: 3}
   keyboardEvents: {fileID: 9105627481677262416, guid: f8ce687e74fba9f4d98d91b3e587909f, type: 3}
   transparentStartPoint: {fileID: 2241455869516824383, guid: 13796455350acb84c82e0ff4e198b08a, type: 3}
@@ -28,3 +28,5 @@ MonoBehaviour:
   powersInventory: 0
   difficulty: 1
   personalRecord: 0
+  externalThreat: 
+  attempts: 0

@@ -8,17 +8,19 @@ public class LevelSpawner : MonoBehaviour
 {
     #region Public Variables
 
+    //Holds each items Inventory
     public ItemInventory basicInventory;
     public ItemInventory fanInventory;
     public ItemInventory magnetInventory;
     public ItemInventory pushInventory;
     public ItemInventory powerInventory;
 
-    public LevelData[] levelData;
-    public GameObject levelObject;
-    public GameObject levelEventsObject;
-    public GameObject startingPoint;
-    public GameObject inventoryObject;
+
+    public LevelData[] levelData; //Level scriptable object
+    public GameObject levelObject; //Level keyboard object
+    public GameObject levelEventsObject; //Level keys
+    public GameObject startingPoint; //Transparent outline of keys that despawns on play
+    public GameObject inventoryObject; //The object to disable to hide the inventory
 
     public bool gameStarted = false;
     public bool levelPassed = false;

@@ -14469,6 +14469,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c1e0c0b6c6e7dda40bb9fb130e8116d5, type: 2}
   - {fileID: 11400000, guid: e69ea1a9adbdd16408acbd8d65598f7a, type: 2}
   volume: 0
+  isPlaying: 0
   audioSource: {fileID: 1018521693}
 --- !u!82 &1018521693
 AudioSource:

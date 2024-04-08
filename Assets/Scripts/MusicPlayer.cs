@@ -4,6 +4,8 @@ using TMPro;
 
 public class MusicPlayer : MonoBehaviour
 {
+    #region Public Variables
+
     public Slider progressSlider;
     public TextMeshProUGUI trackNumberText;
     public TextMeshProUGUI timeText;
@@ -18,32 +20,49 @@ public class MusicPlayer : MonoBehaviour
     public Button prevButton;
 
     public SongData[] songs;
-    private int currentTrackIndex = 0;
     public float volume = 1;
-    private bool isPlaying = false;
 
+    #endregion
+
+    #region Private Variables
+
+    private int currentTrackIndex = 0;
+    public bool isPlaying = false;
     public AudioSource audioSource;
+
+    #endregion
+
+    #region Initialization
 
     private void Start()
     {
+        // Check if music is disabled
         if (PlayerPrefs.GetInt("MusicOff") == 1)
         {
             this.gameObject.SetActive(false);
         }
 
+        // Shuffle songs and play
         ShuffleSongs(songs);
         Play();
 
+        // Add button listeners
         playButton.onClick.AddListener(Play);
         stopButton.onClick.AddListener(Stop);
         pauseButton.onClick.AddListener(Pause);
         nextButton.onClick.AddListener(NextSong);
         prevButton.onClick.AddListener(PreviousSong);
 
+        // Set initial volume and update UI
         UpdateVolume(1);
         UpdateUI();
     }
 
+    #endregion
+
+    #region Utility Functions
+
+    // Shuffle songs array
     public static void ShuffleSongs(SongData[] songs)
     {
         System.Random rng = new System.Random();
@@ -59,6 +78,7 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
+    // Update UI elements with current song info
     private void UpdateUI()
     {
         if (songs.Length == 0 || currentTrackIndex < 0 || currentTrackIndex >= songs.Length)
@@ -75,10 +95,15 @@ public class MusicPlayer : MonoBehaviour
         timeText.text = string.Format("{0}:{1:00}", minutes, seconds);
 
         // Update album cover image
-        albumCoverImage.sprite = currentSong.albumCover; // Assuming albumCover is a Sprite field in SongData
+        albumCoverImage.sprite = currentSong.albumCover;
         audioSource.volume = volume;
     }
 
+    #endregion
+
+    #region Playback Control
+
+    // Play the current song
     public void Play()
     {
         isPlaying = true;
@@ -88,6 +113,7 @@ public class MusicPlayer : MonoBehaviour
         Debug.Log("Playing: " + currentSong.title);
     }
 
+    // Stop playback
     public void Stop()
     {
         isPlaying = false;
@@ -95,6 +121,7 @@ public class MusicPlayer : MonoBehaviour
         Debug.Log("Stopped: " + songs[currentTrackIndex].title);
     }
 
+    // Pause playback
     public void Pause()
     {
         isPlaying = false;
@@ -102,6 +129,7 @@ public class MusicPlayer : MonoBehaviour
         Debug.Log("Paused: " + songs[currentTrackIndex].title);
     }
 
+    // Play next song
     public void NextSong()
     {
         Stop();
@@ -110,6 +138,7 @@ public class MusicPlayer : MonoBehaviour
         Play();
     }
 
+    // Play previous song
     public void PreviousSong()
     {
         Stop();
@@ -118,21 +147,34 @@ public class MusicPlayer : MonoBehaviour
         Play();
     }
 
+    #endregion
+
+    #region Volume Control
+
+    // Update volume level
     public void UpdateVolume(float vol)
     {
         volume = vol / 3;
     }
 
+    #endregion
+
+    #region Update
+
     private void Update()
     {
+        // Update progress slider and UI if playing
         if (isPlaying && audioSource.isPlaying)
         {
             progressSlider.value = audioSource.time / audioSource.clip.length;
             UpdateUI();
         }
+        // Play next song if finished
         else if (isPlaying && !audioSource.isPlaying)
         {
             NextSong();
         }
     }
+
+    #endregion
 }
