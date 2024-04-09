@@ -348,7 +348,10 @@ MonoBehaviour:
   Triggers: 1
   multipleStays: 0
   clearCannonBalls: 0
+  clearKeyboardChecker: 0
+  objectsInTrigger: 1
   cannon: {fileID: 0}
+  firstPress: 1
   delayedStay:
   - {fileID: 0}
   - {fileID: 0}
@@ -1716,7 +1719,7 @@ PrefabInstance:
       objectReference: {fileID: 7148837283221240432}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: connectedKeysObject.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: conveyorAnimMesh.Array.data[0]
