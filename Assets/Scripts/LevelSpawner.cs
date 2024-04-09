@@ -60,10 +60,15 @@ public class LevelSpawner : MonoBehaviour
     #region Initialization
 
     void Start()
-    {
+    {       
+        Screen.SetResolution(1920, 1080, true);
         LoadLevel(0);
     }
 
+    public void Awake()
+    {
+
+    }
     #endregion
 
     #region Level Loading

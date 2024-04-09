@@ -80,6 +80,7 @@ public class KeyController : MonoBehaviour
         Power
     }
 
+
     public enum Direction
     {
         Left,

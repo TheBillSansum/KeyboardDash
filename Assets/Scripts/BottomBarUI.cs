@@ -50,6 +50,10 @@ public class BottomBarUI : MonoBehaviour
     {
         Application.Quit();
     }
+    public void MinimiseGame()
+    {
+
+    }
 
     public void ToggleStart()
     {
