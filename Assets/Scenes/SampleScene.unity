@@ -13403,8 +13403,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.030843573, y: -0.7064338, z: 0.030843573, w: 0.7064338}
-  m_LocalPosition: {x: 15, y: 10, z: 6.4}
+  m_LocalRotation: {x: 0.3535534, y: -0.61237246, z: 0.3535534, w: 0.61237246}
+  m_LocalPosition: {x: 5.08, y: 10.33, z: 6.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26936,8 +26936,14 @@ MonoBehaviour:
   - 
   - 
   - 
-  hintHeard: 0000000000000000000000000000000000000000
-  hintReady: 0101010100000100000001000000000000000000
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  hintHeard: 0000000000000000000000000000000000000000000000000000
+  hintReady: 0101010100000100000001000000000000000000000000000000
   hintLocation:
   - {fileID: 847714210}
   - {fileID: 1097111699}
@@ -26953,11 +26959,17 @@ MonoBehaviour:
   - {fileID: 1097111699}
   - {fileID: 1097111699}
   - {fileID: 847714210}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 847714210}
+  - {fileID: 847714210}
+  - {fileID: 847714210}
+  - {fileID: 847714210}
+  - {fileID: 847714210}
+  - {fileID: 847714210}
+  - {fileID: 847714210}
+  - {fileID: 847714210}
+  - {fileID: 847714210}
+  - {fileID: 847714210}
+  - {fileID: 847714210}
   - {fileID: 847714210}
   clippySprite:
   - {fileID: 1236171454, guid: 3710c0718711e3949914e0314cd9faff, type: 3}

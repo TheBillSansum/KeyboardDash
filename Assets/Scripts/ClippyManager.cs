@@ -8,11 +8,11 @@ public class ClippyManager : MonoBehaviour
 {
     public bool clippyHidden = false;
     public int currentHint;
-    public string[] hints = new string[20];
-    public bool[] hintHeard = new bool[20];
-    public bool[] hintReady = new bool[20];
-    public Transform[] hintLocation = new Transform[20];
-    public Sprite[] clippySprite = new Sprite[20];
+    public string[] hints = new string[26];
+    public bool[] hintHeard = new bool[26];
+    public bool[] hintReady = new bool[26];
+    public Transform[] hintLocation = new Transform[26];
+    public Sprite[] clippySprite = new Sprite[26];
 
     public GameObject enableClippyButton;
     public GameObject cullClippyButton;
@@ -45,8 +45,12 @@ public class ClippyManager : MonoBehaviour
         hints[15] = "EXTERNAL DANGERS! Cannon balls will knock your key off axis, make a wall from the bottom row to protect its journey.";
         hints[16] = "EXTERNAL DANGER! That laser will end your turn straight away, don't get caught! Atleast there is only one...";
         hints[17] = "Ah... thats more than one, Okay make sure to stay high to avoid those, one touch and its over...";
+        hints[18] = "Oooooo Zerooo Gravityyyyy, keep the key low otherwise you'll lose it!";
+        hints[19] = "You messy slob, clean up this work space! Think carefully about what keys you are pressing and the impact... you have 25 presses.";
+        hints[20] = "Better cap that USB stick! Quick!";
 
-        hints[19] = "Having Issues? I can see you've failed this level a few times now... Did you know you can slow down time to allow more time for reaction speed?, head over to settings!";
+
+        hints[25] = "Having Issues? I can see you've failed this level a few times now... Did you know you can slow down time to allow more time for reaction speed?, head over to settings!";
 
         clippyMenu.SetActive(false);
         clippyMenuActive = false;
@@ -79,7 +83,7 @@ public class ClippyManager : MonoBehaviour
             clippyObject.gameObject.transform.position = hintLocation[hint].position;
             clippyBody.text = hints[hint];
             hintHeard[hint] = true;
-            if (hint == 19)
+            if (hint == 25)
             {
                 turnOnSlowMode.SetActive(true);
             }
@@ -94,6 +98,7 @@ public class ClippyManager : MonoBehaviour
     {
         hintHeard[currentHint] = true;
         clippyObject.SetActive(false);
+
         if(hintReady[currentHint+1] == true)
         {
             PlayHint(currentHint+1);

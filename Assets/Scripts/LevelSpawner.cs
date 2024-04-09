@@ -92,9 +92,10 @@ public class LevelSpawner : MonoBehaviour
         levelPassed = false;
         firstPress = false;
         levelData[level].attempts++;
+
         if (levelData[level].attempts > 5)
         {
-            clippyManager.PlayHint(19);
+            clippyManager.PlayHint(25);
         }
 
         popupInstance.ClosePopup();
@@ -162,7 +163,46 @@ public class LevelSpawner : MonoBehaviour
             case 2:
                 clippyManager.PlayHint(5);
                 break;
-                // Add more cases for other levels if necessary
+            case 3:
+                clippyManager.PlayHint(7);
+                break;
+            case 4:
+                clippyManager.PlayHint(8);
+                break;
+            case 5:
+                clippyManager.PlayHint(9);
+                break;
+            case 6:
+                clippyManager.PlayHint(10);
+                break;
+            case 7:
+                clippyManager.PlayHint(12);
+                break;
+            case 8:
+                clippyManager.PlayHint(13);
+                break;
+            case 9:
+                clippyManager.PlayHint(14);
+                break;
+            case 10:
+                clippyManager.PlayHint(15);
+                break;
+            case 11:
+                clippyManager.PlayHint(16);
+                break;
+            case 12:
+                clippyManager.PlayHint(17);
+                break;
+            case 13:
+                clippyManager.PlayHint(18);
+                break;
+            case 14:
+                clippyManager.PlayHint(19);
+                break;
+            case 15:
+                clippyManager.PlayHint(20);
+                break;
+
         }
     }
 
