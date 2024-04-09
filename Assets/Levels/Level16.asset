@@ -16,17 +16,17 @@ MonoBehaviour:
   levelName: USB Placement
   levelDescription: Wrong Way. Spin. Wrong Way. Spin. Right Way
   sceneObject: {fileID: 384876553434278044, guid: a1e36633bd4933342941a95e3100fce0, type: 3}
-  keyboardEvents: {fileID: 4703304004853824956, guid: c5aad943d6f25704e8d6f26dc438bc29, type: 3}
-  transparentStartPoint: {fileID: 132901185817840023, guid: f71a2eab4bae7f340a69ae39f16c466a, type: 3}
-  inventoryActive: 1
-  timeLimit: 0
-  pressLimits: 0
+  keyboardEvents: {fileID: 1097416684094523579, guid: a6c9a12c765ca6543ac79c2b833811ff, type: 3}
+  transparentStartPoint: {fileID: 8755242148114044280, guid: dab94c37fd0b77f4393ec0ae5b416b50, type: 3}
+  inventoryActive: 0
+  timeLimit: 2
+  pressLimits: 5
   basicInventory: 0
   magnetsInventory: 0
   fansInventory: 0
-  conveyorsInventory: 25
-  powersInventory: 5
+  conveyorsInventory: 0
+  powersInventory: 0
   difficulty: 1
-  personalRecord: 7.4974213
+  personalRecord: 1.2544241
   externalThreat: 
   attempts: 0
