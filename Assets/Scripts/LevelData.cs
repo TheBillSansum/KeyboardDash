@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Level Data Scriptable Object for each level.
+/// </summary>
 [CreateAssetMenu(fileName = "New Level", menuName = "Levels/Level")]
+
 public class LevelData : ScriptableObject
 {
     public int levelNumber;
@@ -23,6 +26,10 @@ public class LevelData : ScriptableObject
     public float personalRecord;
     public string externalThreat;
     public int attempts;
+
+    /// <summary>
+    /// Easy, Medium, Hard
+    /// </summary>
     public enum difficultyLevel 
     {
         easy,

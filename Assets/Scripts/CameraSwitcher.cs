@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-
+/// <summary>
+/// Utilised in the starting animation for the game, Camera 1 faces the monitor and Camera 2 is the main cam for the whole game, facing the keyboard
+/// </summary>
 public class CameraSwitcher : MonoBehaviour
 {
     public CinemachineVirtualCameraBase camera1;
@@ -28,25 +30,19 @@ public class CameraSwitcher : MonoBehaviour
 
     IEnumerator SwitchCamera()
     {
+        transitionInProgress = true; // Set transition in progress
 
-        // Set transition in progress
-        transitionInProgress = true;
-
-        // Get the Cinemachine Brain
-        CinemachineBrain cinemachineBrain = FindObjectOfType<CinemachineBrain>();
+        CinemachineBrain cinemachineBrain = FindObjectOfType<CinemachineBrain>(); // Get the Cinemachine Brain
 
         // Play the blend
         cinemachineBrain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.EaseInOut;
         cinemachineBrain.m_DefaultBlend.m_Time = transitionDuration;
+        
+        camera1.Priority = 0; // Deactivate the first camera
 
-        // Deactivate the first camera
-        camera1.Priority = 0;
+        camera2.Priority = 10; // Activate the second camera
 
-        // Activate the second camera
-        camera2.Priority = 10;
-
-        // Wait for the duration of the transition
-        yield return new WaitForSeconds(transitionDuration);
+        yield return new WaitForSeconds(transitionDuration); // Wait for the duration of the transition
 
         // Reset transition status
         transitionInProgress = false;

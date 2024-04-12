@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Utilised in the first laser level in moving the laser back and forth
+/// </summary>
+
 public class ImagePingPong : MonoBehaviour
 {
     public Transform startPoint; 
@@ -24,7 +28,9 @@ public class ImagePingPong : MonoBehaviour
             SwitchTarget();
         }
     }
-
+    /// <summary>
+    /// Swap Direction
+    /// </summary>
     void SwitchTarget()
     {
         if (currentTarget == startPoint.position)

@@ -239,10 +239,6 @@ public class LevelSpawner : MonoBehaviour
             obj.GetComponent<FinishCriteria>().Restart();
             Debug.Log("LevelSpawner ran");
         }
-        else
-        {
-            // Handle case when object not found
-        }
 
         // Reset goals for DelayedStay objects
         foreach (DelayedStay delayedStay in FindObjectsOfType<DelayedStay>())
@@ -250,22 +246,33 @@ public class LevelSpawner : MonoBehaviour
             delayedStay.SendMessage("ResetGoal", SendMessageOptions.DontRequireReceiver);
         }
     }
-
+    /// <summary>
+    /// Resets the current levelNumber
+    /// </summary>
     public void ResetLevel()
     {
         LoadLevel(levelNumber);
     }
 
+    /// <summary>
+    /// Clears the levelObject gameobject
+    /// </summary>
     public void ClearLevels()
     {
         Destroy(levelObject);
     }
 
+    /// <summary>
+    /// Generates a popup for different failure cases
+    /// <para>0 = Time Limit</para>
+    /// <para>1 = Key fell off map</para>
+    /// <para>2 = Key hit by laser</para>
+    /// <para>3 = Key flew away (zero gravity)</para>
+    /// </summary>
+    /// <param name="reason"></param>
     public void LevelFailed(int reason)
     {
         gameStarted = false;
-
-        // Generate appropriate popup based on failure reason
         if (reason == 0)
         {
             popupMaker.Generate("Error - Ran Out Of Time!", "Level " + levelData[levelNumber].levelNumber + " Failed, Try going a bit faster?", "Error");

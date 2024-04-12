@@ -18,6 +18,7 @@ public class ScrollViewWithMouseWheel : MonoBehaviour
             newPosition.y += scrollAmount;
             newPosition.y = Mathf.Clamp01(newPosition.y);
             scrollRect.normalizedPosition = newPosition;
+            Debug.Log(newPosition + " Scroll Value");
         }
     }
 }
