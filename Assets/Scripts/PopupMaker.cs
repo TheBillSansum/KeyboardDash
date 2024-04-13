@@ -14,11 +14,13 @@ public class PopupMaker : MonoBehaviour
     public Image popUpImage;
     public GameObject victoryButtons;
     public GameObject lostButtons;
+    public GameObject gameFinished;
     public PopupInstance instance;
 
     public Sprite warningSprite;
     public Sprite errorSprite;
     public Sprite victorySprite;
+    public Sprite gameComplete;
 
     public void Generate(string Title, string Body, string Image)
     {
@@ -38,12 +40,26 @@ public class PopupMaker : MonoBehaviour
         {
             popUpImage.sprite = errorSprite;
             lostButtons.SetActive(true);
+            victoryButtons.SetActive(false);
+            gameFinished.SetActive(false);
         }
         else if (Image == "Victory")
         {
             popUpImage.sprite = victorySprite;
             victoryButtons.SetActive(true);
+            lostButtons.SetActive(false);
+            gameFinished.SetActive(false);
+
         }
+        else if(Image == "Game Win")
+        {
+            popUpImage.sprite = gameComplete;
+            victoryButtons.SetActive(false);
+            lostButtons.SetActive(false);
+            gameFinished.SetActive(true);
+
+        }
+        
     }
 
     public void ButtonPressed()

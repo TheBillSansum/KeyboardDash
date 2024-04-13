@@ -26,6 +26,8 @@ public class LevelSpawner : MonoBehaviour
     public bool levelPassed = false;
     public bool firstPress = false;
 
+    public bool finalLevel = false;
+
     public TextMeshProUGUI title;
     public GameObject timeScaledDownText;
 
@@ -303,14 +305,21 @@ public class LevelSpawner : MonoBehaviour
             levelData[levelNumber].personalRecord = completionTime;
         }
 
-        // Generate victory popup
-        if (levelData[levelNumber].timeLimit >= 1)
+        if (levelNumber != 15)
         {
-            popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed with " + (timerFloat).ToString("0.00") + " Seconds Left", "Victory");
+            // Generate victory popup
+            if (levelData[levelNumber].timeLimit >= 1)
+            {
+                popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed with " + (timerFloat).ToString("0.00") + " Seconds Left", "Victory");
+            }
+            else
+            {
+                popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed", "Victory");
+            }
         }
         else
         {
-            popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed", "Victory");
+            popupMaker.Generate("Game Over - You Won!", "Congratulations, you completed the game, more levels are coming! Thank You for playing :)", "Game Win");
         }
     }
 

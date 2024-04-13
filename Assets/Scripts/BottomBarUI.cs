@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
-
+using UnityEngine.SceneManagement;
 public class BottomBarUI : MonoBehaviour
 {
     public TMP_Text timeText;
@@ -53,6 +53,11 @@ public class BottomBarUI : MonoBehaviour
     public void MinimiseGame()
     {
 
+    }
+
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void ToggleStart()

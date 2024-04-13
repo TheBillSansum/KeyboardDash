@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Functionality for firing cannon balls, holds a list of transforms to fire from which it picks from randomly
+/// </summary>
 public class Cannon : MonoBehaviour
 {
     public GameObject cannonballPrefab; // Prefab of the cannonball
@@ -35,11 +37,14 @@ public class Cannon : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Shoots a singular cannon ball at a desired location
+    /// </summary>
     void ShootCannonball()
     {
-        Transform selectedFirePoint = firePoints[Random.Range(0, firePoints.Count)];
-        GameObject cannonball = Instantiate(cannonballPrefab, selectedFirePoint.position, selectedFirePoint.rotation);
-        cannonballs.Add(cannonball);
+        Transform selectedFirePoint = firePoints[Random.Range(0, firePoints.Count)]; //Pick a random location to fire from
+        GameObject cannonball = Instantiate(cannonballPrefab, selectedFirePoint.position, selectedFirePoint.rotation); //Save to a gameobject to be added to a list
+        cannonballs.Add(cannonball); //Add to the list for later deletion
 
         Vector3 targetDirection = Vector3.left;
 
@@ -50,6 +55,9 @@ public class Cannon : MonoBehaviour
             rb.AddForce(targetDirection * shootForce);
         }
     }
+    /// <summary>
+    /// Despawn all cannon balls instantly
+    /// </summary>
     public void DisposeAllCannonballs()
     {
         foreach (var cannonball in cannonballs)

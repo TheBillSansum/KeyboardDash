@@ -54,7 +54,7 @@ public class MusicPlayer : MonoBehaviour
         prevButton.onClick.AddListener(PreviousSong);
 
         // Set initial volume and update UI
-        UpdateVolume(1);
+        UpdateVolume(1); //Set volume to start at 1 (Maximum)
         UpdateUI();
     }
 
@@ -62,7 +62,9 @@ public class MusicPlayer : MonoBehaviour
 
     #region Utility Functions
 
-    // Shuffle songs array
+    /// <summary>
+    /// Shuffles the array of SongData objects.
+    /// </summary>
     public static void ShuffleSongs(SongData[] songs)
     {
         System.Random rng = new System.Random();
@@ -78,7 +80,9 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
-    // Update UI elements with current song info
+    /// <summary>
+    /// Updates the UI elements with information about the current song.
+    /// </summary>
     private void UpdateUI()
     {
         if (songs.Length == 0 || currentTrackIndex < 0 || currentTrackIndex >= songs.Length)
@@ -103,7 +107,9 @@ public class MusicPlayer : MonoBehaviour
 
     #region Playback Control
 
-    // Play the current song
+    /// <summary>
+    /// Plays the current song.
+    /// </summary>
     public void Play()
     {
         isPlaying = true;
@@ -113,7 +119,9 @@ public class MusicPlayer : MonoBehaviour
         Debug.Log("Playing: " + currentSong.title);
     }
 
-    // Stop playback
+    /// <summary>
+    /// Stops playback.
+    /// </summary>
     public void Stop()
     {
         isPlaying = false;
@@ -121,7 +129,9 @@ public class MusicPlayer : MonoBehaviour
         Debug.Log("Stopped: " + songs[currentTrackIndex].title);
     }
 
-    // Pause playback
+    /// <summary>
+    /// Pauses playback.
+    /// </summary>
     public void Pause()
     {
         isPlaying = false;
@@ -129,7 +139,9 @@ public class MusicPlayer : MonoBehaviour
         Debug.Log("Paused: " + songs[currentTrackIndex].title);
     }
 
-    // Play next song
+    /// <summary>
+    /// Plays the next song.
+    /// </summary>
     public void NextSong()
     {
         Stop();
@@ -138,7 +150,9 @@ public class MusicPlayer : MonoBehaviour
         Play();
     }
 
-    // Play previous song
+    /// <summary>
+    /// Plays the previous song.
+    /// </summary>
     public void PreviousSong()
     {
         Stop();
@@ -151,7 +165,9 @@ public class MusicPlayer : MonoBehaviour
 
     #region Volume Control
 
-    // Update volume level
+    /// <summary>
+    /// Updates the volume level.
+    /// </summary>
     public void UpdateVolume(float vol)
     {
         volume = vol / 3;

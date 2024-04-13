@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Contains functionality to spawn a black star that starts small and scales up to the whole screen, then ping pongs back to nothing
+/// </summary>
 public class TransitionManager : MonoBehaviour
 {
     public Image starShape;
@@ -14,6 +16,9 @@ public class TransitionManager : MonoBehaviour
     public float scale = 1f;
     private bool hasCompletedCycle = false;
 
+    /// <summary>
+    /// Make sure all settings are reset to normal
+    /// </summary>
     void Start()
     {
         starShape.gameObject.SetActive(false);
@@ -23,9 +28,9 @@ public class TransitionManager : MonoBehaviour
 
     void Update()
     {
-        if (!hasCompletedCycle)
+        if (!hasCompletedCycle) //Runs the transition
         {
-            if (goingUp)
+            if (goingUp) //Depending on if getting bigger or smaller
             {
                 scale += speed * Time.deltaTime;
                 if (scale >= maxScale)
@@ -36,6 +41,7 @@ public class TransitionManager : MonoBehaviour
             else
             {
                 scale -= speed * Time.deltaTime;
+
                 if (scale <= 0)
                 {
                     goingUp = true;
@@ -48,6 +54,9 @@ public class TransitionManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Starts running the black star transition 
+    /// </summary>
     public void StartTransition()
     {
         runTransition = true;
