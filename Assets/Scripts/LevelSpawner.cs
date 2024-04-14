@@ -4,6 +4,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+/// <summary>
+/// GameManager script, used to spawn all of the levels in when required. Also runs all needed checks throughout gameplay
+/// </summary>
 public class LevelSpawner : MonoBehaviour
 {
     #region Public Variables
@@ -239,7 +242,6 @@ public class LevelSpawner : MonoBehaviour
         if (obj != null)
         {
             obj.GetComponent<FinishCriteria>().Restart();
-            Debug.Log("LevelSpawner ran");
         }
 
         // Reset goals for DelayedStay objects
@@ -293,31 +295,35 @@ public class LevelSpawner : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Functionality to pass the level and move onto the next, displays a pop up with a custom message
+    /// </summary>
     public void LevelPassed()
     {
-        levelData[levelNumber].attempts = 0;
+        levelData[levelNumber].attempts = 0; //Reset attempts to 0
         levelPassed = true;
         gameStarted = false;
 
-        float completionTime = Time.time - startTime;
-        if (levelData[levelNumber].personalRecord == 0 || completionTime < levelData[levelNumber].personalRecord)
+        float completionTime = Time.time - startTime; //Calculate how much time the level took to pass
+
+        if (levelData[levelNumber].personalRecord == 0 || completionTime < levelData[levelNumber].personalRecord) //If a new personal record for that level
         {
-            levelData[levelNumber].personalRecord = completionTime;
+            levelData[levelNumber].personalRecord = completionTime; //Save it to that levels scriptable object
         }
 
         if (levelNumber != 15)
         {
-            // Generate victory popup
-            if (levelData[levelNumber].timeLimit >= 1)
+
+            if (levelData[levelNumber].timeLimit >= 1) //If that level had a time limit, tell the player how long they had left
             {
                 popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed with " + (timerFloat).ToString("0.00") + " Seconds Left", "Victory");
             }
-            else
+            else //If no time limit, just say a normal victory message
             {
                 popupMaker.Generate("Victory - Level Passed", "Level " + levelData[levelNumber].levelNumber + " Passed", "Victory");
             }
         }
-        else
+        else //If the last level, display a custom message with custom buttons
         {
             popupMaker.Generate("Game Over - You Won!", "Congratulations, you completed the game, more levels are coming! Thank You for playing :)", "Game Win");
         }
@@ -332,23 +338,23 @@ public class LevelSpawner : MonoBehaviour
         // Update timer and presses display
         if (timerOn)
         {
-            if (gameStarted && firstPress)
+            if (gameStarted && firstPress) //Once the first press has been tracked start counting
             {
-                timerFloat -= Time.deltaTime;
+                timerFloat -= Time.deltaTime; //Count down 
 
-                if (timerFloat <= 0)
+                if (timerFloat <= 0) //If time has run out 
                 {
-                    LevelFailed(0);
+                    LevelFailed(0); //End the run and display a custom fail message
                 }
 
                 DisplayTime();
             }
-            else if (gameStarted == false)
+            else if (gameStarted == false) //Display the time but don't start counting down yet
             {
                 DisplayTime();
             }
         }
-        if (pressesTracked)
+        if (pressesTracked) //If press fatigue is on display the ui
         {
             DisplayPresses();
         }
@@ -370,30 +376,36 @@ public class LevelSpawner : MonoBehaviour
 
     #region UI Display
 
+    /// <summary>
+    /// If time limit is active for this level, display the UI window for it
+    /// </summary>
     public void DisplayTime()
     {
         float timelimit = levelData[levelNumber].timeLimit;
-        timerFill.fillAmount = timerFloat / timelimit;
+        timerFill.fillAmount = timerFloat / timelimit; //Calculate the fill on the circle 
 
-        int timeInSecondsInt = (int)timerFloat;
+        int timeInSecondsInt = (int)timerFloat; 
         int minutes = timeInSecondsInt / 60;
         int seconds = timeInSecondsInt - (minutes * 60);
-        timerTime.text = minutes.ToString("D2") + ":" + seconds.ToString("D2");
+        timerTime.text = minutes.ToString("D2") + ":" + seconds.ToString("D2"); //Display the time in text, Example = "0:29"
     }
 
+    /// <summary>
+    /// If press fatigue is active for this level display the UI window for it
+    /// </summary>
     public void DisplayPresses()
     {
-        pressesFill.fillAmount = presses / levelData[levelNumber].pressLimits;
+        pressesFill.fillAmount = presses / levelData[levelNumber].pressLimits; //Calculate the fill on the circle 
 
         if (presses > levelData[levelNumber].pressLimits)
         {
-            pressesText.text = levelData[levelNumber].pressLimits + "/" + levelData[levelNumber].pressLimits;
+            pressesText.text = levelData[levelNumber].pressLimits + "/" + levelData[levelNumber].pressLimits; //Display the progress in text, Example = "3/6"
         }
         else
         {
             pressesText.text = presses.ToString() + "/" + levelData[levelNumber].pressLimits;
         }
-        if (presses >= levelData[levelNumber].pressLimits)
+        if (presses >= levelData[levelNumber].pressLimits) //If too many presses, stop all further presses
         {
             pressFatigued = true;
         }

@@ -2,16 +2,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Script for the music player window, runs through an array of 'songData' scriptable objects
+/// </summary>
 public class MusicPlayer : MonoBehaviour
 {
     #region Public Variables
 
-    public Slider progressSlider;
-    public TextMeshProUGUI trackNumberText;
-    public TextMeshProUGUI timeText;
-    public TextMeshProUGUI songTitleText;
-    public TextMeshProUGUI artistText;
-    public Image albumCoverImage;
+    public Slider progressSlider; //Progress through the song
+    public TextMeshProUGUI trackNumberText; //The song number currently playing
+    public TextMeshProUGUI timeText; //Time of current song
+    public TextMeshProUGUI songTitleText; //Title of current song
+    public TextMeshProUGUI artistText; //The artist of the current song
+    public Image albumCoverImage; //Album cover for current song
 
     public Button playButton;
     public Button stopButton;
@@ -36,8 +39,8 @@ public class MusicPlayer : MonoBehaviour
 
     private void Start()
     {
-        // Check if music is disabled
-        if (PlayerPrefs.GetInt("MusicOff") == 1)
+       
+        if (PlayerPrefs.GetInt("MusicOff") == 1) // Check if music is disabled
         {
             this.gameObject.SetActive(false);
         }
@@ -53,7 +56,6 @@ public class MusicPlayer : MonoBehaviour
         nextButton.onClick.AddListener(NextSong);
         prevButton.onClick.AddListener(PreviousSong);
 
-        // Set initial volume and update UI
         UpdateVolume(1); //Set volume to start at 1 (Maximum)
         UpdateUI();
     }
