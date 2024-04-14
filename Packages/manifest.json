@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.3dconnexion.3dxunity3d": "file:C:/Program Files/3Dconnexion/3DxWare/3DxUnity3D/src",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.collab-proxy": "2.0.7",
     "com.unity.feature.cinematic": "1.0.0",
