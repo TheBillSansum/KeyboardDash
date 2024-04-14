@@ -98,35 +98,34 @@ public class LevelLoaderInstance : MonoBehaviour
             difficultyText.text = "-Hard-";
         }
 
-        // Display level description and any external threats
-        descriptionText.text = levelData.levelDescription.ToString();
-        if (levelData.externalThreat == "Cannon")
+       
+        descriptionText.text = levelData.levelDescription.ToString(); // Display level description
+
+        switch (levelData.externalThreat) //Switch statement to display different data for each possible external threat
         {
-            externalThreat.SetActive(true);
-            externalThreat.GetComponent<Image>().sprite = cannonThreat;
-            cannonText.text = "-Cannon-";
-        }
-        else if (levelData.externalThreat == "Laser")
-        {
-            externalThreat.SetActive(true);
-            externalThreat.GetComponent<Image>().sprite = laserThreat;
-            cannonText.text = "-Laser-";
-        }
-        else if (levelData.externalThreat == "Lasers")
-        {
-            externalThreat.SetActive(true);
-            externalThreat.GetComponent<Image>().sprite = lasersThreat;
-            cannonText.text = "-Lasers-";
-        }
-        else if (levelData.externalThreat == "ZeroGravity")
-        {
-            externalThreat.SetActive(true);
-            externalThreat.GetComponent<Image>().sprite = zeroGravity;
-            cannonText.text = "-Zero Gravity-";
-        }
-        else
-        {
-            externalThreat.SetActive(false);
+            case "Cannon":
+                externalThreat.SetActive(true);
+                externalThreat.GetComponent<Image>().sprite = cannonThreat;
+                cannonText.text = "-Cannon-";
+                break;
+            case "Laser":
+                externalThreat.SetActive(true);
+                externalThreat.GetComponent<Image>().sprite = laserThreat;
+                cannonText.text = "-Laser-";
+                break;
+            case "Lasers":
+                externalThreat.SetActive(true);
+                externalThreat.GetComponent<Image>().sprite = lasersThreat;
+                cannonText.text = "-Lasers-";
+                break;
+            case "ZeroGravity":
+                externalThreat.SetActive(true);
+                externalThreat.GetComponent<Image>().sprite = zeroGravity;
+                cannonText.text = "-Zero Gravity-";
+                break;
+            default:
+                externalThreat.SetActive(false);
+                break;
         }
     }
 

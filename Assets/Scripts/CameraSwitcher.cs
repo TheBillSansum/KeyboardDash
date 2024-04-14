@@ -25,7 +25,7 @@ public class CameraSwitcher : MonoBehaviour
     }
     public void Start()
     {
-        userInterface.SetActive(false);
+        userInterface.SetActive(false); //Ensure the UI is on
     }
 
     IEnumerator SwitchCamera()

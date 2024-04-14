@@ -497,6 +497,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
+      propertyPath: staticKey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b632c0431351a8c44a68b178e19e812e, type: 3}
@@ -4591,6 +4595,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4069214094796575092}
     m_Modifications:
     - target: {fileID: 1977301106661982778, guid: 42ed4d76a0f571049a0a4dfb0c3e183b, type: 3}
+      propertyPath: requiredTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977301106661982778, guid: 42ed4d76a0f571049a0a4dfb0c3e183b, type: 3}
       propertyPath: finishCriteria
       value: 
       objectReference: {fileID: 2332126833056617319}
@@ -4608,7 +4616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3243424215372813969, guid: 42ed4d76a0f571049a0a4dfb0c3e183b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.657
+      value: 37.32
       objectReference: {fileID: 0}
     - target: {fileID: 3243424215372813969, guid: 42ed4d76a0f571049a0a4dfb0c3e183b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4668,11 +4676,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6b307a9d4059749a4c73206ae43359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSpawner: {fileID: 0}
   Triggers: 0
   multipleStays: 0
   clearCannonBalls: 0
+  clearKeyboardChecker: 0
+  objectsInTrigger: 1
   cannon: {fileID: 0}
+  firstPress: 1
   delayedStay:
   - {fileID: 0}
   - {fileID: 0}
@@ -8527,7 +8537,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: 413d77080b9042d4c92f26f3b08efad5, type: 3}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: staticKey
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901828588329383484, guid: c698350b74c15a243b29ae9302be0d93, type: 3}
       propertyPath: magnetMesh

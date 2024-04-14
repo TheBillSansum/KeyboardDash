@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Utilised in every level to move to the next level when it has been completed
+/// </summary>
 public class FinishCriteria : MonoBehaviour
 {
     public bool Triggers = true; // Determines if the level completion is triggered by the player entering the trigger area
@@ -75,17 +78,15 @@ public class FinishCriteria : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (clearKeyboardChecker && other.CompareTag("Respawn") && levelSpawner.gameStarted == true)
-        {
-            // Increment the count of objects in the trigger area
-            objectsInTrigger++;
+        {      
+            objectsInTrigger++; // Increment the count of objects in the trigger area
         }
 
         if (Triggers)
         {
             if (other.gameObject.CompareTag("Player") && levelSpawner.gameStarted == true)
-            {
-                // Trigger level completion
-                LevelPassed();
+            {             
+                LevelPassed(); // Trigger level completion
             }
         }
     }
@@ -93,26 +94,22 @@ public class FinishCriteria : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Respawn") && levelSpawner.gameStarted == true)
-        {
-            // Decrement the count of objects in the trigger area
-            objectsInTrigger--;
+        {          
+            objectsInTrigger--; // Decrement the count of objects in the trigger area
         }
     }
 
     public void SetUpObjects()
-    {
-        // Decrease the count of objects in the trigger area
-        objectsInTrigger--;
+    {     
+        objectsInTrigger--; // Decrease the count of objects in the trigger area
     }
 
     public void LevelPassed()
     {
         if (clearCannonBalls)
-        {
-            // Dispose all cannonballs if required
-            cannon.DisposeAllCannonballs();
-        }
-        // Trigger the LevelSpawner to signal level completion
-        levelSpawner.LevelPassed();
+        {          
+            cannon.DisposeAllCannonballs(); // Dispose all cannonballs if required
+        }     
+        levelSpawner.LevelPassed(); // Trigger the LevelSpawner to signal level completion
     }
 }

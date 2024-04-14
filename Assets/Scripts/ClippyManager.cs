@@ -4,24 +4,28 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+/// <summary>
+/// Script that runs all of the clippy hints and spawns them at specific locations depending on the hint number
+/// <para> Some hints run other hints after but most are called from the level spawner</para>
+/// </summary>
 public class ClippyManager : MonoBehaviour
 {
-    public bool clippyHidden = false;
+    public bool clippyHidden = false; //If the player has dismissed clippy
     public int currentHint;
-    public string[] hints = new string[26];
-    public bool[] hintHeard = new bool[26];
-    public bool[] hintReady = new bool[26];
-    public Transform[] hintLocation = new Transform[26];
-    public Sprite[] clippySprite = new Sprite[26];
+    public string[] hints = new string[26]; //The text to display to the player
+    public bool[] hintHeard = new bool[26]; //If that specific hint has already been heard in this playthrough
+    public bool[] hintReady = new bool[26]; //If this hint should be played when the previous hint has been heard, most are false
+    public Transform[] hintLocation = new Transform[26]; //Screen location of the menu 
+    public Sprite[] clippySprite = new Sprite[26]; //Different faces of clippy to be
 
-    public GameObject enableClippyButton;
+    public GameObject enableClippyButton; //Buttons for the menu
     public GameObject cullClippyButton;
     public GameObject clippyMenu;
     public bool clippyMenuActive = false;
-    public GameObject turnOnSlowMode;
+
+    public GameObject turnOnSlowMode; //Special button that appears on the hint telling the player about slow mode, it is enabled as this reference
 
     public Image clippyImage;
-
     public TextMeshProUGUI clippyBody;
     public GameObject clippyObject;
 
@@ -52,10 +56,10 @@ public class ClippyManager : MonoBehaviour
 
         hints[25] = "Having Issues? I can see you've failed this level a few times now... Did you know you can slow down time to allow more time for reaction speed?, head over to settings!";
 
-        clippyMenu.SetActive(false);
+        clippyMenu.SetActive(false); //Makes sure the menu is closed on start
         clippyMenuActive = false;
 
-        PlayHint(0);
+        PlayHint(0); //Starts the player off with the first hint
     }
 
     public void Update()
@@ -72,28 +76,35 @@ public class ClippyManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function to play the specific hint, depending on the number it will spawn in particular locations
+    /// </summary>
+    /// <param name="hint"></param>
     public void PlayHint(int hint)
     {
-        Debug.Log("Instruction to play hint" + hint);
         currentHint = hint;
 
-        if (clippyHidden == false && hintHeard[hint]!= true)
+        if (clippyHidden == false && hintHeard[hint]!= true) //Make sure it hasn't been heard and clippy isnt hidden
         {
-            clippyObject.SetActive(true);
+            clippyObject.SetActive(true); 
             clippyObject.gameObject.transform.position = hintLocation[hint].position;
             clippyBody.text = hints[hint];
             hintHeard[hint] = true;
-            if (hint == 25)
+            
+            if (hint == 25) //If the final hint which tells the player about 75% speed is called
             {
-                turnOnSlowMode.SetActive(true);
+                turnOnSlowMode.SetActive(true); //Enable the special button
             }
-            else
+            else //Remove it
             {
                 turnOnSlowMode.SetActive(false);
             }
         }
     }
 
+    /// <summary>
+    /// Functionality for the skip hint button on clippy
+    /// </summary>
     public void SkipHint()
     {
         hintHeard[currentHint] = true;
@@ -105,18 +116,27 @@ public class ClippyManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Functionality to cull clippy
+    /// </summary>
     public void HideClippy()
     {
         clippyHidden = true;
         clippyObject.SetActive(false);
     }
-    
+
+    /// <summary>
+    /// Functionality to bring Clippy back from being culled
+    /// </summary>
     public void EnableClippy()
     {
         clippyHidden = false;
         clippyObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Functionality to enable the clippy menu
+    /// </summary>
     public void ToggleMenu()
     {
         if (clippyMenuActive)
@@ -131,7 +151,16 @@ public class ClippyManager : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Functionality to change Clippys emotions on his face, utilised in events
+    /// <para> Options:</para>
+    /// <para> "Normal",</para>
+    /// <para> "Happy",</para>
+    /// <para> "Sad",</para>
+    /// <para> "Excited",</para>
+    /// <para> "Petting",</para>
+    /// </summary>
+    /// <param name="emotion"></param>
     public void DisplayFace(string emotion)
     {
         switch(emotion)
@@ -158,12 +187,15 @@ public class ClippyManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Functionality completely reset clippy, option found in the clippy menu
+    /// </summary>
     public void FactoryReset()
     {
-        for (int i = 0; i < hintHeard.Length; i++)
+        for (int i = 0; i < hintHeard.Length; i++) //Run through the array and clear them all
         {
             hintHeard[i] = false;
         }
-        PlayHint(0);
+        PlayHint(0); //Play the first hint again
     }
 }

@@ -62,8 +62,8 @@ public class KeyController : MonoBehaviour
     public Mesh powerOnMesh;
 
     public Mesh[] conveyorAnimMesh = new Mesh[6]; //Array of each frame of the conveyor animation
-    public float animationInterval = 0.05f;
-    private int currentMeshIndex = 0;
+    public float animationInterval = 0.05f; //Time between each frame
+    private int currentMeshIndex = 0; //Current frame
     public Direction conveyorDirection;
 
     private Coroutine conveyorAnimationCoroutine;
@@ -95,7 +95,12 @@ public class KeyController : MonoBehaviour
         Power
     }
 
-
+    /// <summary>
+    /// <para>Left</para>
+    /// <para>Right</para>
+    /// <para>Up</para>
+    /// <para> Down</para>
+    /// </summary>
     public enum Direction
     {
         Left,
@@ -108,91 +113,91 @@ public class KeyController : MonoBehaviour
 
     void Start()
     {
-        levelSpawner = GameObject.FindAnyObjectByType<LevelSpawner>();
-        spawnPoint = transform.position;
-        foreach (GameObject key in connectedKeysObject)
+        levelSpawner = GameObject.FindAnyObjectByType<LevelSpawner>(); //Get a reference to the levelSpawner 
+
+        spawnPoint = transform.position; //Set the starting point so it can return
+
+        foreach (GameObject key in connectedKeysObject) //For sticky keys,
         {
-            connectedKeysCon.Add(key.GetComponent<KeyController>());
+            connectedKeysCon.Add(key.GetComponent<KeyController>()); 
             key.GetComponent<KeyController>().stickySkin.SetActive(true);
             key.GetComponent<KeyController>().connectedKeysObject = connectedKeysObject;
         }
-        if (connectedKeysObject.Length >= 1)
+        if (connectedKeysObject.Length >= 1) //If this object is part of a stickSkin chain, the outer green skin object is enabled
         {
             stickySkin.SetActive(true);
         }
-        initialPosition = transform.position;
-        pressedPosition = initialPosition + Vector3.up * keyPressDistance;
 
-        UpdateKeyType();
+        initialPosition = transform.position; //Default normal position
+        pressedPosition = initialPosition + Vector3.up * keyPressDistance; //Calculate the pressed position
 
-
+        UpdateKeyType(); //Check if the key needs to be customised 
 
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
 
-
         if (keyText != null)
         {
-            keyText.text = GetKeyStringWithoutAlpha(associatedKey);
+            keyText.text = GetKeyStringWithoutAlpha(associatedKey); //Set the text to the key code, ensuring it is just the letter
         }
     }
+
     bool proxy;
 
+    /// <summary>
+    /// Functionality for changing the key type, locking elevated, changing directions, and powering
+    /// </summary>
     public void UpdateKeyType()
     {
         this.transform.position = spawnPoint;
-        powerOn = false;
-        fanObject.SetActive(false);
-        this.gameObject.transform.rotation = Quaternion.identity;
-        keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
-        keyText.gameObject.SetActive(true);
+        powerOn = false; //Start power keys with the off status
+        fanObject.SetActive(false); //Ensure the fan object is turned off
+        this.gameObject.transform.rotation = Quaternion.identity; //Reset rotation
+        keyText.transform.rotation = Quaternion.Euler(90, 180, -90); //Make sure text is the right way aroudn
+        keyText.gameObject.SetActive(true); //And enabled 
 
-
-        if (lockedElevated)
+        if (lockedElevated) //If lockedElevated is true, set the object to the pressed position and keep it there
         {
             transform.position = pressedPosition;
-            pressedPosition = initialPosition + Vector3.down * 0.03f * keyPressDistance;
+            pressedPosition = initialPosition + Vector3.down * 0.03f * keyPressDistance; //When pressing, go down instead
             initialPosition = transform.position;
         }
-        else
+        else //If not lockedElevated, calculate normal pressed position above the key
         {
             pressedPosition = initialPosition + Vector3.up * keyPressDistance;
         }
 
-
-
         switch (keyType)
         {
-
-            case KeyType.Normal:
+            case KeyType.Normal: //If normal key, just set keys skin to normal
                 this.GetComponent<MeshFilter>().mesh = normalMesh;
                 break;
 
-            case KeyType.Magnet:
+            case KeyType.Magnet: //If magnet, set skin to magnet
                 this.GetComponent<MeshFilter>().mesh = magnetMesh;
                 break;
 
-            case KeyType.Inactive:
+            case KeyType.Inactive://If inactive, set skin to inactive
                 this.GetComponent<MeshFilter>().mesh = inactiveMesh;
                 break;
 
-            case KeyType.Fan:
+            case KeyType.Fan: //If fan, enable the fan blades, set the skin to fan, remove the text and block the key from elevating
                 fanObject.SetActive(true);
                 this.GetComponent<MeshFilter>().mesh = fanMesh;
                 keyText.gameObject.SetActive(false);
                 pressedPosition = transform.position;
                 break;
 
-            case KeyType.Conveyor:
+            case KeyType.Conveyor: //If conveyor, set skin to conveyor, block the key from elevating and rotate based on the direction enum
                 this.GetComponent<MeshFilter>().mesh = conveyorMesh;
                 pressedPosition = transform.position;
 
                 switch (conveyorDirection)
                 {
                     case Direction.Down:
-                        this.gameObject.transform.Rotate(0, 0, 0);
-                        conveyorPush.conveyorDirection_ = ConveyorPush.Direction.Down;
-                        keyText.transform.rotation = Quaternion.Euler(90, 180, -90);
+                        this.gameObject.transform.Rotate(0, 0, 0); 
+                        conveyorPush.conveyorDirection_ = ConveyorPush.Direction.Down; //Ensure the trigger which moves objects is facing the correct way
+                        keyText.transform.rotation = Quaternion.Euler(90, 180, -90); //And ensure text is always readable
                         break;
 
                     case Direction.Right:
@@ -215,7 +220,7 @@ public class KeyController : MonoBehaviour
                 }
                 break;
 
-            case KeyType.Power:
+            case KeyType.Power: //If power, make skin the red version of power on, then check if it should be on or off and also block it from being moved up
                 this.GetComponent<MeshFilter>().mesh = powerOffMesh;
                 pressedPosition = transform.position;
                 if (powerOn)
@@ -233,16 +238,17 @@ public class KeyController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If a neighbour key is a power block with power being supplied, this key will be proxy powered
+    /// </summary>
     public void ProxyPower()
     {
         isActivated = true;
         proxyPowered = true;
 
-
         switch (keyType)
         {
-
-            case KeyType.Magnet:
+            case KeyType.Magnet: // If this is a magnet, attract objects
 
                 if (isActivated)
                 {
@@ -257,7 +263,7 @@ public class KeyController : MonoBehaviour
                 }
                 break;
 
-            case KeyType.Fan: //If fan is activated, blow closest object
+            case KeyType.Fan: //If this is a fan, blow closest object
                 if (isActivated)
                 {
                     BlowObjects();
@@ -268,16 +274,16 @@ public class KeyController : MonoBehaviour
 
                 if (isActivated && conveyorAnimationCoroutine == null)
                 {
-                    conveyorAnimationCoroutine = StartCoroutine(AnimateConveyor());
-                    conveyorObject.SetActive(true);
+                    conveyorAnimationCoroutine = StartCoroutine(AnimateConveyor()); //Runs the animations
+                    conveyorObject.SetActive(true); //Enables the object which moves objects above it
                 }
 
-                else if (!isActivated && conveyorAnimationCoroutine != null)
+                else if (!isActivated && conveyorAnimationCoroutine != null) //Stops the animation
                 {
-                    conveyorObject.SetActive(false);
-                    StopCoroutine(conveyorAnimationCoroutine);
-                    conveyorAnimationCoroutine = null;
-                    this.GetComponent<MeshFilter>().mesh = conveyorMesh;
+                    conveyorObject.SetActive(false); //Removes the object which moves objects above it
+                    StopCoroutine(conveyorAnimationCoroutine); //Stops the animation
+                    conveyorAnimationCoroutine = null; 
+                    this.GetComponent<MeshFilter>().mesh = conveyorMesh; //Sets the skin to normal unpowered 
                 }
                 break;
         }
@@ -325,8 +331,6 @@ public class KeyController : MonoBehaviour
 
         }
     }
-
-
 
     void FixedUpdate()
     {

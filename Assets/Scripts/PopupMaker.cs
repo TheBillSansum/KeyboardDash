@@ -5,6 +5,10 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+
+/// <summary>
+/// Script to spawn pop ups such as failures and level passes
+/// </summary>
 public class PopupMaker : MonoBehaviour
 {
     public GameObject popUpObjectBlank;
@@ -22,44 +26,46 @@ public class PopupMaker : MonoBehaviour
     public Sprite victorySprite;
     public Sprite gameComplete;
 
+
+    /// <summary>
+    /// Function to generate a pop up with custom text, buttons and images
+    /// </summary>
+    /// <param name="Title">Top text of the pop up</param>
+    /// <param name="Body">Main body of text for the popup</param>
+    /// <param name="Image"> Which of the images to use, options: warningSprite, errorSprite, victorySprite or gameComplete</param>
     public void Generate(string Title, string Body, string Image)
     {
         
-        lostButtons.SetActive(false);
+        lostButtons.SetActive(false); //Ensure all previous buttons have been removed
         victoryButtons.SetActive(false);
-        popUpObjectBlank.SetActive(true);
-        popUpTitle.text = Title;
-        popUpBody.text = Body;
+        gameFinished.SetActive(false);
 
-        if (Image == "Warning")
-        {
-            popUpImage.sprite = warningSprite;
+        popUpObjectBlank.SetActive(true); //Set the pop up object to active
+        popUpTitle.text = Title; //Set the title text
+        popUpBody.text = Body; //And the description
 
-        }
-        else if (Image == "Error")
+        switch (Image)
         {
-            popUpImage.sprite = errorSprite;
-            lostButtons.SetActive(true);
-            victoryButtons.SetActive(false);
-            gameFinished.SetActive(false);
-        }
-        else if (Image == "Victory")
-        {
-            popUpImage.sprite = victorySprite;
-            victoryButtons.SetActive(true);
-            lostButtons.SetActive(false);
-            gameFinished.SetActive(false);
+            case "Warning":
+                popUpImage.sprite = warningSprite; //Set the specfic sprite
+                break;
 
-        }
-        else if(Image == "Game Win")
-        {
-            popUpImage.sprite = gameComplete;
-            victoryButtons.SetActive(false);
-            lostButtons.SetActive(false);
-            gameFinished.SetActive(true);
+            case "Error":
+                popUpImage.sprite = errorSprite;
+                lostButtons.SetActive(true); //If custom buttons are utilised, turn them on
+                break;
 
+            case "Victory":
+                popUpImage.sprite = victorySprite;
+                victoryButtons.SetActive(true);
+                break;
+
+            case "Game Win":
+                popUpImage.sprite = gameComplete;
+                gameFinished.SetActive(true);
+                break;
         }
-        
+
     }
 
     public void ButtonPressed()
@@ -76,11 +82,14 @@ public class PopupMaker : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// Load the next level in the array of levels, if there is another.
+    /// </summary>
     public void NextLevelButton()
     {
         if (levelSpawner.levelData[levelSpawner.levelNumber + 1] != null)
         {
+
             levelSpawner.LoadLevel(levelSpawner.levelNumber + 1);
         }
         else
@@ -89,6 +98,9 @@ public class PopupMaker : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Reload the current level
+    /// </summary>
     public void ResetButton()
     {
         levelSpawner.ResetLevel();

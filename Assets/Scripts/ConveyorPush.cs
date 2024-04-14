@@ -7,7 +7,7 @@ public class ConveyorPush : MonoBehaviour
     public float pushForce = 10;
     public Direction conveyorDirection_;
     public Rigidbody rb;
-    public GameObject parent;
+    public GameObject parent; //The button object to get the correct direction
     public enum Direction
     {
         Left,
@@ -23,6 +23,6 @@ public class ConveyorPush : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        rb.AddForce(pushForce * parent.transform.right, ForceMode.Force);
+        rb.AddForce(pushForce * parent.transform.right, ForceMode.Force); //Move any object with a rb that enters the small trigger box
     }
 }
