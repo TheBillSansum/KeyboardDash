@@ -27,5 +27,6 @@ MonoBehaviour:
   conveyorsInventory: 0
   powersInventory: 0
   difficulty: 2
-  personalRecord: 3.1452074
+  personalRecord: 0
   externalThreat: Lasers
+  attempts: 0

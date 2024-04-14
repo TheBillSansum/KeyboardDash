@@ -31,30 +31,29 @@ public class ClippyManager : MonoBehaviour
 
     void Start()
     {
-        hints[0] = "Hey, Im Clippy! Your virtual assistant, Im here to guide you through this Game, if you already hate me you can remove me by pressing 'Remove'!";
-        hints[1] = "Here is the play area! The goal is to get the object on the keyboard into the Goal, as shown by the gold!";
-        hints[2] = "Use your keyboard to move the keys in the Game!";
+        hints[0] = "Hey, I'm Clippy! Your virtual assistant. I'm here to guide you through this game. If you already hate me, you can remove me by pressing 'Remove'!";
+        hints[1] = "Here is the play area! The goal is to get the object on the keyboard into the goal, as shown by the gold!";
+        hints[2] = "Use your keyboard to move the keys in the game!";
         hints[3] = "When you are ready, press 'Start'!";
-        hints[4] = "Some levels have Time Limits! You must complete the goal before this time reaches 0 otherwise you will need to Try Again!";
-        hints[5] = "You unlocked the Inventory! Drag and Drop from the slots and place keys on the desired key!";
-        hints[6] = "The magnet key attracts any close metalic objects towards it, press the key assosiated with it to use it!";
-        hints[7] = "Some levels limit how many presses you can use per attempt, once you hit the limit no further presses can be tracked, but play continues!";
-        hints[8] = "Goals that have a % require you to hold the key in the goal, make sure to keep it contained as if it leaves progress is lost!";
-        hints[9] = "Just like last level, some levels contain multiple keys, which must all be complete at the same time to pass";
-        hints[10] = "You have 2 'Power' blocks this level and only one press, you will have to get creative in placements. Powering on the blocks don't count as a press ;)";
-        hints[11] = "You unlocked a conveyer belt to place, you only have one though, be cautious of where you place it!";
-        hints[12] = "New Item! Place the fans on the keyboard and then press that button during play to blow the closest key object away";
-        hints[13] = "Oh! The first 'Hard' level! Good Luck, make sure to get a speedy start";
-        hints[14] = "Tut Tut Tut... Sticky Keys! The groups of green keys all act as a group, keep that in mind!";
-        hints[15] = "EXTERNAL DANGERS! Cannon balls will knock your key off axis, make a wall from the bottom row to protect its journey.";
-        hints[16] = "EXTERNAL DANGER! That laser will end your turn straight away, don't get caught! Atleast there is only one...";
-        hints[17] = "Ah... thats more than one, Okay make sure to stay high to avoid those, one touch and its over...";
-        hints[18] = "Oooooo Zerooo Gravityyyyy, keep the key low otherwise you'll lose it!";
-        hints[19] = "You messy slob, clean up this work space! Think carefully about what keys you are pressing and the impact... you have 25 presses.";
+        hints[4] = "Some levels have time limits! You must complete the goal before this time reaches 0, otherwise you will need to try again!";
+        hints[5] = "You unlocked the inventory! Drag and drop from the slots and place keys on the desired key!";
+        hints[6] = "The magnet key attracts any close metallic objects towards it. Press the key associated with it to use it!";
+        hints[7] = "Some levels limit how many presses you can use per attempt. Once you hit the limit, no further presses can be tracked, but play continues!";
+        hints[8] = "Goals that have a % require you to hold the key in the goal. Make sure to keep it contained, as if it leaves, progress is lost!";
+        hints[9] = "Just like the last level, some levels contain multiple keys, which must all be completed at the same time to pass.";
+        hints[10] = "You have 2 'Power' blocks this level and only one press. You will have to get creative in placements. Powering on the blocks doesn't count as a press ;)";
+        hints[11] = "You unlocked a conveyor belt to place. You only have one though, so be cautious of where you place it!";
+        hints[12] = "New item! Place the fans on the keyboard and then press that button during play to blow the closest key object away.";
+        hints[13] = "Oh! The first 'Hard' level! Good luck, make sure to get a speedy start!";
+        hints[14] = "Tut tut tut... Sticky keys! The groups of green keys all act as a group, keep that in mind!";
+        hints[15] = "EXTERNAL DANGERS! Cannonballs will knock your key off-axis, make a wall from the bottom row to protect its journey.";
+        hints[16] = "EXTERNAL DANGER! That laser will end your turn straight away. Don't get caught! At least there is only one...";
+        hints[17] = "Ah... that's more than one. Okay, make sure to stay high to avoid those, one touch and it's over...";
+        hints[18] = "Oooooo Zero Gravityyyyy, keep the key low otherwise you'll lose it!";
+        hints[19] = "You messy slob, clean up this workspace! Think carefully about what keys you are pressing and the impact... you have 25 presses.";
         hints[20] = "Better cap that USB stick! Quick!";
 
-
-        hints[25] = "Having Issues? I can see you've failed this level a few times now... Did you know you can slow down time to allow more time for reaction speed?, head over to settings!";
+        hints[25] = "Having issues? I can see you've failed this level a few times now... Did you know you can slow down time to allow more time for reaction speed? Head over to settings!";
 
         clippyMenu.SetActive(false); //Makes sure the menu is closed on start
         clippyMenuActive = false;

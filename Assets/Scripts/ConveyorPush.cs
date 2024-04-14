@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script for functionality of trigger box above the conveyor to push all objects in trigger
+/// </summary>
 public class ConveyorPush : MonoBehaviour
 {
     public float pushForce = 10;

@@ -28,3 +28,5 @@ MonoBehaviour:
   powersInventory: 0
   difficulty: 1
   personalRecord: 0
+  externalThreat: 
+  attempts: 0

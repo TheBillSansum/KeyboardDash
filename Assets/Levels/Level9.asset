@@ -27,5 +27,6 @@ MonoBehaviour:
   conveyorsInventory: 2
   powersInventory: 1
   difficulty: 2
-  personalRecord: 4.631706
+  personalRecord: 0
   externalThreat: 
+  attempts: 0
